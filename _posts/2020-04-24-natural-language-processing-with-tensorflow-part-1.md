@@ -1,8 +1,9 @@
 ---
+
 layout: post
 title: Natural Language Processing with Tensorflow (Part 1)
 description: creating a simple application for finding positive and nwgative review from IMDB dataset. Notes of Coursera course.
-keywords: IMDB, Coursera, NLP, embedding, review
+keywords: IMDB, Coursera, NLP, embedding, review, AI, ML, machine learning, deep learning
 author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/i_love.png
 ---
@@ -322,7 +323,28 @@ plt.show()
 
 **tf.keras.layers.embedding(..)** turns positive integers (We encoded in preprocessing stage) into dense vectors of fixed size. **This layer can only be used as first layer in a model**
 
-We will learn about embedding in detail here, until now let's visualise embedding in 
+We will learn about embedding in detail here, until now let's visualise embedding in  **Tensorflow embedding projector**
+
+Find reverse map **index &rarr; Word** 
+
+```python
+# Reverse map from index to word
+inv_map = {v: k for k, v in word_index.items()}
+```
+
+Now get weights of embedding layer i.e. first layer. Its shape must be **vocab_size x embedding_dim**
+
+```python
+e = model.layers[0]
+weights = e.get_weights()[0]
+print(weights.shape)
+```
+
+**output**
+
+<div style="background-color:black;color:white;width:100%;padding-left:10px">(100000, 16)</div>
+
+Now download these weights and words in .tsv file. Then go to **Tensorflow embedding projector**  and visualise.
 
 ```python
 import io
@@ -330,8 +352,10 @@ import io
 out_v = io.open('vecs.tsv', 'w', encoding='utf-8')
 out_m = io.open('meta.tsv', 'w', encoding='utf-8')
 
+vocab_size = len(inv_map.keys())
+
 for word_num in range(1, vocab_size):
-    word = reverse_word_index[word_num]
+    word = inv_map[word_num]
     embeddings = weights[word_num]
     out_m.write(word + '\n')
     out_v.write('\t'.join([str(x) for x in embeddings]) + '\n')
@@ -340,3 +364,10 @@ out_v.close()
 out_m.close()
 ```
 
+<hr>
+
+### References and Code
+
+[1] [Natural Language Processing in Tensorflow  by Laurence Moroney](https://www.coursera.org/learn/natural-language-processing-tensorflow)
+
+You can find code <a href="https://colab.research.google.com/drive/1EcqFDKb_fNb6EApjOxifq9QwLJok9WcD" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
