@@ -5,7 +5,7 @@ title: Natural Language Processing with Tensorflow (Part 1)
 description: creating a simple application for finding positive and nwgative review from IMDB dataset. Notes of Coursera course.
 keywords: IMDB, Coursera, NLP, embedding, review, AI, ML, machine learning, deep learning
 author: Parikshit Patil
-thumbnail: https://pskp-95.github.io/public/images/i_love.png
+thumbnail: https://pskp-95.github.io/public/images/thumbnail_nlp.png
 ---
 
 This blog post is a notes on course **Natural Language Processing with Tensorflow on Coursera**.
@@ -371,3 +371,4 @@ out_m.close()
 [1] [Natural Language Processing in Tensorflow  by Laurence Moroney](https://www.coursera.org/learn/natural-language-processing-tensorflow)
 
 You can find code <a href="https://colab.research.google.com/drive/1EcqFDKb_fNb6EApjOxifq9QwLJok9WcD" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
