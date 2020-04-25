@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Natural Language Processing with Tensorflow
+title: Natural Language Processing with Tensorflow (Part 1)
 description: creating a simple application for finding positive and nwgative review from IMDB dataset. Notes of Coursera course.
 keywords: IMDB, Coursera, NLP, embedding, review
 author: Parikshit Patil
