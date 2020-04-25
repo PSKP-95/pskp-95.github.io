@@ -32,6 +32,15 @@
   <link rel="shortcut icon" href="{{ '/public/favicon.ico' | absolute_url }}">
 
   <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ '/atom.xml' | absolute_url }}">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-164487510-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-164487510-1');
+  </script>
 
   <script src="https://kit.fontawesome.com/71b3820bf4.js" crossorigin="anonymous"></script>
   {% if site.google_analytics_id %}
