@@ -93,7 +93,7 @@ print(sequence)
 
 As you can see, **Tom** is not in corpus and it is asisgned as **&lt;'OOV'&gt;**. But as our dataset increases, possibility of missing word reduces. or We can use **GloVe** or **word2vec** embeddings. *We will see later*.
 
- ### Padding
+### Padding
 
 But still here is problem, as we know neural networks works **only with fixed size input**. so we need to **pad these sequences / trim to fixed length**.
 

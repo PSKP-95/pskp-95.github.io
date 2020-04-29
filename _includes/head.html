@@ -21,12 +21,20 @@
       {{ page.title }} &middot; {{ site.title }}
     {% endif %}
   </title>
+  {% if page.title == "Home" %}
+    <meta name="description" content="This is blog on Deep learning, machine learning and artificial intelligence written by Parikshit Patil. (PSKP-95)">
+    <meta name="keywords" content="machine learning, ml, deep learning, artificial intelligence, nlp, natural language processing, neural network, ai, programming, high performance computing, hpc, algorithms, data structure, ds">
+    <meta name="author" content="Parikshit Patil">
+    <meta property="og:title" content="This is blog on Deep learning, machine learning and artificial intelligence written by Parikshit Patil. (PSKP-95)">
+    <meta property="og:image" content="https://pskp-95.github.io/public/images/icon.png">
+  {% else %}
+    <meta name="description" content="{{ page.description}}">
+    <meta name="keywords" content="{{ page.keywords}}">
+    <meta name="author" content="{{ page.author}}">
+    <meta property="og:title" content="{{page.title}}">
+    <meta property="og:image" content="{{ page.thumbnail }}">
+  {% endif %}
   
-  <meta name="description" content="{{ page.description}}">
-  <meta name="keywords" content="{{ page.keywords}}">
-  <meta name="author" content="{{ page.author}}">
-  <meta property="og:title" content="{{page.title}}">
-  <meta property="og:image" content="{{ page.thumbnail }}">
   
   {% if page.url and site.baseurl %}
   <link rel="canonical" href="{{ page.url | absolute_url }}">
