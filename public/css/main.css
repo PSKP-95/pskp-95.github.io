@@ -233,9 +233,10 @@ a:visited { color: #205caa; }
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
-  font-size: 15px;
+  font-size: 18px;
   overflow:auto;
   white-space: pre;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .post code { padding: 1px 5px; }
