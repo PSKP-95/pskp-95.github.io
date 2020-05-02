@@ -187,7 +187,7 @@ $$
 $$
 
 Now we will use above 2 equations to find $\frac{\delta{J}(W,b)}{\delta{W}}$ and $\frac{\delta{J}(W,b)}{\delta{b}}$
-
+ {% raw %}
 $$
 \begin{align*}
 \frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} \\
@@ -199,7 +199,7 @@ $$
 &=a-y \\
 \end{align*}
 $$
-
+ {% endraw %}
 Finally done :-). Time for code.
 
 ```python
