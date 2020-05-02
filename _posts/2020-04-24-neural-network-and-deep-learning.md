@@ -7,7 +7,7 @@ author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
 ```
 
-![Human neuron and artificial neuron](../public/images/neuron_and_neuron.png)
+![Human neuron and artificial neuron](https://pskp-95.github.io/public/images/neuron_and_neuron.png)
 
 Artificial Neural Networks are inspired by Human Neural System. In human neural system, axons of one neuron are connected with dendrites of another and they are regulating electric signal by using chemicals. This is higher level working of human neuron. number of these neurons are used for complex decision making. It's just intro :-).
 
@@ -17,11 +17,11 @@ Artificial Neural Networks are inspired by Human Neural System. In human neural 
 
 We have to find **is there a cat in image or not**. This is binary classification because either cat is present or not in image (1 or 0).
 
-![Cat or Not](../public/images/cat_binary.png)
+![Cat or Not](https://pskp-95.github.io/public/images/cat_binary.png)
 
 Before we start learning logistic regression, lets see how image is stored and presented in computer because we have to work on these images. Images are **continuous signals in space** but storing and processing continuous signal is too hard :-(. So images are discretized and then stored and processed in computers. images are stored in 3D matrix with 3 channels i.e. red, green, blue (RGB).
 
-![Image Representation](../public/images/image_repre.png)
+![Image Representation](https://pskp-95.github.io/public/images/image_repre.png)
 
 As shown in above image, images are shored in 3D matrix. But for training on logistic regression, we need vector as a input. So We will roll out this image into **long column vector**. given image is **64x64x3** size where $1^{st}$ 64 is height and $2^{nd}$ width of image. Actually it depends on situation. for example, in numpy **img.shape** gives first dimension as height of image while mentioning resolution of image, we do opposite like **1920x1080**. 
 
@@ -53,7 +53,7 @@ We will see all notation in basic neural network. some of them are not used in l
 
 Given $X$, we want $\hat{y} = P(y=1|0)$. As below image, we will give input as rolled image and output will be 1 if cat in image else 0. in image, $ w_1, w_2, ..., w_n $ are weights and $b$ is bias. These are learning parameters means we will learn them while training phase.
 
-![Artificial Neuron](../public/images/ar_neuron.webp)
+![Artificial Neuron](https://pskp-95.github.io/public/images/ar_neuron.webp)
 
 if we want to explain above image in one line then this line will be like this **weighted sum over input is added to bias and whatever we got, pass it to activation function**. Here weighted sum means multiply weights to respective input i.e. $x_i * w_i$ and add them. Lets consider $Z$ as a sum of weighted sum of input and bias.
 $$
@@ -85,7 +85,7 @@ $$
 
 When you plot sigmoid function, you will find graph shown below. 
 
-![Sigmoid function](../public/images/sigmoid.jpg)
+![Sigmoid function](https://pskp-95.github.io/public/images/sigmoid.jpg)
 
 #### Training
 
