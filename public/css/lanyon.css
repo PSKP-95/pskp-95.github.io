@@ -567,6 +567,7 @@ a.pagination-item:hover {
   overflow:auto;
   font-size: 18px;
   white-space: pre;
+  font-weight: 300;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
