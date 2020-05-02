@@ -561,13 +561,14 @@ a.pagination-item:hover {
   border: 1px solid #d5d5e9;
   background-color: #eef;
   padding: 8px 12px;
+  color: black;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
   overflow:auto;
   font-size: 18px;
   white-space: pre;
-  font-weight: 300;
+  font-weight: bold;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
