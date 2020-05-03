@@ -188,18 +188,46 @@ It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat
 
 Now we will use above 2 equations to find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\) and \\(\frac{\delta{J}(W,b)}{\delta{b}}\\)
 
+<notextile>
 \\[
 \begin{align*}
-\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} &#92;&#92;
+\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} //
 
-&=(a-y) . X^T &#92;&#92;
+&=(a-y) . X^T //
 
-\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} &#92;&#92;
+\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} //
 
 &=a-y 
 \end{align*}
 \\]
+</notextile>
+<notextile>
+\[
+\begin{align*}
+\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} //
 
+&=(a-y) . X^T //
+
+\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} //
+
+&=a-y 
+\end{align*}
+\]
+</notextile>
+
+{% raw %}
+\\[
+\begin{align*}
+\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} //
+
+&=(a-y) . X^T //
+
+\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} //
+
+&=a-y 
+\end{align*}
+\\]
+{% endraw %}
 Finally done :-). Time for code.
 
 ```python
