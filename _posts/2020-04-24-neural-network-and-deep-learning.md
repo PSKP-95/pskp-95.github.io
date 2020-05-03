@@ -71,18 +71,18 @@ If you are familiar with linear regression then you might saw above image except
 
 
 We need derivative of sigmoid function while sending error backward. So lets find now.
-
-\\[
+<notextile>
+\[
 \begin{align*}
-\sigma'(Z) &= \frac{d}{dZ} . \frac{1}{1 + e^{-Z}} \\\\
-&= \frac{d}{dZ}(1+e^{-Z})^{-1} \\\\
-&= -(1+e^{-Z})^{-2}(-e^{-Z}) \\\\
-&= \frac{e^{-Z}}{(1+e^{-Z})^2} \\\\
-&= \frac{1}{1+e^{-Z}} (1+\frac{1}{1+e^{-Z}}) \\\\
+\sigma'(Z) &= \frac{d}{dZ} . \frac{1}{1 + e^{-Z}} \\
+&= \frac{d}{dZ}(1+e^{-Z})^{-1} \\
+&= -(1+e^{-Z})^{-2}(-e^{-Z}) \\
+&= \frac{e^{-Z}}{(1+e^{-Z})^2} \\
+&= \frac{1}{1+e^{-Z}} (1+\frac{1}{1+e^{-Z}}) \\
 &= \sigma(Z).(1-\sigma(Z))
 \end{align*}
-\\]
-
+\]
+</notextile>
 When you plot sigmoid function, you will find graph shown below. 
 
 ![Sigmoid function](https://pskp-95.github.io/public/images/sigmoid.jpg)
@@ -144,90 +144,69 @@ J(W,b) =  \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i})
 ##### Gradient Descent
 
 Now only remaining job is to send loss backward and update weights and biases appropriately. For updating this parameters, we have to find cost w.r.t. weights and biases. Like below
-
-\\[
+</notextile>
+\[
 \begin{align*}
-W &= W - \alpha * \frac{\delta{J}(W,b)}{\delta{W}} \\\\
+W &= W - \alpha * \frac{\delta{J}(W,b)}{\delta{W}} \\
 b &= b - \alpha * \frac{\delta{J}(W,b)}{\delta{b}}
 \end{align*}
-\\]
-
+\]
+</notextile>
 In above equation, \\(\alpha\\) is **learning rate**.
 
 >The amount that the weights are updated during training is referred to as the step size or the **learning rate.** Specifically, the learning rate is a configurable **hyperparameter** used in the training of neural networks that has a small positive value, often in the range between **0.0 and 1.0**.
 
 To find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\) and \\(\frac{\delta{J}(W,b)}{\delta{b}}\\), we need to expand equation of \\(J(W,b)\\).
-
-\\[
+<notextile>
+\[
 \begin{align*}
-J(W,b) &= \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i}) \\\\
+J(W,b) &= \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i}) \\
 
-&= -\frac{1}{m} \sum \limits_{i=1}^m (y^{i}\log({\hat{y}^{i}}) + (1-y^{i})\log({1-\hat{y}^{i}})) \\\\
+&= -\frac{1}{m} \sum \limits_{i=1}^m (y^{i}\log({\hat{y}^{i}}) + (1-y^{i})\log({1-\hat{y}^{i}})) \\
 
 &= -\frac{1}{m} \sum \limits_{i=1}^m (y^{i}\log(\sigma{(z^{i})}) + (1-y^{i})\log({1-\sigma{(z^{i})}}))
 
 \end{align*}
-\\]
+\]
+</notextile>
 
 It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat{y}\\) as \\(a\\).**
 
-\\[
-\begin{align*}
-\frac{\delta{J}( W,b )}{\delta{a}} &= -(\frac{y}{a} - \frac{1-y}{1-a}) \\\\
-
-&= -\frac{y}{a} + \frac{1-y}{1-a} \\\\
-
-\frac{\delta{J}( W,b )}{\delta{Z}} &= -(\frac{y}{\sigma{(Z)}} \sigma'{(Z)} + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma'{(Z)})\\\\
-
-&=-(\frac{y}{\sigma{(Z)}} \sigma(Z).(1-\sigma(Z)) + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma(Z).(1-\sigma(Z)))\\\\
-
-&=-(y.(1-\sigma(Z)) + (1-y)\sigma(Z))\\\\
-&=a-y
-\end{align*}
-\\]
-
-Now we will use above 2 equations to find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\) and \\(\frac{\delta{J}(W,b)}{\delta{b}}\\)
-
-<notextile>
-\\[
-\begin{align*}
-\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} //
-
-&=(a-y) . X^T //
-
-\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} //
-
-&=a-y 
-\end{align*}
-\\]
-</notextile>
 <notextile>
 \[
 \begin{align*}
-\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} //
+\frac{\delta{J}( W,b )}{\delta{a}} &= -(\frac{y}{a} - \frac{1-y}{1-a}) \\
 
-&=(a-y) . X^T //
+&= -\frac{y}{a} + \frac{1-y}{1-a} \\
 
-\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} //
+\frac{\delta{J}( W,b )}{\delta{Z}} &= -(\frac{y}{\sigma{(Z)}} \sigma'{(Z)} + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma'{(Z)})\\
+
+&=-(\frac{y}{\sigma{(Z)}} \sigma(Z).(1-\sigma(Z)) + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma(Z).(1-\sigma(Z)))\\
+
+&=-(y.(1-\sigma(Z)) + (1-y)\sigma(Z))\\
+&=a-y
+\end{align*}
+\]
+</notextile>
+
+Now we will use above 2 equations to find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\) and \\(\frac{\delta{J}(W,b)}{\delta{b}}\\)
+
+
+<notextile>
+\[
+\begin{align*}
+\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} \\
+
+&=(a-y) . X^T \\
+
+\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} \\
 
 &=a-y 
 \end{align*}
 \]
 </notextile>
 
-{% raw %}
-\\[
-\begin{align*}
-\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} //
 
-&=(a-y) . X^T //
-
-\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} //
-
-&=a-y 
-\end{align*}
-\\]
-{% endraw %}
 Finally done :-). Time for code.
 
 ```python
