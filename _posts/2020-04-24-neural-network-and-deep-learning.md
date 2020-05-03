@@ -9,7 +9,7 @@ thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
 
 ![Human neuron and artificial neuron](https://pskp-95.github.io/public/images/neuron_and_neuron.png)
 
-Artificial Neural Networks are inspired by Human Neural System. In human neural system, axons of one neuron are connected with dendrites of another and they are regulating electric signal by using chemicals. This is higher level working of human neuron. number of these neurons are used for complex decision making. It's just intro :-).
+Artificial Neural Networks are inspired by Human Neural System. In human neural system, axons of one neuron are connected with dendrites of another and they are regulating electric signal by using chemicals. This is higher level working of human neuron. number of these neurons are used for complex decision making. It's just intro &#128515;.
 
 ## Logistic Regression
 
@@ -19,7 +19,7 @@ We have to find **is there a cat in image or not**. This is binary classificatio
 
 ![Cat or Not](https://pskp-95.github.io/public/images/cat_binary.png)
 
-Before we start learning logistic regression, lets see how image is stored and presented in computer because we have to work on these images. Images are **continuous signals in space** but storing and processing continuous signal is too hard :-(. So images are discretized and then stored and processed in computers. images are stored in 3D matrix with 3 channels i.e. red, green, blue (RGB).
+Before we start learning logistic regression, lets see how image is stored and presented in computer because we have to work on these images. Images are **continuous signals in space** but storing and processing continuous signal is too hard &#128577;. So images are discretized and then stored and processed in computers. images are stored in 3D matrix with 3 channels i.e. red, green, blue (RGB).
 
 ![Image Representation](https://pskp-95.github.io/public/images/image_repre.png)
 
@@ -131,7 +131,7 @@ def sigmoid(X):
 y_hat = sigmoid(Z)
 ```
 
-Now time for **Back Propagation**. But it is too risky to say back propagation because in logistic regression, error is not sent back to another layer (:-) Only Single layer). For computing loss in single training example, we can formulate loss (error) function as
+Now time for **Back Propagation**. But it is too risky to say back propagation because in logistic regression, error is not sent back to another layer (&#128515; Only Single layer). For computing loss in single training example, we can formulate loss (error) function as
 
 \\[
     L(\hat{y},y) = -(y\log({\hat{y}}) + (1-y)\log({1-\hat{y}}))
@@ -218,7 +218,7 @@ Now we will use above 2 equations to find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\)
 </notextile>
 
 
-Finally done :-). Time for code.
+Finally done &#128519;. Time for code.
 
 ```python
 # Find cost
