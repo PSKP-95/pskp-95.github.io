@@ -25,7 +25,7 @@ Before we start learning logistic regression, lets see how image is stored and p
 
 As shown in above image, images are shored in 3D matrix. But for training on logistic regression, we need vector as a input. So We will roll out this image into **long column vector**. given image is **64x64x3** size where \\(1^{st}\\) 64 is height and \\(2^{nd}\\) width of image. Actually it depends on situation. for example, in numpy **img.shape** gives first dimension as height of image while mentioning resolution of image, we do opposite like **1920x1080**. 
 
-**So the problem**: Given a cat picture \\(X\\), we want probability of cat in image i.e. \\(\hat{y} = P(y=1|x)\\).
+**So the problem**: Given a cat picture \\(X\\), we want probability of cat in image i.e. \\(\hat{y} = P(y=1&#124;x)\\).
 
 ### Notation
 
@@ -51,7 +51,7 @@ We will see all notation in basic neural network. some of them are not used in l
 
 ### Algorithm
 
-Given \\(X\\), we want \\(\hat{y} = P(y=1|0)\\). As below image, we will give input as rolled image and output will be 1 if cat in image else 0. in image, \\( w_1, w_2, ..., w_n \\) are weights and \\(b\\) is bias. These are learning parameters means we will learn them while training phase.
+Given \\(X\\), we want \\(\hat{y} = P(y=1&#124;0)\\). As below image, we will give input as rolled image and output will be 1 if cat in image else 0. in image, \\( w_1, w_2, ..., w_n \\) are weights and \\(b\\) is bias. These are learning parameters means we will learn them while training phase.
 
 ![Artificial Neuron](https://pskp-95.github.io/public/images/ar_neuron.webp)
 
@@ -74,11 +74,11 @@ We need derivative of sigmoid function while sending error backward. So lets fin
 
 \\[
 \begin{align*}
-\sigma'(Z) &= \frac{d}{dZ} . \frac{1}{1 + e^{-Z}} \\
-&= \frac{d}{dZ}(1+e^{-Z})^{-1} \\
-&= -(1+e^{-Z})^{-2}(-e^{-Z}) \\
-&= \frac{e^{-Z}}{(1+e^{-Z})^2} \\
-&= \frac{1}{1+e^{-Z}} (1+\frac{1}{1+e^{-Z}}) \\
+\sigma'(Z) &= \frac{d}{dZ} . \frac{1}{1 + e^{-Z}} \\\\
+&= \frac{d}{dZ}(1+e^{-Z})^{-1} \\\\
+&= -(1+e^{-Z})^{-2}(-e^{-Z}) \\\\
+&= \frac{e^{-Z}}{(1+e^{-Z})^2} \\\\
+&= \frac{1}{1+e^{-Z}} (1+\frac{1}{1+e^{-Z}}) \\\\
 &= \sigma(Z).(1-\sigma(Z))
 \end{align*}
 \\]
@@ -147,7 +147,7 @@ Now only remaining job is to send loss backward and update weights and biases ap
 
 \\[
 \begin{align*}
-W &= W - \alpha * \frac{\delta{J}(W,b)}{\delta{W}} \\
+W &= W - \alpha * \frac{\delta{J}(W,b)}{\delta{W}} \\\\
 b &= b - \alpha * \frac{\delta{J}(W,b)}{\delta{b}}
 \end{align*}
 \\]
@@ -160,9 +160,9 @@ To find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\) and \\(\frac{\delta{J}(W,b)}{\del
 
 \\[
 \begin{align*}
-J(W,b) &= \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i}) \\
+J(W,b) &= \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i}) \\\\
 
-&= -\frac{1}{m} \sum \limits_{i=1}^m (y^{i}\log({\hat{y}^{i}}) + (1-y^{i})\log({1-\hat{y}^{i}})) \\
+&= -\frac{1}{m} \sum \limits_{i=1}^m (y^{i}\log({\hat{y}^{i}}) + (1-y^{i})\log({1-\hat{y}^{i}})) \\\\
 
 &= -\frac{1}{m} \sum \limits_{i=1}^m (y^{i}\log(\sigma{(z^{i})}) + (1-y^{i})\log({1-\sigma{(z^{i})}}))
 
@@ -173,15 +173,15 @@ It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat
 
 \\[
 \begin{align*}
-\frac{\delta{J}( W,b )}{\delta{a}} &= -(\frac{y}{a} - \frac{1-y}{1-a}) \\
+\frac{\delta{J}( W,b )}{\delta{a}} &= -(\frac{y}{a} - \frac{1-y}{1-a}) \\\\
 
-&= -\frac{y}{a} + \frac{1-y}{1-a} \\
+&= -\frac{y}{a} + \frac{1-y}{1-a} \\\\
 
-\frac{\delta{J}( W,b )}{\delta{Z}} &= -(\frac{y}{\sigma{(Z)}} \sigma'{(Z)} + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma'{(Z)})\\
+\frac{\delta{J}( W,b )}{\delta{Z}} &= -(\frac{y}{\sigma{(Z)}} \sigma'{(Z)} + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma'{(Z)})\\\\
 
-&=-(\frac{y}{\sigma{(Z)}} \sigma(Z).(1-\sigma(Z)) + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma(Z).(1-\sigma(Z)))\\
+&=-(\frac{y}{\sigma{(Z)}} \sigma(Z).(1-\sigma(Z)) + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma(Z).(1-\sigma(Z)))\\\\
 
-&=-(y.(1-\sigma(Z)) + (1-y)\sigma(Z))\\
+&=-(y.(1-\sigma(Z)) + (1-y)\sigma(Z))\\\\
 &=a-y
 \end{align*}
 \\]
@@ -190,13 +190,13 @@ Now we will use above 2 equations to find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\)
 
 \\[
 \begin{align*}
-\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} \\
+\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} \\\\
 
-&=(a-y) . X^T \\
+&=(a-y) . X^T \\\\
 
-\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} \\
+\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} \\\\
 
-&=a-y \\
+&=a-y 
 \end{align*}
 \\]
 
