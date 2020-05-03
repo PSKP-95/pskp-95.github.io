@@ -672,3 +672,7 @@ img{
   overflow:auto;
   color: black;
 }
+
+strong {
+  font-weight: bold;
+}
