@@ -128,6 +128,9 @@ Z = np.dot(W.T, X) + b
 def sigmoid(X):
     return 1 / (1 + np.exp(- X))
 
+def inv_sigmoid(X):
+    return sigmoid(X) * (1-sigmoid(X))
+
 y_hat = sigmoid(Z)
 ```
 
@@ -153,8 +156,8 @@ Now only remaining job is to send loss backward and update weights and biases ap
 </notextile>
 \[
 \begin{align*}
-W &= W - \alpha * \frac{\delta{J}(W,b)}{\delta{W}} \\
-b &= b - \alpha * \frac{\delta{J}(W,b)}{\delta{b}}
+W &= W - \alpha * \frac{\partial{J}(W,b)}{\partial{W}} \\
+b &= b - \alpha * \frac{\partial{J}(W,b)}{\partial{b}}
 \end{align*}
 \]
 </notextile>
@@ -164,7 +167,7 @@ In above equation, \\(\alpha\\) is **learning rate**.
 
 >The amount that the weights are updated during training is referred to as the step size or the **learning rate.** Specifically, the learning rate is a configurable **hyperparameter** used in the training of neural networks that has a small positive value, often in the range between **0.0 and 1.0**.
 
-To find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\) and \\(\frac{\delta{J}(W,b)}{\delta{b}}\\), we need to expand equation of \\(J(W,b)\\).
+To find \\(\frac{\partial{J}(W,b)}{\partial{W}}\\) and \\(\frac{\partial{J}(W,b)}{\partial{b}}\\), we need to expand equation of \\(J(W,b)\\).
 
 <div class="scrollable">
 <notextile>
@@ -180,17 +183,17 @@ J(W,b) &= \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i}) \\
 \]
 </notextile>
 </div>
-It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat{y}\\) as \\(a\\).**
+It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat{y}\\) as \\(a\\).** and for sake of simplicity, put \\(\fract{1}{m} \\) aside.
 
 <div class="scrollable">
 <notextile>
 \[
 \begin{align*}
-\frac{\delta{J}( W,b )}{\delta{a}} &= -(\frac{y}{a} - \frac{1-y}{1-a}) \\
+\frac{\partial{J}( W,b )}{\partial{a}} &= -(\frac{y}{a} - \frac{1-y}{1-a}) \\
 
 &= -\frac{y}{a} + \frac{1-y}{1-a} \\
 
-\frac{\delta{J}( W,b )}{\delta{Z}} &= -(\frac{y}{\sigma{(Z)}} \sigma'{(Z)} + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma'{(Z)})\\
+\frac{\partial{J}( W,b )}{\partial{Z}} &= -(\frac{y}{\sigma{(Z)}} \sigma'{(Z)} + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma'{(Z)})\\
 
 &=-(\frac{y}{\sigma{(Z)}} \sigma(Z).(1-\sigma(Z)) + \frac{(1-y)}{(1-\sigma{(Z)})} \sigma(Z).(1-\sigma(Z)))\\
 
@@ -200,39 +203,138 @@ It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat
 \]
 </notextile>
 </div>
-Now we will use above 2 equations to find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\) and \\(\frac{\delta{J}(W,b)}{\delta{b}}\\)
+Now we will use above 2 equations to find \\(\frac{\partial{J}(W,b)}{\partial{W}}\\) and \\(\frac{\partial{J}(W,b)}{\partial{b}}\\)
 
-
+<div class="scrollable">
 <notextile>
 \[
 \begin{align*}
-\frac{\delta{J}( W,b )}{\delta{W}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{W}} \\
+\frac{\partial{J}( W,b )}{\partial{W}} &= \frac{\partial{J}{(W,b)}}{\partial{Z}} \frac{\partial{Z}}{\partial{W}} \\
 
-&=(a-y) . X^T \\
+&=(\frac{1}{m})(a-y) . X^T \\
 
-\frac{\delta{J}(W,b)}{\delta{b}} &= \frac{\delta{J}{(W,b)}}{\delta{Z}} \frac{\delta{Z}}{\delta{b}} \\
+\frac{\partial{J}(W,b)}{\partial{b}} &= \frac{\partial{J}{(W,b)}}{\partial{Z}} \frac{\partial{Z}}{\partial{b}} \\
 
-&=a-y 
+&=(\frac{1}{m})(a-y)
 \end{align*}
 \]
 </notextile>
-
+</div>
 
 Finally done &#128519;. Time for code.
 
 ```python
 # Find cost
+cost = -(1/m) * (Y*np.log(y_hat)+(1-Y)*np.log(1-y_hat))
 
-cost = -(1/m)*(Y*np.log(y_hat)+(1-Y)*np.log(1-y_hat))
-
-dw = np.dot((y_hat - y),X.T)
-db = y_hat - y
+dw = (1/m) * np.dot((y_hat - y), X.T)
+db = (1/m)* np.sum(y_hat - y, axis=1, keeps_dim=True)
 
 # update w and b
 W = W - alpha * dw
 b = b - alpha * db
 ```
 
+## Neural Network
+
+Still now we learned logistic regression and updating parameters in it. Logistic regression unit is also called as **neuron** in neural network. You can compare both neuron and neural network in below image. Neurons are stacked in 2 dimensional space and all neurons from previous layer are connected to all neurons in current layer.
+
+![Neurons](https://pskp-95.github.io/public/images/neurons.png)
+
+In above image (b), 2 inputs are given to **Hidden layer** and these all 5 neurons in hidden unit produces \\(a^{[1]}\\) which will pass to output layer. **In image, 1 circle means 1 neuron.** and (b) has 2 layers (Input is not considered as layer). **remember \\(a^{[l]}_i\\) means activations produced by \\(i^{th}\\) unit in \\(l^{th}\\) layer.**
+
+![Neurons](https://pskp-95.github.io/public/images/forward.png)
+
+In above image \\(x\\) is our \\(X\\) in logistic regression. In logistic regression we saw \\(W\\) is weight matrix but here we have number of neurons so for each neuron we have weight matrix and represented by \\(W^{[l]}_i\\) where \\(l\\) is layer and i is unit(neuron) in that layer. and also separate bias for each neuron \\( b^{[l]}_i\\). But while implementing, we use vectorization for fast computation. So all weights for neurons is stacked and created a **row vector** of \\(W^{[l]}_i\\) for each layer. Now weights of \\(1^{st}\\) layer are \\(W^{[1]}\\). Similarly biases are also stacked and created **column vector**. 
+
+> Suppose, We are at layer \\(l\\) so previous layer \\(l-1\\) has \\(n_{l-1}\\) units and current layer \\(l\\) has \\(n_{l}\\) units then shape of weight matrix of layer \\(l\\) will be \\(n_l \times n_{l-1}\\). and shape of bias matrix will be \\(n_l \times 1\\).
+
+![Feed Forward](https://pskp-95.github.io/public/images/feed_forward.png)
+
+Lets implement in python as shown in above image.
+
+```python
+# We already have X and Y with us
+# define units list
+units = [3,4,1] # input, hidden, output
+
+#initialise weights and biases
+W_1 = np.random.rand(units[1],units[0])
+b_1 = np.zeros((units[1],1))
+
+W_2 = np.random.rand(units[2],units[1])
+b_2 = np.zeros((units[2],1))
+
+# Feed forward
+z_1 = np.dot(W_1.T,X) + b_1
+a_1 = np.sigmoid(z_1)
+
+z_2 = np.dot(W_2.T,a_1) + b_2
+y_hat = np.sigmoid(z_2) # or a_2
+```
+
+#### Back Propagation
+
+We already saw in logistic regression that how to update \\(W^{[2]}\\) and \\(b^{[2]}\\) but for updating \\(W^{[1]}\\) and \\(b^{[1]}\\), we need \\(\frac{\partial{J}(W,b)}{\partial{W^{[1]}}}\\) and \\(\frac{\partial{J}(W,b)}{\partial{b^{[1]}}}\\); here \\(W\\) and \\(b\\) are considered as all weights and biases in network. means cost of final prediction. Lets find some more derivatives. But before that, see computation graph for our 2 layer neural network.
+
+![Computation graph](https://pskp-95.github.io/public/images/compute_graph.png)
+
+From above graph, we can find below equations.
+
+<div class="scrollable">
+<notextile>
+\[
+\begin{align*}
+\frac{\partial{J}(W,b)}{\partial{Z^{[1]}}} &= \frac{\partial{J}(W,b)}{\partial{Z^{[2]}}}.\frac{\partial{Z^{[2]}}}{\partial{a^{[1]}}}.\frac{\partial{a^{[1]}}}{\partial{Z^{[1]}}} \\
+&= \frac{\partial{J}(W,b)}{\partial{Z^{[2]}}} .W^{[2]T}.\sigma'{(Z^{1})}\\
+
+\end{align*}
+\]
+</notextile>
+</div>
+
+Now we can find  \\(\frac{\partial{J}(W,b)}{\partial{W^{[1]}}}\\) and \\(\frac{\partial{J}(W,b)}{\partial{b^{[1]}}}\\)
+
+<div class="scrollable">
+<notextile>
+\[
+\begin{align*}
+\frac{\partial{J}(W,b)}{\partial{W^{[1]}}} &= \frac{\partial{J}(W,b)}{\partial{Z^{[1]}}}.\frac{\partial{Z^{[1]}}}{\partial{W^{[1]}}} \\
+&= \frac{\partial{J}(W,b)}{\partial{Z^{[2]}}} .X^{T}\\
+
+\frac{\partial{J}(W,b)}{\partial{b^{[1]}}} &= \frac{\partial{J}(W,b)}{\partial{Z^{[1]}}}.\frac{\partial{Z^{[1]}}}{\partial{b^{[1]}}} \\
+&= \frac{\partial{J}(W,b)}{\partial{Z^{[2]}}} 
+\end{align*}
+\]
+</notextile>
+</div>
+
+Finally done &#128519;. Time for code.
+
+
+```python
+# Some code copied from logistic regression
+# Find cost
+cost = -(1/m) * (Y*np.log(y_hat)+(1-Y)*np.log(1-y_hat))
+
+dZ_2 = y_hat - y
+dw2 = (1/m) * np.dot(dZ_2, a_1.T)
+db2 = (1/m)* np.sum(dZ_2, axis=1, keeps_dim=True)
+
+dZ_1 = np.dot(W_2.T,dZ_2) * inv_sigmoid(z_1)
+dw1 = (1/m) * np.dot(dZ_1, a_1.T)
+db1 = (1/m)* np.sum(dZ_1, axis=1, keeps_dim=True)
+
+# Update weights
+W_1 = W_1 - alpha * dw1
+b_1 = b_1 - alpha * db1
+
+W_2 = W_2 - alpha * dw2
+b_2 = b_2 - alpha * db2
+```
+This article may have some bugs. Please if you found any comment down.
+
 ## References
+
 [1] [All notations reference](https://d3c33hcgiwev3.cloudfront.net/_106ac679d8102f2bee614cc67e9e5212_deep-learning-notation.pdf?Expires=1588550400&Signature=Wp2N8mhdPu~oh8SEoq-jjl-nb0p6O9E-P3mDH3GNhxzu~p8AU4UQ32MiFIE~S0Y31uQysTlWD6VR0cOvmE3rZVUGL94U1TtitKo9KAF72GMCBrgP7yFnkuS730lkKzs2jmHAZV09hjvqCyuHcpu6DyoPUrCeMC1wJCVgItmsMqo_&Key-Pair-Id=APKAJLTNE6QMUY6HBC5A)
 
