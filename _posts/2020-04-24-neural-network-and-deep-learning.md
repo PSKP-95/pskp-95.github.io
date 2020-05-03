@@ -41,13 +41,13 @@ We will see all notation in basic neural network. some of them are not used in l
 
 #### Objects
 
- - \\(X \in \R^{n_x \times m}\\) is the input matrix
- - \\(x^i \in \R^{n_x}\\) is the \\(i^{th}\\) example represented as a **column vector**
- - \\(Y \in \R^{n_y \times m}\\) is the label matrix or actual output while training
- - \\(y^{(i)} \in \R^{n_y}\\) is the output label for the \\(i^{th}\\) example
- - \\(W^{[l]} \in \R^{number \space of units \space in\space next\space layer \times number\space of\space units\space in\space previous\space layer}\\) is the weight matrix of \\(l^{th}\\) layer
- - \\(b^{[l]} \in \R^{number\space of\space units\space in\space next\space layer} \\) is the bias vector in the \\(l^{th}\\) layer
- - \\(\hat{y} \in \R^{n_y} \\) is the predicted output vector. Also denoted by \\(a^{[L]}\\). 
+ - \\(X \in \mathbb{R}^{n_x \times m}\\) is the input matrix
+ - \\(x^i \in \mathbb{R}^{n_x}\\) is the \\(i^{th}\\) example represented as a **column vector**
+ - \\(Y \in \mathbb{R}^{n_y \times m}\\) is the label matrix or actual output while training
+ - \\(y^{(i)} \in \mathbb{R}^{n_y}\\) is the output label for the \\(i^{th}\\) example
+ - \\(W^{[l]} \in \mathbb{R}^{number \space of units \space in\space next\space layer \times number\space of\space units\space in\space previous\space layer}\\) is the weight matrix of \\(l^{th}\\) layer
+ - \\(b^{[l]} \in \mathbb{R}^{number\space of\space units\space in\space next\space layer} \\) is the bias vector in the \\(l^{th}\\) layer
+ - \\(\hat{y} \in \mathbb{R}^{n_y} \\) is the predicted output vector. Also denoted by \\(a^{[L]}\\). 
 
 ### Algorithm
 
