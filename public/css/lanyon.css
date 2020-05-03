@@ -668,11 +668,15 @@ img{
   margin-right: auto;
 }
 
-.scrollable{
+/* .scrollable{
   overflow:auto;
   color: black;
-}
+} */
 
 strong {
   font-weight: bold;
+}
+
+.MathJax{
+  overflow:auto;
 }
