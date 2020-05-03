@@ -41,7 +41,7 @@ We will see all notation in basic neural network. some of them are not used in l
 
 #### Objects
 
- - \(X \in \R^{n_x \times m}\) is the input matrix
+ - \\(X \in \R^{n_x \times m}\\) is the input matrix
  - \(x^i \in \R^{n_x}\) is the \(i^{th}\) example represented as a **column vector**
  - $Y \in \R^{n_y \times m}$ is the label matrix or actual output while training
  - $y^{(i)} \in \R^{n_y}$ is the output label for the $i^{th}$ example
