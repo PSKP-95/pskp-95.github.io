@@ -153,7 +153,7 @@ J(W,b) =  \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i})
 Now only remaining job is to send loss backward and update weights and biases appropriately. For updating this parameters, we have to find cost w.r.t. weights and biases. Like below
 
 <div class="scrollable">
-</notextile>
+<notextile>
 \[
 \begin{align*}
 W &= W - \alpha * \frac{\partial{J}(W,b)}{\partial{W}} \\
@@ -183,7 +183,7 @@ J(W,b) &= \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i}) \\
 \]
 </notextile>
 </div>
-It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat{y}\\) as \\(a\\).** and for sake of simplicity, put \\(\fract{1}{m} \\) aside.
+It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat{y}\\) as \\(a\\).** and for sake of simplicity, put \\(\frac{1}{m} \\) aside.
 
 <div class="scrollable">
 <notextile>
