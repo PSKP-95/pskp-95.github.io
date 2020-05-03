@@ -71,6 +71,8 @@ If you are familiar with linear regression then you might saw above image except
 
 
 We need derivative of sigmoid function while sending error backward. So lets find now.
+
+<div class="scrollable">
 <notextile>
 \[
 \begin{align*}
@@ -83,6 +85,8 @@ We need derivative of sigmoid function while sending error backward. So lets fin
 \end{align*}
 \]
 </notextile>
+</div>
+
 When you plot sigmoid function, you will find graph shown below. 
 
 ![Sigmoid function](https://pskp-95.github.io/public/images/sigmoid.jpg)
@@ -144,6 +148,8 @@ J(W,b) =  \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i})
 ##### Gradient Descent
 
 Now only remaining job is to send loss backward and update weights and biases appropriately. For updating this parameters, we have to find cost w.r.t. weights and biases. Like below
+
+<div class="scrollable">
 </notextile>
 \[
 \begin{align*}
@@ -152,11 +158,15 @@ b &= b - \alpha * \frac{\delta{J}(W,b)}{\delta{b}}
 \end{align*}
 \]
 </notextile>
+</div>
+
 In above equation, \\(\alpha\\) is **learning rate**.
 
 >The amount that the weights are updated during training is referred to as the step size or the **learning rate.** Specifically, the learning rate is a configurable **hyperparameter** used in the training of neural networks that has a small positive value, often in the range between **0.0 and 1.0**.
 
 To find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\) and \\(\frac{\delta{J}(W,b)}{\delta{b}}\\), we need to expand equation of \\(J(W,b)\\).
+
+<div class="scrollable">
 <notextile>
 \[
 \begin{align*}
@@ -169,7 +179,7 @@ J(W,b) &= \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i}) \\
 \end{align*}
 \]
 </notextile>
-
+</div>
 It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat{y}\\) as \\(a\\).**
 
 <div class="scrollable">
