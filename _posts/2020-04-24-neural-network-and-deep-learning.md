@@ -172,6 +172,7 @@ J(W,b) &= \frac{1}{m} \sum \limits_{i=1}^m L(\hat{y}^{i},y^{i}) \\
 
 It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat{y}\\) as \\(a\\).**
 
+<div class="scrollable">
 <notextile>
 \[
 \begin{align*}
@@ -188,7 +189,7 @@ It's time to find gradients w.r.t. weights and biases. **currently, call \\(\hat
 \end{align*}
 \]
 </notextile>
-
+</div>
 Now we will use above 2 equations to find \\(\frac{\delta{J}(W,b)}{\delta{W}}\\) and \\(\frac{\delta{J}(W,b)}{\delta{b}}\\)
 
 

@@ -666,3 +666,8 @@ img{
   margin-left: auto;
   margin-right: auto;
 }
+
+.scrollable{
+  overflow:auto;
+  color: black;
+}
