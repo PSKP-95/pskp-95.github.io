@@ -23,9 +23,9 @@ Before we start learning logistic regression, lets see how image is stored and p
 
 ![Image Representation](https://pskp-95.github.io/public/images/image_repre.png)
 
-As shown in above image, images are shored in 3D matrix. But for training on logistic regression, we need vector as a input. So We will roll out this image into **long column vector**. given image is **64x64x3** size where $1^{st}$ 64 is height and $2^{nd}$ width of image. Actually it depends on situation. for example, in numpy **img.shape** gives first dimension as height of image while mentioning resolution of image, we do opposite like **1920x1080**. 
+As shown in above image, images are shored in 3D matrix. But for training on logistic regression, we need vector as a input. So We will roll out this image into **long column vector**. given image is **64x64x3** size where \(1^{st}\) 64 is height and \(2^{nd}\) width of image. Actually it depends on situation. for example, in numpy **img.shape** gives first dimension as height of image while mentioning resolution of image, we do opposite like **1920x1080**. 
 
-**So the problem**: Given a cat picture $X$, we want probability of cat in image i.e. $\hat{y} = P(y=1|x)$.
+**So the problem**: Given a cat picture $X$, we want probability of cat in image i.e. \(\hat{y} = P(y=1|x)\).
 
 ### Notation
 
@@ -34,15 +34,15 @@ We will see all notation in basic neural network. some of them are not used in l
 #### Sizes
 
  - m: number of examples in dataset
- - $n_x$: input size
- - $n_y$: output size
- - $n^{[l]}_h$: Number of hidden units in $l^{th}$ layer.
+ - \(n_x\): input size
+ - \(n_y\): output size
+ - \(n^{[l]}_h\): Number of hidden units in \(l^{th}\) layer.
  - L: number of layers in metwork.
 
 #### Objects
 
  - \(X \in \R^{n_x \times m}\) is the input matrix
- - \(x^i \in \R^{n_x}\) is the $i^{th}$ example represented as a **column vector**
+ - \(x^i \in \R^{n_x}\) is the \(i^{th}\) example represented as a **column vector**
  - $Y \in \R^{n_y \times m}$ is the label matrix or actual output while training
  - $y^{(i)} \in \R^{n_y}$ is the output label for the $i^{th}$ example
  - $W^{[l]} \in \R^{number \space of units \space in\space next\space layer \times number\space of\space units\space in\space previous\space layer}$ is the weight matrix of $l^{th}$ layer
