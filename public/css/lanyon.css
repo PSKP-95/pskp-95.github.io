@@ -318,6 +318,10 @@ a.sidebar-nav-item:focus {
   margin-top: 0;
 }
 
+.post-description{
+  color: rgb(52, 80, 88);
+}
+
 /* Meta data line below post title */
 .post-date {
   display: block;
@@ -675,4 +679,128 @@ img{
 
 strong {
   font-weight: bold;
+}
+
+code{
+  font-family: monospace;
+  font-size: 18px;
+}
+
+.preview {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  border: 1px solid rgb(100, 97, 97);
+  color: rgb(12, 12, 102);
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 0 3px #000;
+}
+
+.preview:hover{
+  box-shadow: 0 0 8px #000;
+}
+
+.preview .left{
+  display: flex;
+  flex-direction: column;
+  flex: 80%;
+  height: 100%;
+  padding-left: 10px;
+}
+
+.preview .right{
+  flex: 20%;
+  align: right;
+}
+
+.preview .left .head{
+  flex: 55%;
+  font-size: 17px;
+  overflow: hidden;
+  font-family: monospace;
+  font-weight: bold;
+}
+.preview .left .detail{
+  flex: 42%;
+  font-size: 15px;
+  overflow: hidden;
+}
+.preview .left .link{
+  font-size: 15px;
+  flex: 3%;
+}
+
+@media (max-width: 500px) {
+
+  .preview {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    border: 1px solid rgb(100, 97, 97);
+    color: rgb(19, 19, 85);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 2px #000
+  }
+
+  .preview .left{
+    display: flex;
+    flex-direction: column;
+    flex: 60%;
+    padding-left: 10px;
+    margin-bottom: -10px;
+  }
+
+  .preview .right{
+    flex: 40%;
+  }
+  .preview img {
+    width: 100%;
+    height: 150px;
+    padding-bottom: 0.5px;
+    overflow: hidden;
+    border: 1px 1px 1px 0px solid rgb(100, 97, 97);
+    border-radius: 5px;
+  }
+
+  .preview .left .head{
+    flex: 93%;
+    font-size: 15px;
+    overflow: hidden;
+    font-family: monospace;
+    font-weight: bold;
+
+    animation-name: head;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+  }
+  .preview .left .detail{
+    flex: 0%;
+    font-size: 14px;
+    overflow: hidden;
+
+    animation-name: detail;
+    animation-duration: 5s;
+    animation-iteration-count:infinite;
+  }
+
+  @keyframes head {
+    0%   {flex:93%}
+    50% {flex:0%}
+    100%   {flex:93%}
+  }
+  
+  @keyframes detail {
+    0%   {flex:0%}
+    50% {flex:93%}
+    100%   {flex:0%}
+  }
+  .preview .left .link{
+    font-size: 12px;
+    flex: 7%;
+    margin-bottom: -10px;
+  }
 }
