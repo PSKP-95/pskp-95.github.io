@@ -334,8 +334,8 @@ b_2 = b_2 - alpha * db2
 ```
 This article may have some bugs. Please if you found any comment down. and also check next article in series.
 
-<div class="preview">
-    <div class="left" onclick="location.href='/2020/04/26/neural-network-and-deep-learning-1/'">
+<div class="preview" onclick="location.href='/2020/04/26/neural-network-and-deep-learning-1/'">
+    <div class="left">
       <div class="head">
         <h2>Neural Network and Deep Learning (Part 2)</h2>
       </div>
