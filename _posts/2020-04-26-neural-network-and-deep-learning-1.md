@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Neural Network and Deep Learning (Part 2)
-description: Basics of feedforward neural networks. Implementing deep neural network in numpy
+description: Basics of feedforward neural networks. Generic implemention for L layer deep neural network in numpy.
 keywords: neural network in detail,coursera,AI,ML,machine learning,deep learning,andrew ng,deeplearning.ai
 author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
@@ -54,7 +54,7 @@ a^{[l]} &= g^{[l]}{(Z^{[l]})}
 
 In above equations, \\(g^{[l]}\\) means activation function used in that particular layer. \\(l \in \mathbb{R}^{[1,L]}\\) and \\(L\\) means total number of layers **excluding input.** **When \\(l = 1\\) then \\({a^{[l-1]} = a^{[0]} = X}\\)**
 
-Let's initialize weights and biases. We will use **dictionary** so that no need to use different variable names.
+Let's initialize weights and biases. We will use `units` (python list) to store units in each layer. `units[0]` will be input size \\(n_x\\). We will use **dictionary** so that no need to use different variable names.
 
 ```python
 # import required libraries
@@ -234,3 +234,7 @@ for epoch in epochs:
         parameters['b' + str(layer)] = parameters['b' + str(layer)] - alpha * cache['db' + str(layer)]
 
 ```
+
+## References and Code
+
+You can find code  <a target="_blank" href="https://colab.research.google.com/github/PSKP-95/pskp95-blog-codes/blob/master/Neural%20Network%20and%20Deep%20Learning/L_layered_neural_network.ipynb" target="_parent"><img style="float:right" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>

@@ -370,5 +370,5 @@ out_m.close()
 
 [1] [Natural Language Processing in Tensorflow  by Laurence Moroney](https://www.coursera.org/learn/natural-language-processing-tensorflow)
 
-You can find code <a href="https://colab.research.google.com/drive/1EcqFDKb_fNb6EApjOxifq9QwLJok9WcD" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+You can find code  <a target="_blank" href="https://colab.research.google.com/drive/1EcqFDKb_fNb6EApjOxifq9QwLJok9WcD" target="_parent"><img style="float:right" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 

@@ -1,13 +1,13 @@
 ---
 layout: post
 title: Neural Network and Deep Learning (Part 1)
-description: Basics of feedforward neural networks. notes of coursera course 'neural network and deep learning' by andrew ng
-keywords: neural network in detail,Coursera,AI,ML,machine learning,deep learning,andrew ng,deeplearning.ai
+description: Basics of feedforward neural networks with logistic regression. notes of coursera course 'neural network and deep learning' by andrew ng
+keywords: neural network in detail,logistic regression,AI,ML,machine learning,deep learning,andrew ng,deeplearning.ai
 author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
 ---
 
-![Human neuron and artificial neuron](https://pskp-95.github.io/public/images/neuron_and_neuron.png)
+![Human neuron and artificial neuron](/public/images/neuron_and_neuron.png)
 
 Artificial Neural Networks are inspired by Human Neural System. In human neural system, axons of one neuron are connected with dendrites of another and they are regulating electric signal by using chemicals. This is higher level working of human neuron. number of these neurons are used for complex decision making. It's just intro &#128515;.
 
@@ -17,11 +17,11 @@ Artificial Neural Networks are inspired by Human Neural System. In human neural 
 
 We have to find **is there a cat in image or not**. This is binary classification because either cat is present or not in image (1 or 0).
 
-![Cat or Not](https://pskp-95.github.io/public/images/cat_binary.png)
+![Cat or Not](/public/images/cat_binary.png)
 
 Before we start learning logistic regression, lets see how image is stored and presented in computer because we have to work on these images. Images are **continuous signals in space** but storing and processing continuous signal is too hard &#128577;. So images are discretized and then stored and processed in computers. images are stored in 3D matrix with 3 channels i.e. red, green, blue (RGB).
 
-![Image Representation](https://pskp-95.github.io/public/images/image_repre.png)
+![Image Representation](/public/images/image_repre.png)
 
 As shown in above image, images are shored in 3D matrix. But for training on logistic regression, we need vector as a input. So We will roll out this image into **long column vector**. given image is **64x64x3** size where \\(1^{st}\\) 64 is height and \\(2^{nd}\\) width of image. Actually it depends on situation. for example, in numpy **img.shape** gives first dimension as height of image while mentioning resolution of image, we do opposite like **1920x1080**. 
 
@@ -53,7 +53,7 @@ We will see all notation in basic neural network. some of them are not used in l
 
 Given \\(X\\), we want \\(\hat{y} = P(y=1&#124;0)\\). As below image, we will give input as rolled image and output will be 1 if cat in image else 0. in image, \\( w_1, w_2, ..., w_n \\) are weights and \\(b\\) is bias. These are learning parameters means we will learn them while training phase.
 
-![Artificial Neuron](https://pskp-95.github.io/public/images/ar_neuron.webp)
+![Artificial Neuron](/public/images/ar_neuron.webp)
 
 if we want to explain above image in one line then this line will be like this **weighted sum over input is added to bias and whatever we got, pass it to activation function**. Here weighted sum means multiply weights to respective input i.e. \\(x_i * w_i\\) and add them. Lets consider \\(Z\\) as a sum of weighted sum of input and bias.
 \\[
@@ -89,7 +89,7 @@ We need derivative of sigmoid function while sending error backward. So lets fin
 
 When you plot sigmoid function, you will find graph shown below. 
 
-![Sigmoid function](https://pskp-95.github.io/public/images/sigmoid.jpg)
+![Sigmoid function](/public/images/sigmoid.jpg)
 
 #### Training
 
@@ -239,17 +239,17 @@ b = b - alpha * db
 
 Still now we learned logistic regression and updating parameters in it. Logistic regression unit is also called as **neuron** in neural network. You can compare both neuron and neural network in below image. Neurons are stacked in 2 dimensional space and all neurons from previous layer are connected to all neurons in current layer.
 
-![Neurons](https://pskp-95.github.io/public/images/neurons.png)
+![Neurons](/public/images/neurons.png)
 
 In above image (b), 2 inputs are given to **Hidden layer** and these all 5 neurons in hidden unit produces \\(a^{[1]}\\) which will pass to output layer. **In image, 1 circle means 1 neuron.** and (b) has 2 layers (Input is not considered as layer). **remember \\(a^{[l]}_i\\) means activations produced by \\(i^{th}\\) unit in \\(l^{th}\\) layer.**
 
-![Neurons](https://pskp-95.github.io/public/images/forward.png)
+![Neurons](/public/images/forward.png)
 
 In above image \\(x\\) is our \\(X\\) in logistic regression. In logistic regression we saw \\(W\\) is weight matrix but here we have number of neurons so for each neuron we have weight matrix and represented by \\(W^{[l]}_i\\) where \\(l\\) is layer and i is unit(neuron) in that layer. and also separate bias for each neuron \\( b^{[l]}_i\\). But while implementing, we use vectorization for fast computation. So all weights for neurons is stacked and created a **row vector** of \\(W^{[l]}_i\\) for each layer. Now weights of \\(1^{st}\\) layer are \\(W^{[1]}\\). Similarly biases are also stacked and created **column vector**. 
 
 > Suppose, We are at layer \\(l\\) so previous layer \\(l-1\\) has \\(n_{l-1}\\) units and current layer \\(l\\) has \\(n_{l}\\) units then shape of weight matrix of layer \\(l\\) will be \\(n_l \times n_{l-1}\\). and shape of bias matrix will be \\(n_l \times 1\\). I know you are confused because shape of weight matrix in logistic regression is opposite what we are seeing here. To make implementation simple we are doing this. You can use another approach also.
 
-![Feed Forward](https://pskp-95.github.io/public/images/feed_forward.png)
+![Feed Forward](/public/images/feed_forward.png)
 
 Lets implement in python as shown in above image.
 
@@ -277,7 +277,7 @@ y_hat = sigmoid(z_2) # or a_2
 
 We already saw in logistic regression that how to update \\(W^{[2]}\\) and \\(b^{[2]}\\) but for updating \\(W^{[1]}\\) and \\(b^{[1]}\\), we need \\(\frac{\partial{J}(W,b)}{\partial{W^{[1]}}}\\) and \\(\frac{\partial{J}(W,b)}{\partial{b^{[1]}}}\\); here \\(W\\) and \\(b\\) are considered as all weights and biases in network. means cost of final prediction. Lets find some more derivatives. But before that, see computation graph for our 2 layer neural network.
 
-![Computation graph](https://pskp-95.github.io/public/images/compute_graph.png)
+![Computation graph](/public/images/compute_graph.png)
 
 From above graph, we can find below equations. **You may think that Why this equations re-arranged like that?** Now these equations can work with multiple examples at a time.
 
@@ -340,7 +340,7 @@ This article may have some bugs. Please if you found any comment down. and also 
         <h2>Neural Network and Deep Learning (Part 2)</h2>
       </div>
       <div class="detail">
-        <p>Basics of feedforward neural networks. Implementing deep neural network in numpy</p>
+        <p>Basics of feedforward neural networks. Generic implemention for L layer deep neural network in numpy.</p>
       </div>
       <div class="link">
         <p><i class="fa fa-link" aria-hidden="true"></i>
