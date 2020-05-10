@@ -235,6 +235,28 @@ for epoch in len(epochs):
 
 ```
 
+This article may have some bugs. Please, if you find any, comment below. and also check next article in series.
+
+<div class="preview" onclick="location.href='/2020/04/28/neural-network-and-deep-learning-2/'">
+    <div class="left">
+      <div class="head">
+        <h2>Neural Network and Deep Learning (Part 3)</h2>
+      </div>
+      <div class="detail">
+        <p>Multiclass classification using deep neural network in numpy only. Also also MNIST handwritten digit classification in numpy.</p>
+      </div>
+      <div class="link">
+        <p><i class="fa fa-link" aria-hidden="true"></i>
+ pskp-95.github.in</p>
+      </div>
+    </div>
+    <div class="right">
+      <img align='right' src="/public/images/course1_dl.png" alt="">
+    </div>
+</div>
+
+<hr>
+
 ## References and Code
 
 You can find code  <a target="_blank" href="https://colab.research.google.com/github/PSKP-95/pskp95-blog-codes/blob/master/Neural%20Network%20and%20Deep%20Learning/L_layered_neural_network.ipynb" target="_parent"><img style="float:right" src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>

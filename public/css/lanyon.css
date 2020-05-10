@@ -696,6 +696,7 @@ code{
   cursor: pointer;
   background-color: rgb(255, 255, 255);
   box-shadow: 0 0 3px #000;
+  margin-bottom: 20px;
 }
 
 .preview:hover{
@@ -803,4 +804,13 @@ code{
     flex: 7%;
     margin-bottom: -10px;
   }
+}
+
+/* for image caption */
+img + em {
+  font-style: normal;
+  display: inherit;
+  text-align: center;
+  font-size: 80%;
+  color: #000080;
 }

@@ -134,7 +134,7 @@ def inv_sigmoid(X):
 y_hat = sigmoid(Z)
 ```
 
-Now time for **Back Propagation**. But it is too risky to say back propagation because in logistic regression, error is not sent back to another layer (&#128515; Only Single layer). For computing loss in single training example, we can formulate loss (error) function as
+Now time for **Back Propagation**. But it is too risky to say back propagation because in logistic regression, error is not sent back to another layer (&#128515; Only Single layer). For computing loss in single training example, we will use **binary cross entropy loss** and we can formulate loss (error) function as
 
 \\[
     L(\hat{y},y) = -(y\log({\hat{y}}) + (1-y)\log({1-\hat{y}}))
