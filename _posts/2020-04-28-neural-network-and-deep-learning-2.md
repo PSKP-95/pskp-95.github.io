@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Neural Network and Deep Learning (Part 3)
-description: Multiclass classification using deep neural network in numpy only. Also also MNIST handwritten digit classification in numpy.
+description: Multiclass classification using deep neural network in numpy only. Also MNIST handwritten digit classification in numpy.
 keywords: neural network in detail, multiclass classification,AI,ML,machine learning,deep learning,andrew ng,deeplearning.ai
 author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
@@ -19,7 +19,7 @@ This will be the \\(3^{rd}\\) and last article in `neural network and deep learn
       </div>
       <div class="link">
         <p><i class="fa fa-link" aria-hidden="true"></i>
- pskp-95.github.in</p>
+ pskp-95.github.io</p>
       </div>
     </div>
     <div class="right">
@@ -36,7 +36,7 @@ This will be the \\(3^{rd}\\) and last article in `neural network and deep learn
       </div>
       <div class="link">
         <p><i class="fa fa-link" aria-hidden="true"></i>
- pskp-95.github.in</p>
+ pskp-95.github.io</p>
       </div>
     </div>
     <div class="right">

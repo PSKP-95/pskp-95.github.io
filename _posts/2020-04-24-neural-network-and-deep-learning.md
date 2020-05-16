@@ -344,7 +344,7 @@ This article may have some bugs. Please if you found any comment down. and also 
       </div>
       <div class="link">
         <p><i class="fa fa-link" aria-hidden="true"></i>
- pskp-95.github.in</p>
+ pskp-95.github.io</p>
       </div>
     </div>
     <div class="right">

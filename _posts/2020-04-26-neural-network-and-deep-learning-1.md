@@ -21,7 +21,7 @@ In previous article, we saw **Logistic Regression with Gradient Descent** and al
       </div>
       <div class="link">
         <p><i class="fa fa-link" aria-hidden="true"></i>
- pskp-95.github.in</p>
+ pskp-95.github.io</p>
       </div>
     </div>
     <div class="right">
@@ -243,11 +243,11 @@ This article may have some bugs. Please, if you find any, comment below. and als
         <h2>Neural Network and Deep Learning (Part 3)</h2>
       </div>
       <div class="detail">
-        <p>Multiclass classification using deep neural network in numpy only. Also also MNIST handwritten digit classification in numpy.</p>
+        <p>Multiclass classification using deep neural network in numpy only. Also MNIST handwritten digit classification in numpy.</p>
       </div>
       <div class="link">
         <p><i class="fa fa-link" aria-hidden="true"></i>
- pskp-95.github.in</p>
+ pskp-95.github.io</p>
       </div>
     </div>
     <div class="right">
