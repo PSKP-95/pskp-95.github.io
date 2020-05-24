@@ -14,6 +14,7 @@ title: About
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
@@ -72,6 +73,48 @@ title: About
                 </div>
             </section>
             <hr class="m-0" />
+            <!-- Project-->
+            <section class="resume-section" id="projects">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Projects</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Voice Cloning using neural audio synthesis</h3>
+                            <p>Implementing system using tacotron 2 and wavenet for
+cloning voice unknown person using his/her voice
+samples.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2019 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Energy conservation using person detection</h3>
+                            <p>Building prototype system for reducing wastage of energy
+in school, colleges and offices by using person detection.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2018 - November 2018</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Code RTC</h3>
+                            <p>Uses angularjs as frontend and python flask as backend.
+Application helps competitive programmer to implement
+solution and store for future uses</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">January 2020 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Neural Builder</h3>
+                            <p>Graphical Neural network building website. Adding GUI
+abstraction layer to keras API to build neural networks
+interactively.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">February 2019</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
             <!-- Education-->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
@@ -93,6 +136,7 @@ title: About
                         </div>
                         <div class="flex-shrink-0"><span class="text-primary">June 2014 - May 2016</span></div>
                     </div>
+                    <br>
                     <div class="d-flex flex-column flex-md-row justify-content-between">
                         <div class="flex-grow-1">
                             <h3 class="mb-0">Maharashtra State Board</h3>
