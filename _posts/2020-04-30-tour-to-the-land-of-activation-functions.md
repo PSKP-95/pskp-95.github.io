@@ -2,7 +2,7 @@
 layout: post
 title: Tour to the land of activation functions 
 description: pros and cons of each activation function with detailed description like mathematical formulae and it's derivative
-keywords: activation functions in detail,neural network,AI,ML,machine learning,deep learning
+keywords: activation functions in detail,ReLU, Leaky ReLU, approximates identity near the origin, neural network,AI,ML,machine learning,deep learning
 author: Parikshit Patil
 thumbnail: /public/images/relu_icon.png
 ---
