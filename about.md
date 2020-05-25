@@ -1,6 +1,10 @@
 ---
 layout: page
 title: About
+description: Personla Site of Parikshit Patil (परिक्षित पाटील) AKA PSKP.
+keywords: parikshit patil, परिक्षित पाटील, PSKP, pskp-95, pskp_95
+author: Parikshit Patil
+thumbnail: https://pskp-95.github.io/public/images/icon.png
 ---
 
 
@@ -154,20 +158,21 @@ interactively.</p>
                     <h2 class="mb-5">Skills</h2>
                     <div class="subheading mb-3">Programming Languages & Tools</div>
                     <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="icon-cplusplus"></i></li>
-                        <li class="list-inline-item"><i class="icon-tensorflow"></i></li>
-                        <li class="list-inline-item"><i class="icon-python"></i></li>
-                        <li class="list-inline-item"><i class="icon-keras"></i></li>
-                        <li class="list-inline-item"><i class="icon-linux"></i></li>
-                        <li class="list-inline-item"><i class="icon-ubuntu"></i></li>
-                        <li class="list-inline-item"><i class="icon-mysql"></i></li>
-                        <li class="list-inline-item"><i class="icon-mongodb"></i></li>
-                        <li class="list-inline-item"><i class="icon-javascript"></i></li>
-                        <li class="list-inline-item"><i class="icon-html5"></i></li>
-                        <li class="list-inline-item"><i class="icon-css3"></i></li>
-                        <li class="list-inline-item"><i class="icon-flask"></i></li>
-                        <li class="list-inline-item"><i class="icon-git"></i></li>
-                        <li class="list-inline-item"><i class="icon-bootstrap"></i></li>
+                        <li title="CPP Programming Language" class="list-inline-item"><i class="icon-cplusplus"></i></li>
+                        <li title="Tensorflow" class="list-inline-item"><i class="icon-tensorflow"></i></li>
+                        <li title="Python Programming Language" class="list-inline-item"><i class="icon-python"></i></li>
+                        <li title="Keras" class="list-inline-item"><i class="icon-keras"></i></li>
+                        <li title="Linux" class="list-inline-item"><i class="icon-linux"></i></li>
+                        <li title="Ubuntu Operating System" class="list-inline-item"><i class="icon-ubuntu"></i></li>
+                        <li title="MySQL Database" class="list-inline-item"><i class="icon-mysql"></i></li>
+                        <li title="MongoDB Database" class="list-inline-item"><i class="icon-mongodb"></i></li>
+                        <li title="Javascript" class="list-inline-item"><i class="icon-javascript"></i></li>
+                        <li title="HTML 5" class="list-inline-item"><i class="icon-html5"></i></li>
+                        <li title="CSS 3" class="list-inline-item"><i class="icon-css3"></i></li>
+                        <li title="Python-Flask" class="list-inline-item"><i class="icon-flask"></i></li>
+                        <li title="Git Version Control" class="list-inline-item"><i class="icon-git"></i></li>
+                        <li title="Bootstrap" class="list-inline-item"><i class="icon-bootstrap"></i></li>
+                        <li title="Visual Studio Code" class="list-inline-item"><i class="icon-visualstudiocode"></i></li>
                     </ul>
                     <div class="subheading mb-3">Interested Fields</div>
                     <ul class="fa-ul mb-0">

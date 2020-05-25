@@ -28,7 +28,11 @@
     <meta property="og:image" content="https://pskp-95.github.io/public/images/icon.png">
     <script src="https://kit.fontawesome.com/71b3820bf4.js" crossorigin="anonymous"></script>
   {% elsif page.title == "About" %}
-    <!-- Google fonts-->
+    <meta name="description" content="{{ page.description}}">
+    <meta name="keywords" content="{{ page.keywords}}">
+    <meta name="author" content="{{ page.author}}">
+    <meta property="og:title" content="{{page.title}}">
+    <meta property="og:image" content="{{ page.thumbnail }}">
     <link rel="stylesheet" href="/public/resume/assets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
