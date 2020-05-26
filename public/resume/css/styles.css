@@ -1947,6 +1947,9 @@ pre code {
   .table-responsive-sm > .table-bordered {
     border: 0;
   }
+  #flag{
+    display: none;
+  }
 }
 @media (max-width: 767.98px) {
   .table-responsive-md {
@@ -1958,6 +1961,9 @@ pre code {
   .table-responsive-md > .table-bordered {
     border: 0;
   }
+  #flag{
+    display: none;
+  }
 }
 @media (max-width: 991.98px) {
   .table-responsive-lg {
@@ -1968,6 +1974,9 @@ pre code {
   }
   .table-responsive-lg > .table-bordered {
     border: 0;
+  }
+  #flag{
+    display: none;
   }
 }
 @media (max-width: 1199.98px) {

@@ -25,14 +25,16 @@ thumbnail: https://pskp-95.github.io/public/images/icon.png
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Achievement</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/">Blog</a></li>
                 </ul>
+                
             </div>
+            <img id="flag" style="width:100%" src="/public/Flag_of_India.svg">
         </nav>
         <!-- Page Content-->
         <div class="container-fluid p-0">
             <!-- About-->
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
-                    <h1 class="mb-0">Parikshit <span class="text-primary">Patil</span> (परिक्षित <span class="text-primary">पाटील)</span></h1>
+                    <h1 class="mb-0">Parikshit <span class="text-primary">Patil</span> (परिक्षित <span class="text-primary">पाटील) </span></h1>
                     <div class="subheading mb-5">Kavathe Ekand · Sangli, MH 416307 · (+91) 9730445916 · <a href="mailto:patil8698parikshit@gmail.com">patil8698parikshit@gmail.com</a></div>
                     <p class="lead mb-5">I am Computer Science and Engineering enthusiast working to touch the zenith of career by implementing innovative ideas into fruitful results and to work in the cutting-edge competitive industry and challenging work environment to conduce the best of my ability towards the growth and development of the society.</p>
                     <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
