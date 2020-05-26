@@ -1,7 +1,7 @@
 ---
 layout: page
 title: About
-description: Personla Site of Parikshit Patil (परिक्षित पाटील) AKA PSKP.
+description: Personal Site of Parikshit Patil (परिक्षित पाटील) AKA PSKP.
 keywords: parikshit patil, परिक्षित पाटील, PSKP, pskp-95, pskp_95
 author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/icon.png
@@ -12,7 +12,7 @@ thumbnail: https://pskp-95.github.io/public/images/icon.png
 <div id="page-top" style="width:100%">
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top"
-                ><span class="d-block d-lg-none">Parikshit Patil (परिक्षित पाटील)</span><span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/public/resume/assets/img/parikshit.png" alt="" /></span></a
+                ><span class="d-block d-lg-none">Parikshit Patil (परिक्षित पाटील) <img style="height:20px" src="/public/Flag_of_India.svg"></span><span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="/public/resume/assets/img/parikshit.png" alt="" /></span></a
             ><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav">
@@ -72,7 +72,7 @@ thumbnail: https://pskp-95.github.io/public/images/icon.png
                             <div class="subheading mb-3">Siemens Industry Software (India) Pvt Ltd</div>
                             <p>Done integration testing in Java TestNG. and also build small team site in Microsoft Sharepoint</p>
                         </div>
-                        <div class="flex-shrink-0"><span class="text-primary">June 2020 - Jully 2020</span></div>
+                        <div class="flex-shrink-0"><span class="text-primary">June 2020 - July 2020</span></div>
                     </div>
                 </div>
             </section>
@@ -196,7 +196,7 @@ interactively.</p>
             <section class="resume-section" id="interests">
                 <div class="resume-section-content">
                     <h2 class="mb-5">Interests</h2>
-                    <p>Apart from learning computer science and working in software industry, I also like to read books on History and Economics. I like to play android games and watching cartoon.</p>
+                    <p>Apart from learning computer science and working in software industry, I also like to read books on History and Economics. I like to play android games and watching cartoon.&#128580;</p>
                     <p class="mb-0">I like to write articles on machine learning, deep learning, computer vision and NLP. I also writes answers on quora and stack exchange.</p>
                 </div>
             </section>
