@@ -7,6 +7,26 @@ author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
 ---
 
+<div class="index">
+<h2>Table of Contents</h2>
+<ul id="myUL">
+  <li><a href="#initialize-variables">Initialize Variables</a></li>
+  <li><a href="#forward-pass">Forward Pass</a></li>
+  <li><a href="#backward-pass">Backward Pass</a></li>
+  <li><a href="#mnist-handwritten-digit-recognition">MNIST Handwritten Digit Recognition</a></li>
+  <ul>
+    <li><a href="#load-dataset">Load Dataset</a></li>
+    <li><a href="#initialize-weights-and-biases">Initialize Weights and Biases</a></li>
+    <li><a href="#define-sigmoid-and-derivative-of-sigmoid-function">Define Sigmoid and Derivative of Sigmoid Function</a></li>
+    <li><a href="#forward-pass">Forward Pass</a></li>
+    <li><a href="#backward-pass">Backward Pass</a></li>
+    <li><a href="#update-weights-and-biases">Update Weights and Biases</a></li>
+    <li><a href="#start-training">Start Training</a></li>
+    <li><a href="#check-some-samples">Check Some Samples</a></li>
+  </ul>
+</ul>
+</div>
+
 This will be the \\(3^{rd}\\) and last article in `neural network and deep learning` series. We will see multiclass classification in this article. Before that, check previous articles first and return to this articles. Below are the links to these previos articles.
 
 <div class="preview" onclick="location.href='/2020/04/24/neural-network-and-deep-learning/'">

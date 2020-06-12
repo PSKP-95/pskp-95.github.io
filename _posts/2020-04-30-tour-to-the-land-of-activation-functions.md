@@ -9,6 +9,23 @@ thumbnail: /public/images/relu_icon.png
 
 ![Activation Function Meme](/public/images/activation_meme.jpg)
 
+<div class="index">
+<h2>Table of Contents</h2>
+<ul id="myUL">
+  <li><a href="#characteristics">Characteristics</a></li>
+  <li><a href="#activation-functions">Activation Functions</a></li>
+  <ul>
+    <li><a href="#1-sigmoid">1. Sigmoid</a></li>
+    <li><a href="#2-hyperbolic-tangent">2. Hyperbolic Tangent</a></li>
+    <li><a href="#3-rectified-linear-unit">3. Rectified Linear Unit</a></li>
+    <li><a href="#4-leaky-rectified-linear-unit">4. Leaky Rectified Linear Unit</a></li>
+    <li><a href="#5-parameterized-rectified-linear-unit">5. Parameterized Rectified Linear Unit</a></li>
+    <li><a href="#6-softsign">6. Softsign</a></li>
+    <li><a href="#7-softplus">7. Softplus</a></li>
+  </ul>
+</ul>
+</div>
+
 If you are unfamiliar to basics of neural network and backpropagation in neural network, I recommend to check below articles. These articles increase your confidence while reading this article. You can find all mathematical basic concepts about feedforward neural network in these articles.
 
 <div class="preview">

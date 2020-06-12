@@ -7,6 +7,28 @@ author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
 ---
 
+<div class="index">
+<h2>Table of Contents</h2>
+<ul id="myUL">
+  <li><a href="#logistic-regression">Logistic Regression</a></li>
+  <ul>
+    <li><a href="#problem">Problem</a></li>
+    <li><a href="#notation">Notation</a></li>
+    <li><a href="#algorithm">Algorithm</a></li>
+    <ul>
+    <li><a href="#activation-function">Activation Function</a></li>
+    <li><a href="#training">Training</a></li>
+    <li><a href="#gradient-descent">Gradient Descent</a></li>
+  </ul>
+  </ul>
+  <li><a href="#neural-network">Neural Network</a></li>
+  <ul>
+  <li><a href="#forward-propagation">Forward Propagation</a></li>
+  <li><a href="#back-propagation">Back Propagation</a></li>
+  </ul>
+</ul>
+</div>
+
 ![Human neuron and artificial neuron](/public/images/neuron_and_neuron.png)
 
 Artificial Neural Networks are inspired by Human Neural System. In human neural system, axons of one neuron are connected with dendrites of another and they are regulating electric signal by using chemicals. This is higher level working of human neuron. number of these neurons are used for complex decision making. It's just intro &#128515;.
@@ -242,6 +264,8 @@ Still now we learned logistic regression and updating parameters in it. Logistic
 ![Neurons](/public/images/neurons.png)
 
 In above image (b), 2 inputs are given to **Hidden layer** and these all 5 neurons in hidden unit produces \\(a^{[1]}\\) which will pass to output layer. **In image, 1 circle means 1 neuron.** and (b) has 2 layers (Input is not considered as layer). **remember \\(a^{[l]}_i\\) means activations produced by \\(i^{th}\\) unit in \\(l^{th}\\) layer.**
+
+### Forward Propagation
 
 ![Neurons](/public/images/forward.png)
 

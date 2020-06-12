@@ -80,9 +80,9 @@ h1, h2, h3, h4, h5, h6 {
     max-width: 32rem;
   }
 }
-@media (min-width: 56em) {
+@media (min-width: 60em) {
   .container {
-    max-width: 38rem;
+    max-width: 42rem;
   }
 }
 
@@ -744,7 +744,7 @@ code{
     border-radius: 5px;
     cursor: pointer;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 2px #000
+    box-shadow: 0 0 2px #000;
   }
 
   .preview .left{
@@ -845,8 +845,8 @@ tr:nth-child(even) {
 
 .index{
   background-color: #EEEEEE;
-  border: 1px solid rgb(24, 23, 23);
   margin: 0 0 10px 0;
+  border-right: 10px solid rgb(39, 37, 37);
 }
 .index h2{
   margin-left: 2px;
@@ -886,4 +886,8 @@ tr:nth-child(even) {
     background: #FE7E00;
     width: 0%;
   }
+}
+
+.title-line{
+  border: 1px solid black;
 }

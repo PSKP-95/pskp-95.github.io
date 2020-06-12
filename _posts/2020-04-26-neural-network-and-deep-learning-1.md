@@ -9,6 +9,18 @@ thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
 
 ![Go Deeper](/public/images/go_deeper.jpg)
 
+<div class="index">
+<h2>Table of Contents</h2>
+<ul id="myUL">
+  <li><a href="#deep-l-layer-neural-network">Deep L-layer Neural Network</a></li>
+  <ul>
+    <li><a href="#forward-propagation">Forward Propagation</a></li>
+    <li><a href="#backward-pass">Backward Pass</a></li>
+    <li><a href="#code">Code</a></li>
+  </ul>
+</ul>
+</div>
+
 In previous article, we saw **Logistic Regression with Gradient Descent** and also started with **Shallow Neural Network**. But in real world applications shallow networks may `underfit` data. You can check this article here.
 
 <div class="preview" onclick="location.href='/2020/04/24/neural-network-and-deep-learning/'">
@@ -37,7 +49,7 @@ As shown in below image, first network (actually not network) is one neuron or l
 
 In previous article, We saw \\(n^{[l]}\\) is number of neurons in \\(l^{th}\\) layer. We will implement \\(4^{th}\\) neural network in above image in this article.
 
-## Forward Propagation
+### Forward Propagation
 
 Output from \\(l^{th}\\) layer is **sum of weighted sum of output of previous layer and bias.** We saw this in previous article. Now generalize this.
 
@@ -94,7 +106,7 @@ for layer in range(1, L+1):
 
 `cache['a' + str(L)]` will be the predicted output. still now, we completed forward pass of neural network. Now the important part i.e. backpropagation for updating learnable parameters.
 
-## Backward Pass
+### Backward Pass
 
 As we want generic backpropagation steps, we need to define some notations
 
@@ -173,6 +185,8 @@ for layer in range(1, L+1):
     parameters['W' + str(layer)] = parameters['W' + str(layer)] - alpha * cache['dW' + str(layer)]
     parameters['b' + str(layer)] = parameters['b' + str(layer)] - alpha * cache['db' + str(layer)]
 ```
+
+### Code
 
 Now lets see final code in action. Copy this code in some python file and run it. You will find that cost is decreasing as iterations increases.
 

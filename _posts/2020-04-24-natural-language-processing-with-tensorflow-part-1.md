@@ -10,6 +10,24 @@ thumbnail: https://pskp-95.github.io/public/images/thumbnail_nlp1.png
 
 This blog post is a notes on course **Natural Language Processing with Tensorflow on Coursera**.
 
+<div class="index">
+<h2>Table of Contents</h2>
+<ul id="myUL">
+  <li><a href="#preprocessing">Preprocessing</a></li>
+  <ul>
+    <li><a href="#encoding-sentences-in-tensorflow--keras">Encoding Sentences in Tensorlflow / Keras</a></li>
+    <li><a href="#creating-sequences-from-sentences">Creating Sequences from sentences</a></li>
+    <li><a href="#padding">Padding</a></li>
+  </ul>
+  <li><a href="#lets-learn-with-small-example">Lets Learn with small example</a></li>
+  <ul>
+    <li><a href="#preprocessing-as-we-done-above">Preprocessing as we done above</a></li>
+    <li><a href="#create-model-in-keras">Create Model in Keras</a></li>
+    <li><a href="#what-is-embedding">What is embedding</a></li>
+  </ul>
+</ul>
+</div>
+
 ## Preprocessing
 
 The most important part of natural language processing is embedding means **How to represent sentences?** for example below if we label every single character in word but here is problem. both words **SILENT** and **LISTEN** has same letters.
