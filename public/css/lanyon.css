@@ -733,7 +733,7 @@ code{
   flex: 3%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 60rem) {
 
   .preview {
     display: flex;
