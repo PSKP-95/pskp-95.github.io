@@ -33,7 +33,7 @@
  *
  * Update the foundational and global aspects of the page.
  */
-
+ @import url('https://fonts.googleapis.com/css2?family=Faustina&display=swap');
 /* Prevent scroll on narrow devices */
 html,
 body {
@@ -658,8 +658,8 @@ a.pagination-item:hover {
 .highlight .n {color: #000;font-weight: 300;}
 
 body {
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 18px;
+  font-family: 'Faustina';
+  font-size: 20px;
   line-height: 1.5;
   font-weight: 300;
   background-color: #ffffff;
@@ -682,6 +682,12 @@ strong {
 }
 
 code{
+  font-family: 'Faustina';
+  font-size: 20px;
+  text-decoration: none;
+}
+
+pre code{
   font-family: monospace;
   font-size: 18px;
 }
@@ -720,12 +726,12 @@ code{
   flex: 55%;
   font-size: 17px;
   overflow: hidden;
-  font-family: monospace;
+  font-family: 'Faustina';
   font-weight: bold;
 }
 .preview .left .detail{
   flex: 42%;
-  font-size: 15px;
+  font-size: 16px;
   overflow: hidden;
 }
 .preview .left .link{
