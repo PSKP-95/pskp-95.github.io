@@ -870,12 +870,14 @@ tr:nth-child(even) {
   width: 100%;
   height: 5px;
   background: rgb(255, 255, 255);
+  z-index: 5;
 }
 
 .progress-bar {
   height: 5px;
   background: #FE7E00;
   width: 0%;
+  z-index: 6;
 }
 
 @media (max-width: 500px) {
@@ -885,15 +887,56 @@ tr:nth-child(even) {
     width: 100%;
     height: 3px;
     background: rgb(255, 255, 255);
+    z-index: 5;
   }
   
   .progress-bar {
     height: 3px;
     background: #FE7E00;
     width: 0%;
+    z-index: 6;
   }
 }
 
 .title-line{
   border: 1px solid black;
+}
+
+/* Yellow highlight */
+.yehi{ 
+  background: rgba(238, 255, 0, 0.4);
+  color: #000;
+}
+
+.blhi{ 
+  background: rgba(38, 0, 255, 0.4);
+  color: #000;
+}
+
+.rehi{
+  background: rgba(255, 0, 0, 0.4);
+  color: #000;
+}
+
+.grhi{
+  background: rgba(0, 255, 13, 0.4);
+  color: #000;
+}
+
+.card{
+  margin: 5px;
+  border-radius: .4rem;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, .1);
+}
+
+.card img{
+  border-top-left-radius: .4rem;
+  border-top-right-radius: .4rem;
+  border-bottom-right-radius: 0rem;
+  border-bottom-left-radius: 0rem;
+}
+
+.card:hover{
+  transform: translateY(-.5%);
+  box-shadow: 0 4rem 8rem rgba(0, 0, 0, .2);
 }

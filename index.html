@@ -5,18 +5,20 @@ title: Home
 
 <div class="posts">
   {% for post in paginator.posts %}
-  <div class="post">
-    <span class="post-date">{{ post.date | date_to_string }}</span>
-    <h2 class="post-title">
-      <a href="{{ post.url | absolute_url }}">
-        {{ post.title }}
-      </a>
-    </h2>
+  {% if post.type == "content"%}
+    <div class="post">
+      <!-- <span class="post-date">{{ post.date | date_to_string }}</span> -->
+      <h2 class="post-title">
+        <a href="{{ post.url | absolute_url }}">
+          {{ post.title }}
+        </a>
+      </h2>
 
-    <p class="post-description">{{post.description}}</p>
+      <p class="post-description">{{post.description}}</p>
 
-  </div>
-  <hr>
+    </div>
+    <hr>
+  {% endif %}
   {% endfor %}
 </div>
 

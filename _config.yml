@@ -4,7 +4,7 @@ tagline:             ''
 description:         'Hi, myself Parikshit and Welcome to my blog. This theme made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
 url:                 https://pskp-95.github.io
 baseurl:             ''
-paginate:            10
+paginate:            1000
 permalink:           pretty
 
 # About/contact
