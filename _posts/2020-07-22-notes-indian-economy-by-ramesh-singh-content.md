@@ -19,14 +19,4 @@ thumbnail:
       </div>
     </div>
   </div>
-  <div class="col-lg-6 col-md-6">
-    <div class="card">
-      <img class="card-img-top" src="/public/images/neural-network-and-deep-learning/1.png" alt="Card image">
-      <div class="card-body">
-        <h4 class="card-title">John Doe</h4>
-        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-        <a href="#" class="btn btn-primary stretched-link">See Profile</a>
-      </div>
-    </div>
-  </div>
 </div>
