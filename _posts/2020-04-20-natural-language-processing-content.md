@@ -16,7 +16,7 @@ thumbnail: https://pskp-95.github.io/public/images/thumbnail_nlp1.png
       <div class="card-body">
         <h4 class="card-title">Natural Language Processing with Tensorflow (Part 1)</h4>
         <p class="card-text">creating a simple application for finding positive and nwgative review from IMDB dataset. Notes of Coursera course.</p>
-        <a href="/2020/07/22/indian-economy-by-ramesh-singh" class="btn btn-primary stretched-link">Go to article</a>
+        <a href="/2020/04/24/natural-language-processing-with-tensorflow-part-1" class="btn btn-primary stretched-link">Go to article</a>
       </div>
     </div>
   </div>
