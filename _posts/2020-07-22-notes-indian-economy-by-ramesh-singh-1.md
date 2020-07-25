@@ -199,3 +199,112 @@ NNP &= GNP - Depreciation  \\
 
 1. <span class="yehi">This is the ‘National Income’ (NI) of an economy.</span> Though,  the  GDP,  NDP  and GNP,  all  are  ‘national  income’  they  are not written with capitalised ‘N’ and ‘I’.
 2. When   we   divide   NNP   by   the   total population  of  a  nation  we  get  the ‘per capita  income’ (PCI)  of  that  nation,
+
+### Cost and Price of National Income
+
+#### Cost
+
+Income of an economy, i.e., value of its total produced goods and services may be calculated at either the ‘factor cost’ or the ‘market cost’.
+
+**Factor cost** is the ‘input cost’ the producer has to incur in  the  process  of  producing  something (such  as  cost  of  capital,  i.e.,  interest  on loans, raw materials, labour, rent, power, etc.). This is also termed as ‘factory price’or ‘production cost/price’.
+
+**market cost** is  derived  after  adding  the  indirect  taxes to the factor cost of the product, it means the  cost  at  which  the  goods  reach  the market,  i.e.,  showrooms  (these  are  the cenvat/central excise and the CST which are  paid  by  the  producers  to  the  central government in India).
+
+> India  officially  used  to  calculate  its national  income  at factor  cost  (though the  data  at market  cost was  also  released Since January 2015, the CSO has  switched  over  to  calculating  it  at market price (i.e., market cost).
+
+<span class="grhi">Once the GST  has  been  implemented  it  will  be easier  for  India  to  calculate  its  national income at market price.</span>
+
+#### Price
+
+Income can be derived at two prices, constant  and  current. The  difference  in the  constant  and  current  prices  is  only that  of  the impact  of  inflation.
+
+Inflation is  considered  stand  still  at  a  year  of  the past  (this  year  of  the  past  is  also  known as  the **‘base  year’**)  in  the  case  of  the **constant price**, while in the **current price**, present  day  inflation  is  added.  Current price  is,  basically,  the  maximum  retail price (MRP) which we see printed on the goods selling in the market.
+
+>As  per  the  new  guidelines  the base  year  in India has been revised from 2004–05 to 2011–12 (January 2015)
+
+<span class="yehi">India calculates its national income at constant prices</span>—so is the situation among other developing   economies,   while   the   developed nations calculate it at the current prices.
+
+Basically,  inflation  has  been  a  challenging  aspect of policymaking in India because of its level (i.e., range  in  which  it  dwindles)  and  stability  (how stable  it  has  been)
+
+- **nominal  income**: The  wage  someone  gets  in  hand  per  day  or  per month.
+- **real  income**: this  is nominal  income  minus  the  present  day  rate  of inflation—adjusted in percentage form.
+- **disposable  income**: the  net  part of  wage  one  is  free  to  use  which  is  derived  after deducting the direct taxes from the real/nominal income, depending upon the need of data.
+
+### Taxes and National Income
+
+While   accounting/calculating   national   income the  taxes,  direct  and  indirect,  collected  by  the government,  needs  to  be  considered. 
+
+- **Direct Taxes:** individual income   tax,   corporate   income   tax,   i.e.,   the corporate  tax,  divident  tax,  interest  tax,  etc.)
+
+  There is no need of adjustment whether the national income is accounted at factor cost or market cost. This is so because at both the ‘costs’ they  have  to  be  the  same.
+- **Indirect Taxes:** cenvat, customs, central sales tax, sales tax/vat, state excise, etc. 
+
+  If  the  national  income  is calculated  at  factor  cost  then  the  corpus  of  the total indirect taxes needs to be deducted from it. This  is  because,  indirect  taxes  have  been  added twice: once at the point of the people/group who pay these taxes from their disposable income while purchasing things from the market, and again at the  point  of  the  governments  (as  their  income receipts)
+
+  Collection/source  of  indirect  taxes  are the ‘disposable  income’  (which  individuals  and companies have with them after paying their direct taxes—from  which  they  do  any  purchasing  and finally, the indirect taxes reach the government)
+
+<div class="scrollable">
+<notextile>
+\[
+National \quad Income\quad at\quad Factor\quad Cost= NNP \quad at \quad Market \quad price - Indirect \quad taxes
+\]
+</notextile>
+</div>
+
+### Subsidies and National Income
+
+Subsidies which are forwarded by the governments need to be  adjusted  while  calculating  national  income. They are added to the national income at market cost,  in  the  case  of  India. 
+
+<div class="scrollable">
+<notextile>
+\[
+National \quad Income\quad at\quad Factor\quad Cost= NNP \quad at \quad Market \quad price - Subsidies
+\]
+</notextile>
+</div>
+
+<span class="yehi">If the national income is derived at the market cost and governments forward no subsidies there is  no  need  of  adjustments  for  the  subsidies</span>  but after all there is not a single economy in the world today which does not forward subsidies in one or the other form.
+
+<div class="scrollable">
+<notextile>
+\[
+National \quad Income\quad at\quad Factor\quad Cost= NNP \quad at \quad Market \quad price - Indirect \quad taxes + Subsidies
+\]
+</notextile>
+</div>
+
+## Revision in the base year and method of National Income Accounting
+
+The  Central  Statistics  Office  (CSO),  in  January 2015,  released  the new  and revised  data  of National Accounts, effecting two changes:
+
+1. <span class="yehi">The Base Year was revised from 2004–05 to 2011–12.</span> This was done in accordance with the recommendation of the National Statistical   Commission   (NSC),   which had advised to revise the base year of all economic indices every five years.
+2. This time, <span class="yehi">the methodology of calculating the  National  Accounts  has  also  been revised</span>  in  line  with  the  requirements of   the   System   of   National   Accounts (SNA)-2008, an internationally accepted standard.
+
+### Changes in Methodology of calculating the National Accounts
+
+1. Headline   growth   rate   will   now   be measured by <span class="yehi">GDP at constant market prices,</span> which  will  henceforth  be  referred  to  as ‘GDP’. Earlier, growth was measured in terms of growth  rate  in GDP  at  factor  cost  and  at constant prices.
+2. Sector-wise   estimates   of   **Gross   Value Added  (GVA)**  will  now  be  given  at  basic  prices16 instead  of  factor  cost.
+
+    The relationship between GVA at factor cost, GVA at basic prices, and GDP (at market prices) is given below:
+
+    **GVA  at  basic  prices**  =  CE  +  OS/MI  + CFC + production taxes less production subsidies.   
+
+    **GVA  at  factor  cost**  =  GVA  at  basic prices – production taxes less production subsidies.   
+
+    **GDP**  =  GVA  at  basic  prices  +  product taxes – product subsidies.
+
+    Where,
+    - **CE** : compensation of employees; 
+    - **OS**:    operating    surplus; 
+    - **MI**:    mixed income; 
+    - **CFC**: consumption of fixed capital  (i.e.,  depriciation)
+    - **Production taxes**:  land revenues, stamps and registration fees and tax on profession.
+    - **production subsidies** are subsidies to  Railways,  input  subsidies  to  farmers, subsidies  to  village  and  small  industries, administrative  subsidies  to  corporations or  cooperatives,  etc.
+      >**Production taxes  or production  subsidies**  are  paid or  received  with  relation  to  production and  are  independent  of  the  volume  of actual   production. 
+    - **Product  taxes**: excise  tax,  sales  tax,  service  tax and  import  and  export  duties.
+    - **Product subsidies**: include  food,  petroleum  and fertilizer subsidies, interest subsidiesgiven to   farmers,   households,   etc.,through banks,    and    subsidies    for    providing insurance to households at lower rates.
+      >**Product  taxes  or subsidies** are paid or received on per unit of the product. 
+    
+3. Comprehensive coverage of the <span class="yehi">corporate sector both in manufacturing and services by  incorporation  of  annual  accounts  of companies  as filed  with  the  Ministry  of Corporate  Affairs  (MCA)  under  their e-governance   initiative,   MCA21</span>.   Use of  MCA21  database  for  manufacturing companies   has   helped   in   accounting for  activities  other  than  manufacturing undertaken by these companies.
+4. Comprehensive coverage of the financial sector  by  inclusion  of  <span class="yehi">information  from the   accounts   of   stock   brokers,   stock exchanges, asset management companies, mutual  funds  and  pension  funds,  and the   regulatory   bodies   including   the Securities  and  Exchange  Board  of  India (SEBI),  Pension  Fund  Regulatory  and Development  Authority  (PFRDA)  and Insurance  Regulatory  and  Development Authority (IRDA).</span>
+5. Improved  coverage  of  activities  of <span class="yehi">local bodies    and autonomous    institutions, covering around 60 per cent of the grants/transfers provided to these institutions.</span>
