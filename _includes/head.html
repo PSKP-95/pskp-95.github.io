@@ -46,7 +46,7 @@
     <meta name="keywords" content="{{ page.keywords}}">
     <meta name="author" content="{{ page.author}}">
     <meta property="og:title" content="{{page.title}}">
-    {% if page.thumbnail == "" %}
+    {% if page.thumbnail == "none" %}
     <meta property="og:image" content="https://github.com/PSKP-95.png">
     {% else %}
     <meta property="og:image" content="{{ page.thumbnail }}">
