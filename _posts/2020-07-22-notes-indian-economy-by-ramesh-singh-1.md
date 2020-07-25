@@ -4,7 +4,7 @@ title: Notes - Indian Economy (Chapter 1 - Introduction)
 description: Notes of Book Indian Economy authored by Ramesh Singh
 keywords: economy, india, indian economy
 author: Parikshit Patil
-thumbnail: 
+thumbnail: /public/images/indian-economy/economy.jpg
 ---
 
 ## Economics: The Discipline
