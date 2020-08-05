@@ -939,3 +939,14 @@ tr:nth-child(even) {
   transform: translateY(-.5%);
   box-shadow: 0 4rem 8rem rgba(0, 0, 0, .2);
 }
+
+/* Small font for small screens */
+
+@media (max-width: 60rem){
+  body{
+    font-size: 16px;
+  }
+  code, pre code, pre{
+    font-size: 16px;
+  }
+}
