@@ -4,8 +4,55 @@ title: Notes - Indian Economy (Chapter 1 - Introduction)
 description: Notes of Book Indian Economy authored by Ramesh Singh
 keywords: economy, india, indian economy
 author: Parikshit Patil
-thumbnail: /public/images/indian-economy/economy.jpg
+thumbnail: https://pskp-95.github.io/public/images/indian-economy/economy.jpg
 ---
+
+<div class="index">
+<h2>Table of Contents</h2>
+<ul id="myUL">
+  <li><a href="#economics-the-discipline">Economics: The Discipline</a></li>
+  <ul>
+    <li><a href="#a-working-definition">A Working Definition</a></li>
+    <li><a href="#economics-and-economy">Economics and Economy</a></li>
+    <li><a href="#distribution-network-models">Distribution Network Models</a></li>
+  </ul>
+  <li><a href="#organising-an-economy">Organising an Economy</a></li>
+  <ul>
+    <li><a href="#types-of-economy">Types of Economy</a></li>
+  </ul>
+
+  <li><a href="#role-of-the-state-in-a-economy">Role of the State in a Economy</a></li>
+
+  <li><a href="#washington-consensus">Washington Consensus</a></li>
+  <ul>
+    <li><a href="#ten-propositions-in-washington-consensus">Ten propositions in Washington Consensus</a></li>
+  </ul>
+
+  <li><a href="#sectors-of-an-economy">Sectors of an Economy</a></li>
+
+  <li><a href="#types-of-economies">Types of Economies</a></li>
+
+  <li><a href="#idea-of-national-income">Idea of National Income</a></li>
+  <ul>
+    <li><a href="#gdp">GDP</a></li>
+    <li><a href="#ndp">NDP</a></li>
+    <li><a href="#gnp">GNP</a></li>
+    <li><a href="#nnp">NNP</a></li>
+    <li><a href="#cost-and-price-of-national-income">Cost and Price of National Income</a></li>
+    <ul>
+      <li><a href="#cost">Cost</a></li>
+      <li><a href="#price">Price</a></li>
+    </ul>
+    <li><a href="#taxes-and-national-income">Taxes and National Income</a></li>
+    <li><a href="#subsidies-and-national-income">Subsidies and National Income</a></li>
+  </ul>
+
+  <li><a href="#revision-in-the-base-year-and-method-of-national-income-accounting">Revision in the base year and method of National Income Accounting</a></li>
+  <ul>
+    <li><a href="#changes-in-methodology-of-calculating-the-national-accounts">Changes in Methodology of calculating the National Accounts</a></li>
+  </ul>
+</ul>
+</div>
 
 ## Economics: The Discipline
 
@@ -31,14 +78,18 @@ The level and quality of natural resources, the quantity and quality of human re
 
 ### Distribution Network Models
 
+![Distribution Network Models](/public/images/indian-economy/distribution-network-models.png)
+
 We have 3 types of models
 - **State**: In the first type of distribution system, the state (i.e., the government) takes the sole responsibility of supplying goods and services required by the population with no payments being done by the consumer—the former Soviet Union and Communist China being the best examples. 
-- **Market**: n this system, goods and services are made available in the market and on the basis of their demand and supply, their prices are determined in the open market and finally they get distributed to the population.
+- **Market**: In this system, goods and services are made available in the market and on the basis of their demand and supply, their prices are determined in the open market and finally they get distributed to the population.
 - **State-market mix**: This distribution system has certain goods and services which might be made available to the population freely or at the subsidised prices by the state and some might be supplied by the market for which consumers need to pay.
 
 ## Organising an Economy
 
-Types of Economy
+### Types of Economy
+
+![Types of Economy](/public/images/indian-economy/types-of-economy.png)
 
 - **Capitalistic Economy:** The decisions of what to produce, how much to produce and at what price to sell are taken by the market, by the private enterprises in this system, with the state having no economic role.
 - **State Economy:** socialistic economy emphasised collective ownership of the means of production (property and assets), it also ascribed a large role to the state in running the economy, while communist economy, on the other hand, advocated state ownership of all properties including labour with absolute power to state in running the economy. <span class="yehi">Here we see two versions of the state economy—in erstwhile USSR known as the socialist economy and in pre-1985 China as the communist economy.</span>
@@ -243,35 +294,17 @@ While   accounting/calculating   national   income the  taxes,  direct  and  ind
 
   Collection/source  of  indirect  taxes  are the ‘disposable  income’  (which  individuals  and companies have with them after paying their direct taxes—from  which  they  do  any  purchasing  and finally, the indirect taxes reach the government)
 
-<div class="scrollable">
-<notextile>
-\[
-National \quad Income\quad at\quad Factor\quad Cost= NNP \quad at \quad Market \quad price - Indirect \quad taxes
-\]
-</notextile>
-</div>
+<div class="text-formula" style="">National Income at Factor Cost = NNP at Market price - Indirect taxes</div>
 
 ### Subsidies and National Income
 
 Subsidies which are forwarded by the governments need to be  adjusted  while  calculating  national  income. They are added to the national income at market cost,  in  the  case  of  India. 
 
-<div class="scrollable">
-<notextile>
-\[
-National \quad Income\quad at\quad Factor\quad Cost= NNP \quad at \quad Market \quad price - Subsidies
-\]
-</notextile>
-</div>
+<div class="text-formula" style="">National Income at Factor Cost = NNP at Market price - Subsidies</div>
 
 <span class="yehi">If the national income is derived at the market cost and governments forward no subsidies there is  no  need  of  adjustments  for  the  subsidies</span>  but after all there is not a single economy in the world today which does not forward subsidies in one or the other form.
 
-<div class="scrollable">
-<notextile>
-\[
-National \quad Income\quad at\quad Factor\quad Cost= NNP \quad at \quad Market \quad price - Indirect \quad taxes + Subsidies
-\]
-</notextile>
-</div>
+<div class="text-formula" style="">National Income at Factor Cost = NNP at Market price - Indirect taxes + Subsidies</div>
 
 ## Revision in the base year and method of National Income Accounting
 

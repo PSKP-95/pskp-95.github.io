@@ -950,3 +950,22 @@ tr:nth-child(even) {
     font-size: 16px;
   }
 }
+
+p img{
+  border: 1px solid black;
+}
+
+p img:hover{
+  transform: translateY(-.5%);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+}
+
+.text-formula{
+  background-color:#6c7df0;
+  margin-bottom: 5px;
+  color:white;
+  width:100%;
+  text-align:center;
+  border:1px solid black;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
+}
