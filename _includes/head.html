@@ -37,8 +37,8 @@
     <meta name="author" content="{{ page.author}}">
     <meta property="og:title" content="{{page.title}}">
     <meta property="og:image" content="{{ page.thumbnail }}">
-    <meta property="twitter:title" content="{{page.title}}">
-    <meta property="twitter:image" content="{{ page.thumbnail }}">
+    <meta name="twitter:title" content="{{page.title}}">
+    <meta name="twitter:image" content="{{ page.thumbnail }}">
     <link rel="stylesheet" href="/public/resume/assets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
@@ -49,13 +49,13 @@
     <meta name="keywords" content="{{ page.keywords}}">
     <meta name="author" content="{{ page.author}}">
     <meta property="og:title" content="{{page.title}}">
-    <meta property="twitter:title" content="{{page.title}}">
+    <meta name="twitter:title" content="{{page.title}}">
     {% if page.thumbnail == "none" %}
     <meta property="og:image" content="https://github.com/PSKP-95.png">
-    <meta property="twitter:image" content="https://github.com/PSKP-95.png">
+    <meta name="twitter:image" content="https://github.com/PSKP-95.png">
     {% else %}
     <meta property="og:image" content="{{ page.thumbnail }}">
-    <meta property="twitter:image" content="{{ page.thumbnail }}">
+    <meta name="twitter:image" content="{{ page.thumbnail }}">
     {% endif %}
     <script src="https://kit.fontawesome.com/71b3820bf4.js" crossorigin="anonymous"></script>
   {% endif %}
