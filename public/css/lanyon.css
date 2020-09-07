@@ -913,13 +913,13 @@ tr:nth-child(even) {
 }
 
 .rehi{
-  background: rgba(255, 0, 0, 0.4);
-  color: #000;
+  /* background: rgba(255, 87, 87, 0.4); */
+  color: red;
 }
 
 .grhi{
-  background: rgba(0, 255, 13, 0.4);
-  color: #000;
+  /* background: rgba(0, 255, 13, 0.4); */
+  color: green;
 }
 
 .card{
@@ -944,7 +944,9 @@ tr:nth-child(even) {
 
 @media (max-width: 60rem){
   body{
-    font-size: 16px;
+    @import url('https://fonts.googleapis.com/css2?family=Faustina&display=swap');
+    font-size: 18px;
+    font-family: 'Faustina', serif;
   }
   code, pre code, pre{
     font-size: 16px;
@@ -968,4 +970,9 @@ p img:hover{
   text-align:center;
   border:1px solid black;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .2);
+}
+
+video{
+  width: 100%;
+  border: 1px solid black;
 }
