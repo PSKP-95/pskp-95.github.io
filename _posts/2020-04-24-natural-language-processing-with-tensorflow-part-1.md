@@ -6,6 +6,7 @@ description: creating a simple application for finding positive and nwgative rev
 keywords: IMDB, Coursera, NLP, embedding, review, AI, ML, machine learning, deep learning
 author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/thumbnail_nlp1.png
+views: 43
 ---
 
 This blog post is a notes on course **Natural Language Processing with Tensorflow on Coursera**.
@@ -76,9 +77,9 @@ As you can see,
 
 ### Creating Sequences from sentences
 
-Now we need sequence of codes for each sentence so that we can pass these sequences to **neural Network**. 
+Now we need sequence of codes for each sentence so that we can pass these sequences to **neural Network**.
 
-We already created **Tokenizer** instance and passed our sentences to its method **tokenizer.fit_on_texts(sentences)**. 
+We already created **Tokenizer** instance and passed our sentences to its method **tokenizer.fit_on_texts(sentences)**.
 
 ```python
 # Let's append new sentence to `sentences`
@@ -161,11 +162,11 @@ testing_labels = []
 for sentence, label in train_data:
     training_sentences.append(str(sentence.numpy()))
     training_labels.append(label.numpy())
-    
+
 for sentence, label in test_data:
     testing_sentences.append(str(sentence.numpy()))
     testing_labels.append(label.numpy())
-   
+
 print("Number of training samples: " + str(len(training_sentences)))
 print("Number of testing samples: " + str(len(testing_sentences)))
 ```
@@ -261,17 +262,17 @@ print(model.summary())
 **output**
 
 <div><pre style="background-color:black;color:white;padding-left:10px">
-Model: "sequential" 
+Model: "sequential"
 _________________________________________________________________
-Layer (type)                 Output Shape              Param #   
+Layer (type)                 Output Shape              Param #
 =================================================================
-embedding (Embedding)        (None, 120, 16)           1600000   
+embedding (Embedding)        (None, 120, 16)           1600000
 _________________________________________________________________
-flatten (Flatten)            (None, 1920)              0         
+flatten (Flatten)            (None, 1920)              0
 _________________________________________________________________
-dense (Dense)                (None, 6)                 11526     
+dense (Dense)                (None, 6)                 11526
 _________________________________________________________________
-dense_1 (Dense)              (None, 1)                 7         
+dense_1 (Dense)              (None, 1)                 7
 =================================================================
 Total params: 1,611,533<
 Trainable params: 1,611,533
@@ -289,7 +290,7 @@ model.compile(optimizer='rmsprop',
 
 num_epochs = 10
 
-history = model.fit(training_padded, 
+history = model.fit(training_padded,
          training_labels_final,
          epochs=num_epochs,
          validation_data=(testing_padded, testing_labels_final))
@@ -302,7 +303,7 @@ history = model.fit(training_padded,
 Epoch 1/10
 782/782 [==============================] - 8s 10ms/step - loss: 0.5179 - accuracy: 0.7336 - val_loss: 0.3833 - val_accuracy: 0.8250
 Epoch 2/10
-782/782 [==============================] - 8s 10ms/step - loss: 0.2824 - accuracy: 0.8834 - 
+782/782 [==============================] - 8s 10ms/step - loss: 0.2824 - accuracy: 0.8834 -
 ...
 Epoch 10/10
 782/782 [==============================] - 8s 10ms/step - loss: 2.0107e-04 - accuracy: 0.9999 - val_loss: 1.3380 - val_accuracy: 0.7828
@@ -343,7 +344,7 @@ plt.show()
 
 We will learn about embedding in detail here, until now let's visualise embedding in  **Tensorflow embedding projector**
 
-Find reverse map **index &rarr; Word** 
+Find reverse map **index &rarr; Word**
 
 ```python
 # Reverse map from index to word
@@ -377,7 +378,7 @@ for word_num in range(1, vocab_size):
     embeddings = weights[word_num]
     out_m.write(word + '\n')
     out_v.write('\t'.join([str(x) for x in embeddings]) + '\n')
-   
+
 out_v.close()
 out_m.close()
 ```

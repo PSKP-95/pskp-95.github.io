@@ -5,6 +5,7 @@ description: Basics of feedforward neural networks with logistic regression. not
 keywords: neural network in detail,logistic regression,AI,ML,machine learning,deep learning,andrew ng,deeplearning.ai
 author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
+views: 50
 ---
 
 <div class="index">

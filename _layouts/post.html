@@ -8,6 +8,8 @@ layout: default
   {% if page.type != "content" %}
   <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i>
 {{ page.date | date_to_string }}</span>
+  <span class="float-right"><i class="fa fa-eye" aria-hidden="true"></i>{{ page.views }}
+  </span>
   {% endif %}
   {{ content }}
 </div>

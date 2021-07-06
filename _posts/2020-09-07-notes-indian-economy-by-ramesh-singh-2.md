@@ -5,6 +5,7 @@ description: Notes of Book Indian Economy authored by Ramesh Singh
 keywords: economy, india, indian economy, happiness, gross national happiness, gnh
 author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/indian-economy/economy.jpg
+views: 896
 ---
 
 <div class="index">
@@ -156,7 +157,7 @@ Social scientists, somehow have been using terms such as progress, growth, devel
 
 **Gross National Happiness**
 
-Bhutan has been following the GNH since 1972 which has the following parameters to attain happiness/ development: 
+Bhutan has been following the GNH since 1972 which has the following parameters to attain happiness/ development:
 
 1. Higher real per capita income
 2. Good governance
@@ -171,11 +172,11 @@ happiness devoid of some ethics at its base. And ethics are rooted in the religi
 
 **Sustainable Development Solution Network** (a UN body) publishes World Happiness report which measures happiness and well-being of the nations to help guide public policy on the basis of the following six parameters:
 
-1. GDP per capita (at PPP) 
-2. Social support (someone to count on) 
-3. Healthy life expectancy at birth 
-4. Freedom to make life choices 
-5. Generosity 
+1. GDP per capita (at PPP)
+2. Social support (someone to count on)
+3. Healthy life expectancy at birth
+4. Freedom to make life choices
+5. Generosity
 6. Perception of corruption
 
 **Major highlights of the WHR 2018 are as given below:**
@@ -187,11 +188,11 @@ happiness devoid of some ethics at its base. And ethics are rooted in the religi
 inter-related epidemic diseases—obesity, substance abuse (especially opioid addiction) and depression.
 - The greatest human migration in history—the hundreds of millions of people who have moved from the Chinese countryside into cities—has not advanced happiness at all.
 
-### The Meaning of Happiness 
+### The Meaning of Happiness
 
 Happiness is an aspiration of every human being, and can also be a measure of social progress. Yet,
 
-happiness is used in at least two ways : 
+happiness is used in at least two ways :
 1. As an emotion [‘Were you happy yesterday?’], and
 2. As an evaluation [‘Are you happy with your life as a whole?’].
 
@@ -238,17 +239,17 @@ To understand the ‘shift’ which is expected to take place among policymakers
 
 Yet most people probably believe that <span class="rehi">happiness is in the eye of the beholder, an individual’s choice, something to be pursued individually rather than as a matter of national policy.</span> Happiness seems far too subjective, too vague, to serve as a touchstone for a nation’s goals, much less its policy content. That indeed has been the traditional view.
 
-The WHR 2012 summarises the fascinating and emerging story of these studies on two broad measurements of happiness: 
-1. the ups and downs of daily emotions and 
-2. an individual’s overall evaluation of life 
+The WHR 2012 summarises the fascinating and emerging story of these studies on two broad measurements of happiness:
+1. the ups and downs of daily emotions and
+2. an individual’s overall evaluation of life
 
 The former is sometimes called ‘**affective happiness**,’ and the latter ‘**evaluative happiness**’.
 
 >**Affective happiness** captures the day-to-day joy of friendship, time with family and sex, or the downsides of long work commutes and sessions with one’s boss. **Evaluative happiness** measures very different dimensions of life, those that lead to overall satisfaction or frustration with one’s place in society.
 
 A household’s income counts for life satisfaction,but only in a limited way—other things matter more:
-1. community trust, 
-2. mental and physical health, and 
+1. community trust,
+2. mental and physical health, and
 3. the quality of governance and rule of law.
 
 <span class="rehi">‘<b>happiness traps</b>’ such as in the USA in recent decades, where GNP may rise relentlessly while life satisfaction stagnates or even declines.</span>

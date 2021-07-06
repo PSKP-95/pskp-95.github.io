@@ -4,7 +4,8 @@ title: Notes - Guide to Competitive Programming (Chapter 1 - Introduction)
 description: Notes of Book Guide to Competitive Programming authored by Antti Laaksonen
 keywords: competitive programming, antti laaksonen
 author: Parikshit Patil
-thumbnail: 
+thumbnail:
+views: 12
 ---
 
 Competitive programming combines two topics:
@@ -52,7 +53,7 @@ Print a line that contains all values of \\(n\\) during the algorithm.
 
 ```cpp
 #include<iostream>
-using namespacestd;
+using namespace std;
 int main() {
     long long n;
     cin >> n;
@@ -60,7 +61,7 @@ int main() {
         cout << n << " ";
         if(n == 1)
             break;
-        if(n%2 == 0) 
+        if(n%2 == 0)
             n /= 2;
         else
             n = n*3+1;

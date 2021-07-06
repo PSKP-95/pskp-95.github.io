@@ -5,6 +5,7 @@ description: Notes of Book Indian Economy authored by Ramesh Singh
 keywords: economy, india, indian economy
 author: Parikshit Patil
 thumbnail: https://pskp-95.github.io/public/images/indian-economy/economy.jpg
+views: 241
 ---
 
 <div class="index">
@@ -72,7 +73,7 @@ The activities which involve profit, loss, livelihood, occupation, wage, employm
 
 Economics will come out with theories of market, employment, etc., and an economy is the real picture of the things which emerges after the application of those theories.
 
-many countries selecting the same remedy and tools to fight the same problems might have similar or dissimilar results during a given period. At the same time, two economies selecting different tools to solve the same economic problems might experience the same results or completely different results. 
+many countries selecting the same remedy and tools to fight the same problems might have similar or dissimilar results during a given period. At the same time, two economies selecting different tools to solve the same economic problems might experience the same results or completely different results.
 
 The level and quality of natural resources, the quantity and quality of human resources, the socio-political milieu, the historical background, the psychic make of the human resource, etc., are some of the factors which individually as well as collectively impact an economy while carrying out economic activities
 
@@ -81,7 +82,7 @@ The level and quality of natural resources, the quantity and quality of human re
 ![Distribution Network Models](/public/images/indian-economy/distribution-network-models.png)
 
 We have 3 types of models
-- **State**: In the first type of distribution system, the state (i.e., the government) takes the sole responsibility of supplying goods and services required by the population with no payments being done by the consumer—the former Soviet Union and Communist China being the best examples. 
+- **State**: In the first type of distribution system, the state (i.e., the government) takes the sole responsibility of supplying goods and services required by the population with no payments being done by the consumer—the former Soviet Union and Communist China being the best examples.
 - **Market**: In this system, goods and services are made available in the market and on the basis of their demand and supply, their prices are determined in the open market and finally they get distributed to the population.
 - **State-market mix**: This distribution system has certain goods and services which might be made available to the population freely or at the subsidised prices by the state and some might be supplied by the market for which consumers need to pay.
 
@@ -114,7 +115,7 @@ Possible roles for the state/government in an economy:
 2. <span class="yehi">As a producer and/or supplier of ‘private goods and services’ </span>(these include all those goods and services which constitute the part of market and which will be distributed among the needy according to the principles of market mechanism. Here the state earns profit as a private enterprise).
 3. <span class="yehi">As a producer and/or supplier of ‘public goods’ or ‘social goods’</span> (these include goods and services which look essential from the perspective of social justice and well-being for the people. like ducation, healthcare, sanitation, drinking water, nutrition, caring for the differently abled and old, etc.)
 
-The economy which selected both the roles (2 and 3) for the state under monopoly we called them the state. <span class="blhi">socialist economy at least the labour was not owned and exploited by the state unlike the other—the communist economy where labour used to be under complete state control.</span> 
+The economy which selected both the roles (2 and 3) for the state under monopoly we called them the state. <span class="blhi">socialist economy at least the labour was not owned and exploited by the state unlike the other—the communist economy where labour used to be under complete state control.</span>
 
 The economic system which left both the roles (2 and 3) as the sole responsibilities of the private sector was called the capitalistic economic system.
 
@@ -166,7 +167,7 @@ The term **‘Washington Consensus’** was coined by the  US  economist  *John 
 
 >Income  level  is  the  most  commonly  used  tool to  determine  the  well-being  and  happiness  of nations and their citizens.
 
-Education  and life  expectancy  can  only  be  enhanced  once  the required  amount  of  ‘investment’  (expenditure on  them)  could  be  mobilised. 
+Education  and life  expectancy  can  only  be  enhanced  once  the required  amount  of  ‘investment’  (expenditure on  them)  could  be  mobilised.
 
 ### GDP
 
@@ -184,7 +185,7 @@ It is also calculated by adding <span class="yehi">national private consumption,
 
 ### NDP
 
-<span class="yehi">Net   Domestic   Product   (NDP)   is   the   GDP calculated after adjusting the weight of the value of  ‘depreciation’.</span> GDP minus the total value of the ‘wear  and  tear’  (depreciation)  that  happened  in the assets while the goods and services were being produced. 
+<span class="yehi">Net   Domestic   Product   (NDP)   is   the   GDP calculated after adjusting the weight of the value of  ‘depreciation’.</span> GDP minus the total value of the ‘wear  and  tear’  (depreciation)  that  happened  in the assets while the goods and services were being produced.
 
 <span class="yehi">The  governments  of the  economies  decide  and  announce  the  rates by  which  assets  depreciate</span>  (done  in  India  by  the Ministry  of  Commerce  and  Industry)  and  a  list is  published,  which  is  used  by  different  sections of  the  economy  to  determine  the  real  levels  of depreciations  in  different  assets.
 
@@ -283,12 +284,12 @@ Basically,  inflation  has  been  a  challenging  aspect of policymaking in Indi
 
 ### Taxes and National Income
 
-While   accounting/calculating   national   income the  taxes,  direct  and  indirect,  collected  by  the government,  needs  to  be  considered. 
+While   accounting/calculating   national   income the  taxes,  direct  and  indirect,  collected  by  the government,  needs  to  be  considered.
 
 - **Direct Taxes:** individual income   tax,   corporate   income   tax,   i.e.,   the corporate  tax,  divident  tax,  interest  tax,  etc.)
 
   There is no need of adjustment whether the national income is accounted at factor cost or market cost. This is so because at both the ‘costs’ they  have  to  be  the  same.
-- **Indirect Taxes:** cenvat, customs, central sales tax, sales tax/vat, state excise, etc. 
+- **Indirect Taxes:** cenvat, customs, central sales tax, sales tax/vat, state excise, etc.
 
   If  the  national  income  is calculated  at  factor  cost  then  the  corpus  of  the total indirect taxes needs to be deducted from it. This  is  because,  indirect  taxes  have  been  added twice: once at the point of the people/group who pay these taxes from their disposable income while purchasing things from the market, and again at the  point  of  the  governments  (as  their  income receipts)
 
@@ -298,7 +299,7 @@ While   accounting/calculating   national   income the  taxes,  direct  and  ind
 
 ### Subsidies and National Income
 
-Subsidies which are forwarded by the governments need to be  adjusted  while  calculating  national  income. They are added to the national income at market cost,  in  the  case  of  India. 
+Subsidies which are forwarded by the governments need to be  adjusted  while  calculating  national  income. They are added to the national income at market cost,  in  the  case  of  India.
 
 <div class="text-formula" style="">National Income at Factor Cost = NNP at Market price - Subsidies</div>
 
@@ -320,24 +321,24 @@ The  Central  Statistics  Office  (CSO),  in  January 2015,  released  the new  
 
     The relationship between GVA at factor cost, GVA at basic prices, and GDP (at market prices) is given below:
 
-    **GVA  at  basic  prices**  =  CE  +  OS/MI  + CFC + production taxes less production subsidies.   
+    **GVA  at  basic  prices**  =  CE  +  OS/MI  + CFC + production taxes less production subsidies.
 
-    **GVA  at  factor  cost**  =  GVA  at  basic prices – production taxes less production subsidies.   
+    **GVA  at  factor  cost**  =  GVA  at  basic prices – production taxes less production subsidies.
 
     **GDP**  =  GVA  at  basic  prices  +  product taxes – product subsidies.
 
     Where,
-    - **CE** : compensation of employees; 
-    - **OS**:    operating    surplus; 
-    - **MI**:    mixed income; 
+    - **CE** : compensation of employees;
+    - **OS**:    operating    surplus;
+    - **MI**:    mixed income;
     - **CFC**: consumption of fixed capital  (i.e.,  depriciation)
     - **Production taxes**:  land revenues, stamps and registration fees and tax on profession.
     - **production subsidies** are subsidies to  Railways,  input  subsidies  to  farmers, subsidies  to  village  and  small  industries, administrative  subsidies  to  corporations or  cooperatives,  etc.
-      >**Production taxes  or production  subsidies**  are  paid or  received  with  relation  to  production and  are  independent  of  the  volume  of actual   production. 
+      >**Production taxes  or production  subsidies**  are  paid or  received  with  relation  to  production and  are  independent  of  the  volume  of actual   production.
     - **Product  taxes**: excise  tax,  sales  tax,  service  tax and  import  and  export  duties.
     - **Product subsidies**: include  food,  petroleum  and fertilizer subsidies, interest subsidiesgiven to   farmers,   households,   etc.,through banks,    and    subsidies    for    providing insurance to households at lower rates.
-      >**Product  taxes  or subsidies** are paid or received on per unit of the product. 
-    
+      >**Product  taxes  or subsidies** are paid or received on per unit of the product.
+
 3. Comprehensive coverage of the <span class="yehi">corporate sector both in manufacturing and services by  incorporation  of  annual  accounts  of companies  as filed  with  the  Ministry  of Corporate  Affairs  (MCA)  under  their e-governance   initiative,   MCA21</span>.   Use of  MCA21  database  for  manufacturing companies   has   helped   in   accounting for  activities  other  than  manufacturing undertaken by these companies.
 4. Comprehensive coverage of the financial sector  by  inclusion  of  <span class="yehi">information  from the   accounts   of   stock   brokers,   stock exchanges, asset management companies, mutual  funds  and  pension  funds,  and the   regulatory   bodies   including   the Securities  and  Exchange  Board  of  India (SEBI),  Pension  Fund  Regulatory  and Development  Authority  (PFRDA)  and Insurance  Regulatory  and  Development Authority (IRDA).</span>
 5. Improved  coverage  of  activities  of <span class="yehi">local bodies    and autonomous    institutions, covering around 60 per cent of the grants/transfers provided to these institutions.</span>
