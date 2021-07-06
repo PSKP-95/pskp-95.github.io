@@ -6,9 +6,9 @@ layout: default
   <h1 class="post-title">{{ page.title }}</h1>
   <hr class="title-line">
   {% if page.type != "content" %}
-  <span style="float:left" class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i>
+  <span class="post-date"><i class="fa fa-calendar" aria-hidden="true"></i>
 {{ page.date | date_to_string }}</span>
-  <span style="float:right"><i class="fa fa-eye" aria-hidden="true"></i> {{ page.views }}
+  <span class="post-date"><i class="fa fa-eye" aria-hidden="true"></i> {{ page.views }}
   </span>
   {% endif %}
   <br>
