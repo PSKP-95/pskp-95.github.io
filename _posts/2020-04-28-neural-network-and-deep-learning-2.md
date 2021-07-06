@@ -29,7 +29,7 @@ thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
 
 This will be the \\(3^{rd}\\) and last article in `neural network and deep learning` series. We will see multiclass classification in this article. Before that, check previous articles first and return to this articles. Below are the links to these previos articles.
 
-<div class="preview" onclick="location.href='/2020/04/24/neural-network-and-deep-learning/'">
+<div class="preview shadow p-3 mb-5 bg-white rounded" onclick="location.href='/2020/04/24/neural-network-and-deep-learning/'">
     <div class="left">
       <div class="head">
         <h2>Neural Network and Deep Learning (Part 1)</h2>
@@ -46,7 +46,7 @@ This will be the \\(3^{rd}\\) and last article in `neural network and deep learn
       <img align='right' src="/public/images/course1_dl.png" alt="">
     </div>
 </div>
-<div class="preview" onclick="location.href='/2020/04/26/neural-network-and-deep-learning-1/'">
+<div class="preview shadow p-3 mb-5 bg-white rounded" onclick="location.href='/2020/04/26/neural-network-and-deep-learning-1/'">
     <div class="left">
       <div class="head">
         <h2>Neural Network and Deep Learning (Part 2)</h2>
@@ -84,25 +84,25 @@ Lets revise some terminologies. \\(m\\) will be number of samples in dataset and
 1 \\
 0 \\
 0 \\
-0       
-\end{bmatrix}, 
+0
+\end{bmatrix},
 \begin{bmatrix}
 0 \\
 1 \\
 0 \\
-0       
+0
 \end{bmatrix},
 \begin{bmatrix}
 0 \\
 0 \\
 1 \\
-0       
+0
 \end{bmatrix},
 \begin{bmatrix}
 0 \\
 0 \\
 0 \\
-1       
+1
 \end{bmatrix}
 \]
 </notextile>
@@ -119,13 +119,13 @@ In general, our data will look like the following matrices. \\(X\\) is input and
 \begin{bmatrix}
 x_{11} & x_{21} & \dots & x_{m1}\\
 \vdots & \vdots & \dots & \vdots\\
-x_{1n_x} & x_{2n_x} & \dots & x_{mn_x} 
+x_{1n_x} & x_{2n_x} & \dots & x_{mn_x}
 \end{bmatrix}
-; Y = 
+; Y =
 \begin{bmatrix}
 y_{11} & y_{21} & \dots & y_{m1}\\
 \vdots & \vdots & \dots & \vdots\\
-y_{1K} & y_{2K} & \dots & y_{mK} 
+y_{1K} & y_{2K} & \dots & y_{mK}
 \end{bmatrix}
 \]
 </notextile>
@@ -166,12 +166,12 @@ print("Y",Y)
 
 <div>
 <pre style="background-color:black;color:white;padding-left:10px">
-X: 
+X:
  [[0.22880349 0.19068802 0.88635967 0.7189259  0.53298338 0.8694621 ]
  [0.72423768 0.48208699 0.7560772  0.97473999 0.5083671  0.95849135]
  [0.49426336 0.51716733 0.34406231 0.96975023 0.25608847 0.40327522]]
 Labels:  [2 1 3 0 0 3]
-Y: 
+Y:
  [[0. 0. 0. 1. 1. 0.]
  [0. 1. 0. 0. 0. 0.]
  [1. 0. 0. 0. 0. 0.]
@@ -264,7 +264,7 @@ In below equations, \\(W\\) & \\(b\\) are representing all weights and biases of
 \begin{align*}
 dZ^L &= \frac{\partial{J(W,b)}}{\partial{Z^L}} \\
  &= \frac{\partial}{\partial{Z^L}}[-  \frac{1}{m} \sum \limits_{j=1}^m  [y^j\log{\hat{(y^j)}} + (1-y^j)\log{(1-\hat{y^j})}]] \\
-&= -  \frac{1}{m} \sum \limits_{j=1}^m [\frac{\partial}{\partial{Z^L}} [y^j\log{\hat{(y^j)}} + (1-y^j)\log{(1-\hat{y^j})}]] \\ 
+&= -  \frac{1}{m} \sum \limits_{j=1}^m [\frac{\partial}{\partial{Z^L}} [y^j\log{\hat{(y^j)}} + (1-y^j)\log{(1-\hat{y^j})}]] \\
 &=-  \frac{1}{m} \sum \limits_{j=1}^m (y^i - \hat{y^i}) \\
 &= \frac{1}{m} \sum \limits_{j=1}^m ( \hat{y^i} - y^i)
 \end{align*}
@@ -304,7 +304,7 @@ for layer in range(L-1,0,-1):
 
 ## MNIST Handwritten Digit Recognition
 
-In above random data example, data and output doesn't make any sense so we will see real life example of handwritten digit classification. You already saw about dataset at start of this article. 
+In above random data example, data and output doesn't make any sense so we will see real life example of handwritten digit classification. You already saw about dataset at start of this article.
 
 ### Load Dataset
 

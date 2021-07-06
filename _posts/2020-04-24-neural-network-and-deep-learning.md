@@ -45,7 +45,7 @@ Before we start learning logistic regression, lets see how image is stored and p
 
 ![Image Representation](/public/images/image_repre.png)
 
-As shown in above image, images are shored in 3D matrix. But for training on logistic regression, we need vector as a input. So We will roll out this image into **long column vector**. given image is **64x64x3** size where \\(1^{st}\\) 64 is height and \\(2^{nd}\\) width of image. Actually it depends on situation. for example, in numpy **img.shape** gives first dimension as height of image while mentioning resolution of image, we do opposite like **1920x1080**. 
+As shown in above image, images are shored in 3D matrix. But for training on logistic regression, we need vector as a input. So We will roll out this image into **long column vector**. given image is **64x64x3** size where \\(1^{st}\\) 64 is height and \\(2^{nd}\\) width of image. Actually it depends on situation. for example, in numpy **img.shape** gives first dimension as height of image while mentioning resolution of image, we do opposite like **1920x1080**.
 
 **So the problem**: Given a cat picture \\(X\\), we want probability of cat in image i.e. \\(\hat{y} = P(y=1&#124;x)\\).
 
@@ -69,7 +69,7 @@ We will see all notation in basic neural network. some of them are not used in l
  - \\(y^{(i)} \in \mathbb{R}^{n_y}\\) is the output label for the \\(i^{th}\\) example
  - \\(W^{[l]} \in \mathbb{R}^{number \space of units \space in\space next\space layer \times number\space of\space units\space in\space previous\space layer}\\) is the weight matrix of \\(l^{th}\\) layer
  - \\(b^{[l]} \in \mathbb{R}^{number\space of\space units\space in\space next\space layer} \\) is the bias vector in the \\(l^{th}\\) layer
- - \\(\hat{y} \in \mathbb{R}^{n_y} \\) is the predicted output vector. Also denoted by \\(a^{[L]}\\). 
+ - \\(\hat{y} \in \mathbb{R}^{n_y} \\) is the predicted output vector. Also denoted by \\(a^{[L]}\\).
 
 ### Algorithm
 
@@ -79,7 +79,7 @@ Given \\(X\\), we want \\(\hat{y} = P(y=1&#124;0)\\). As below image, we will gi
 
 if we want to explain above image in one line then this line will be like this **weighted sum over input is added to bias and whatever we got, pass it to activation function**. Here weighted sum means multiply weights to respective input i.e. \\(x_i * w_i\\) and add them. Lets consider \\(Z\\) as a sum of weighted sum of input and bias.
 \\[
-Z = b + \sum \limits_{i=1}^n x_i \times w_i 
+Z = b + \sum \limits_{i=1}^n x_i \times w_i
 \\]
 
 
@@ -109,7 +109,7 @@ We need derivative of sigmoid function while sending error backward. So lets fin
 </notextile>
 </div>
 
-When you plot sigmoid function, you will find graph shown below. 
+When you plot sigmoid function, you will find graph shown below.
 
 ![Sigmoid function](/public/images/sigmoid.jpg)
 
@@ -117,7 +117,7 @@ When you plot sigmoid function, you will find graph shown below.
 
 Weights \\(W^{[l]}\\) are initialized randomly to eliminate symmetry problem which arises when we initialize weights to zeros. Biases can be initialized to zeros. **Basic steps are** **1.** Ininitialize weights and biases **2.** forward pass means find \\(\hat{y}\\) using input and weights, biases **3.** compare \\(\hat{y}\\) with \\(Y\\) i.e. predicted output with actual output and then backpropagate errors to make changes appropriately in weights and biases.
 
-Lets take example. We have dataset with 10000 (\\(m\\)) images of with cat and without cat in it. when every image of size \\(64 \times 64\times 3\\) rolled out forms 12228 (\\(n_x\\)) features long vector. We got input \\(X^{n_x \times m}\\). Now label (Actual Output) for these examples is \\(Y^{1 \times m}\\). 
+Lets take example. We have dataset with 10000 (\\(m\\)) images of with cat and without cat in it. when every image of size \\(64 \times 64\times 3\\) rolled out forms 12228 (\\(n_x\\)) features long vector. We got input \\(X^{n_x \times m}\\). Now label (Actual Output) for these examples is \\(Y^{1 \times m}\\).
 
 Let's see code for **initializing and forward pass.**
 
@@ -269,7 +269,7 @@ In above image (b), 2 inputs are given to **Hidden layer** and these all 5 neuro
 
 ![Neurons](/public/images/forward.png)
 
-In above image \\(x\\) is our \\(X\\) in logistic regression. In logistic regression we saw \\(W\\) is weight matrix but here we have number of neurons so for each neuron we have weight matrix and represented by \\(W^{[l]}_i\\) where \\(l\\) is layer and i is unit(neuron) in that layer. and also separate bias for each neuron \\( b^{[l]}_i\\). But while implementing, we use vectorization for fast computation. So all weights for neurons is stacked and created a **row vector** of \\(W^{[l]}_i\\) for each layer. Now weights of \\(1^{st}\\) layer are \\(W^{[1]}\\). Similarly biases are also stacked and created **column vector**. 
+In above image \\(x\\) is our \\(X\\) in logistic regression. In logistic regression we saw \\(W\\) is weight matrix but here we have number of neurons so for each neuron we have weight matrix and represented by \\(W^{[l]}_i\\) where \\(l\\) is layer and i is unit(neuron) in that layer. and also separate bias for each neuron \\( b^{[l]}_i\\). But while implementing, we use vectorization for fast computation. So all weights for neurons is stacked and created a **row vector** of \\(W^{[l]}_i\\) for each layer. Now weights of \\(1^{st}\\) layer are \\(W^{[1]}\\). Similarly biases are also stacked and created **column vector**.
 
 > Suppose, We are at layer \\(l\\) so previous layer \\(l-1\\) has \\(n_{l-1}\\) units and current layer \\(l\\) has \\(n_{l}\\) units then shape of weight matrix of layer \\(l\\) will be \\(n_l \times n_{l-1}\\). and shape of bias matrix will be \\(n_l \times 1\\). I know you are confused because shape of weight matrix in logistic regression is opposite what we are seeing here. To make implementation simple we are doing this. You can use another approach also.
 
@@ -327,7 +327,7 @@ Now we can find  \\(\frac{\partial{J}(W,b)}{\partial{W^{[1]}}}\\) and \\(\frac{\
 &= \frac{\partial{J}(W,b)}{\partial{Z^{[1]}}} .X^{T}\\
 
 \frac{\partial{J}(W,b)}{\partial{b^{[1]}}} &= \frac{\partial{J}(W,b)}{\partial{Z^{[1]}}}.\frac{\partial{Z^{[1]}}}{\partial{b^{[1]}}} \\
-&= \frac{\partial{J}(W,b)}{\partial{Z^{[1]}}} 
+&= \frac{\partial{J}(W,b)}{\partial{Z^{[1]}}}
 \end{align*}
 \]
 </notextile>
@@ -358,7 +358,7 @@ b_2 = b_2 - alpha * db2
 ```
 This article may have some bugs. Please if you found any comment down. and also check next article in series.
 
-<div class="preview" onclick="location.href='/2020/04/26/neural-network-and-deep-learning-1/'">
+<div class="preview shadow p-3 mb-5 bg-white rounded" onclick="location.href='/2020/04/26/neural-network-and-deep-learning-1/'">
     <div class="left">
       <div class="head">
         <h2>Neural Network and Deep Learning (Part 2)</h2>

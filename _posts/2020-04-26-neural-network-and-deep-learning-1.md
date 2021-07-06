@@ -23,7 +23,7 @@ thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
 
 In previous article, we saw **Logistic Regression with Gradient Descent** and also started with **Shallow Neural Network**. But in real world applications shallow networks may `underfit` data. You can check this article here.
 
-<div class="preview" onclick="location.href='/2020/04/24/neural-network-and-deep-learning/'">
+<div class="preview shadow p-3 mb-5 bg-white rounded" onclick="location.href='/2020/04/24/neural-network-and-deep-learning/'">
     <div class="left">
       <div class="head">
         <h2>Neural Network and Deep Learning (Part 1)</h2>
@@ -229,7 +229,7 @@ for epoch in len(epochs):
     for layer in range(1, L+1):
         cache['Z' + str(layer)] = np.dot(parameters['W' + str(layer)],cache['a' + str(layer-1)]) + parameters['b' + str(layer)]
         cache['a' + str(layer)] = sigmoid(cache['Z' + str(layer)])
-    
+
     y_hat = cache['a' + str(L)]
     cost = np.sum(-(1/m) * (Y*np.log(y_hat)+(1-Y)*np.log(1-y_hat)))
     print(cost)

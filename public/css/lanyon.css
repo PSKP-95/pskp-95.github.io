@@ -700,7 +700,6 @@ pre code{
   border-radius: 5px;
   cursor: pointer;
   background-color: rgb(255, 255, 255);
-  box-shadow: 0 0 3px #000;
   margin-bottom: 20px;
 }
 
