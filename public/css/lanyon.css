@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (min-width: 60em) {
   .container {
-    max-width: 42rem;
+    max-width: 50rem;
   }
 }
 
@@ -738,6 +738,10 @@ pre code{
   flex: 3%;
 }
 
+.preview img {
+  height: 100%;
+}
+
 @media (max-width: 60rem) {
 
   .preview {
@@ -798,7 +802,7 @@ pre code{
     50% {flex:0%}
     100%   {flex:93%}
   }
-  
+
   @keyframes detail {
     0%   {flex:0%}
     50% {flex:93%}
@@ -844,7 +848,7 @@ tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-/* 
+/*
   Index/ content
 */
 
@@ -888,7 +892,7 @@ tr:nth-child(even) {
     background: rgb(255, 255, 255);
     z-index: 5;
   }
-  
+
   .progress-bar {
     height: 3px;
     background: #FE7E00;
@@ -902,12 +906,12 @@ tr:nth-child(even) {
 }
 
 /* Yellow highlight */
-.yehi{ 
+.yehi{
   background: rgba(238, 255, 0, 0.4);
   color: #000;
 }
 
-.blhi{ 
+.blhi{
   background: rgba(38, 0, 255, 0.4);
   color: #000;
 }
