@@ -738,7 +738,7 @@ pre code{
   flex: 3%;
 }
 
-.preview img {
+.preview .right img {
   height: 100%;
 }
 
