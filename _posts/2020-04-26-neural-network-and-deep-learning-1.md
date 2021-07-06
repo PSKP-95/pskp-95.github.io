@@ -23,7 +23,7 @@ thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
 
 In previous article, we saw **Logistic Regression with Gradient Descent** and also started with **Shallow Neural Network**. But in real world applications shallow networks may `underfit` data. You can check this article here.
 
-<div class="preview shadow p-3 mb-5 bg-white rounded" onclick="location.href='/2020/04/24/neural-network-and-deep-learning/'">
+<div class="preview shadow mb-5 bg-white rounded" onclick="location.href='/2020/04/24/neural-network-and-deep-learning/'">
     <div class="left">
       <div class="head">
         <h2>Neural Network and Deep Learning (Part 1)</h2>

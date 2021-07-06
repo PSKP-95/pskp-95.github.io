@@ -29,7 +29,7 @@ thumbnail: https://pskp-95.github.io/public/images/course1_dl.png
 
 This will be the \\(3^{rd}\\) and last article in `neural network and deep learning` series. We will see multiclass classification in this article. Before that, check previous articles first and return to this articles. Below are the links to these previos articles.
 
-<div class="preview shadow p-3 mb-5 bg-white rounded" onclick="location.href='/2020/04/24/neural-network-and-deep-learning/'">
+<div class="preview shadow mb-5 bg-white rounded" onclick="location.href='/2020/04/24/neural-network-and-deep-learning/'">
     <div class="left">
       <div class="head">
         <h2>Neural Network and Deep Learning (Part 1)</h2>
@@ -46,7 +46,7 @@ This will be the \\(3^{rd}\\) and last article in `neural network and deep learn
       <img align='right' src="/public/images/course1_dl.png" alt="">
     </div>
 </div>
-<div class="preview shadow p-3 mb-5 bg-white rounded" onclick="location.href='/2020/04/26/neural-network-and-deep-learning-1/'">
+<div class="preview shadow mb-5 bg-white rounded" onclick="location.href='/2020/04/26/neural-network-and-deep-learning-1/'">
     <div class="left">
       <div class="head">
         <h2>Neural Network and Deep Learning (Part 2)</h2>
