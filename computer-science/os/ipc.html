@@ -1,0 +1,466 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Interprocess Communication - Parikshit&#x27;s Notebook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../mathematics/index.html">Mathematics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../mathematics/formulas/index.html">Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../mathematics/formulas/algebra.html">Algebra</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../computer-science/index.html">Computer Science</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../computer-science/os/index.html">Operating System</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../computer-science/os/process.html">Process</a></li><li class="chapter-item expanded "><a href="../../computer-science/os/ipc.html" class="active">Interprocess Communication</a></li></ol></li><li class="chapter-item "><a href="../../computer-science/dbms/index.html">Database Management System</a></li><li class="chapter-item "><a href="../../computer-science/networking/index.html">Computer Network</a></li><li class="chapter-item "><a href="../../computer-science/dsa/index.html">Data Structure & Algorithms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../computer-science/dsa/searching.html">Searching</a></li><li class="chapter-item "><a href="../../computer-science/dsa/sorting.html">Sorting</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Parikshit&#x27;s Notebook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h1 id="interprocess-communication"><a class="header" href="#interprocess-communication">Interprocess Communication</a></h1>
+<blockquote>
+<p>code can be found <a href="https://github.com/lets-learn-it/c-learning/tree/master/17-ipc">https://github.com/lets-learn-it/c-learning/tree/master/17-ipc</a></p>
+</blockquote>
+<div class="table-wrapper"><table><thead><tr><th><strong>Technique</strong></th><th><strong>Model</strong></th><th><strong>Purpose</strong></th><th><strong>Granularity</strong></th><th><strong>Network</strong></th></tr></thead><tbody>
+<tr><td><strong>pipe/FIFO</strong></td><td>message passing</td><td>data exchange</td><td>byte stream</td><td>local</td></tr>
+<tr><td><strong>socket</strong></td><td>message passing</td><td>data exchange</td><td>either</td><td>either</td></tr>
+<tr><td><strong>message queue</strong></td><td>message passing</td><td>data exchange</td><td>structured</td><td>local</td></tr>
+<tr><td><strong>shm()</strong></td><td>shared memory</td><td>data exchange</td><td>none</td><td>local</td></tr>
+<tr><td><strong>memory mapped file</strong></td><td>shared memory</td><td>data exchange</td><td>none</td><td>local</td></tr>
+<tr><td><strong>signal</strong></td><td>message passing</td><td>synchronization</td><td>none</td><td>local</td></tr>
+<tr><td><strong>semaphore</strong></td><td>message passing</td><td>synchronization</td><td>none</td><td>local</td></tr>
+</tbody></table>
+</div>
+<h2 id="pipes"><a class="header" href="#pipes">Pipes</a></h2>
+<ul>
+<li>pipes are <strong>unidirectional</strong></li>
+<li>pipes are <strong>order preserving</strong></li>
+<li>pipes have <strong>limited capacity</strong> and they use <strong>blocking I/O</strong>. If a pipe is full, any additional writes to the pipe will block the process until some of the data has been read.</li>
+<li>pipes send data as <strong>unstructured byte streams</strong>.</li>
+<li>Messages that are smaller than the size specified by <code>PIPE_BUF</code> are guaranteed to be sent <strong>atomically</strong>. As such, if two processes write to a pipe at the same time, both messages will be written correctly and they will not interfere with each other.</li>
+</ul>
+<blockquote>
+<p>It is very important to <strong>close the unused end of the pipe</strong> immediately after the fork(). Failure to do so can cause programs to freeze unexpectedly.
+<br><strong>Example</strong>: parent process will try to read from the pipe. Instead of immediately returning, the process will block until an EOF (end-of-file) is written into the pipe. Since the child is the only other process that could write to the pipe and the child exits without writing anything, the parent will block indefinitely.</p>
+</blockquote>
+<h3 id="named-pipes--fifo"><a class="header" href="#named-pipes--fifo">Named Pipes / FIFO</a></h3>
+<p>Above pipes (anonymous pipes) can't be used for unrelated processes. Specifically, the call to <code>pipe()</code> must happen within the same program that later calls <code>fork()</code>.</p>
+<p>FIFOs work by attaching a filename to the pipe thats why <strong>named pipes</strong>.</p>
+<p>Also similar to anonymous pipes, <strong>FIFOs use blocking I/O until both ends are opened by at least one process.</strong>. For using non blocking fifo, pass the <code>O_NONBLOCK</code>option during the call to <code>open()</code> to make the FIFO access non-blocking.</p>
+<h4 id="creating-fifo"><a class="header" href="#creating-fifo">Creating FIFO</a></h4>
+<ul>
+<li>use <code>mkfifo()</code> / <code>mkfifoat()</code> / <code>mknod</code> / <code>mknodat</code> to create fifo</li>
+<li>other process can access fifo by calling <code>open()</code> on associated filename. (should have permissions)</li>
+</ul>
+<blockquote>
+<p>When all readers for a FIFO close and the writer is still open, the writer will receiver the signal SIGPIPE the next time it tries to write(). The default signal handler for this signal prints “Broken Pipe” and exits.</p>
+</blockquote>
+<hr />
+<h2 id="message-queues"><a class="header" href="#message-queues">Message Queues</a></h2>
+<h3 id="posix-message-queues"><a class="header" href="#posix-message-queues">POSIX message queues</a></h3>
+<ul>
+<li>for processes to communicate by exchanging <strong>structured messages.</strong></li>
+<li>When a message is retrieved from the queue, the process receives exactly one message in its entirety; there is no way to retrieve part of a message and leave the rest in the queue.</li>
+<li>message queues are special identifiers and not file descriptors.</li>
+<li>message queues <strong>do not require or guarantee a first-in, first-out ordering</strong>. depends on <em>priority.</em></li>
+<li>Message queues have kernel-level persistence and use special functions or utilities for removing them. <strong>Killing the process will not remove the message queue.</strong></li>
+<li>POSIX message queue is <strong>only removed once it is closed by all processes</strong> currently using it.</li>
+<li>message queues has asynchronous notification feature means reader do not wait for message</li>
+<li>can add attributes to queue like message size or capacity of queue.</li>
+</ul>
+<h4 id="steps"><a class="header" href="#steps">Steps</a></h4>
+<pre><code class="language-c">// Open (and possibly create) a POSIX message queue.
+mqd_t mq_open (const char *name, int oflag, ... /* mode_t mode, struct mq_attr *attr */);
+
+// Get the attributes associated with a given message queue.
+int mq_getattr(mqd_t mqdes, struct mq_attr *attr);
+
+// Close a message queue.
+int mq_close (mqd_t mqdes);
+
+// Initiate deletion of a message queue.
+int mq_unlink (const char *name);
+
+// Send the message pointed to by msg_ptr with priority msg_prio.
+int mq_send (mqd_t mqdes, const char *msg_ptr, size_t msg_len, unsigned int msg_prio);
+
+// Receive a message into a buffer pointed to by msg_ptr and get its priority msg_prio.
+ssize_t mq_receive (mqd_t mqdes, char *msg_ptr, size_t msg_len, unsigned int *msg_prio);
+</code></pre>
+<h4 id="asynchronous-mq"><a class="header" href="#asynchronous-mq">Asynchronous MQ</a></h4>
+<ul>
+<li>by default, if queue is full, writer will block and if no messages available, reader will block</li>
+<li>We can use <code>O_NONBLOCK</code> while opening queue in <code>oflag</code> bit mask. which will <strong>return error instead of blocking.</strong></li>
+<li>Or we can use <code>mq_timedsend()</code> and <code>mq_timedreceive()</code> which takes parameter <code>abs_timeout</code>. It will block read/write till <code>abs_timeout</code></li>
+<li>Most useful way is using <code>mq_notify()</code>. it can be used for requesting asynchronous notification when message is sent.</li>
+</ul>
+<h4 id="systemv-message-queues"><a class="header" href="#systemv-message-queues">SystemV message queues</a></h4>
+<ul>
+<li>use <code>ipcs</code> command to list message queues and <code>ipcrm</code> to delete them.</li>
+</ul>
+<pre><code class="language-c">#include &lt;sys/msg.h&gt;
+
+// create message queue
+key = ftok("./queue.txt", 'b');
+msgq = msgget(key, 0666 | IPC_CREAT);
+
+// message
+// message can be any struct as long as first element is long
+struct _person {
+  int age;
+  char name[20];
+}_person;
+struct my_msg {
+  long mtype;
+  person p;
+};
+
+// create message
+struct Message message;
+
+// while receiving, receiver will specify this id
+message.msgid = 2;
+
+strncpy(message.p.name, "Parikshit", sizeof(msg)+1);
+message.p.age = 26;
+
+// send msg
+bytes = msgsnd(msgq, &amp;message, sizeof(person), 0)
+
+// read msg
+// get message of type 2
+msgrcv(msgq, &amp;message, sizeof(message), 2, 0);
+
+person p = (person) message.p;
+</code></pre>
+<hr />
+<h2 id="shared-memory"><a class="header" href="#shared-memory">Shared memory</a></h2>
+<hr />
+<h2 id="sockets"><a class="header" href="#sockets">Sockets</a></h2>
+<hr />
+<h2 id="memory-mapped-files"><a class="header" href="#memory-mapped-files">Memory Mapped files</a></h2>
+<ul>
+<li>memory of region corresponds to a traditional file on disk.</li>
+<li>no need of <code>read()</code>, <code>write()</code> or <code>fseek()</code> because file is already in memory.</li>
+<li>Memory-mapped files allow for multiple processes to share read-only access to a common file. As a straightforward example, the C standard library (glibc.so) is mapped into all processes running C programs.</li>
+<li>when we use <code>read()</code> with file, kernel copies data from disk to kernel's <strong>buffer cache</strong> and then copies to process's user mode memory. But memory mapped files bypass buffer cache &amp; copies directly into user mode portion of memory.</li>
+<li>If shared region is writable, memory mapped files provide extremely fast IPC data exchange.
+<blockquote>
+<p>Setting up regions in both processes is expensive operation in terms of execution time.</p>
+</blockquote>
+</li>
+<li>memory mapped files create persistent IPC. in case of pipes, message wont be available when any process reads it.</li>
+</ul>
+<h4 id="disadvantages-of-bypassing-kernels-buffer-cache"><a class="header" href="#disadvantages-of-bypassing-kernels-buffer-cache">Disadvantages of bypassing kernel's buffer cache</a></h4>
+<ul>
+<li>If 2 processes access same file using <code>read()</code> function, kernel's buffer will read file from disk once and copy it to user space of those respective processes.</li>
+<li>So second read will be slower in case of memory mapped files because there is no kernel's buffer.</li>
+</ul>
+<h3 id="c-library-functions"><a class="header" href="#c-library-functions">C library functions</a></h3>
+<pre><code class="language-c">// map a file by fd into memory at address addr
+// prot is protection. discussed below
+void *mmap (void *addr, size_t length, int prot, int flags, int fd, off_t offset);
+
+// Unmap a mapped region.
+int munmap (void *addr, size_t length);
+
+// Synchronize mapped region with its underlying file.
+int msync (void *addr, size_t length, int flags);
+</code></pre>
+<h3 id="region-protections-and-privacy"><a class="header" href="#region-protections-and-privacy">Region protections and privacy</a></h3>
+<blockquote>
+<p>These protections <strong>only apply to the current process</strong>. If another process maps the same file into its virtual memory space, that second process may set different protections. As such, it is possible that a region marked as read-only in one process may actually change while the process is running.</p>
+</blockquote>
+<div class="table-wrapper"><table><thead><tr><th><strong>Protection</strong></th><th><strong>Actions Permitted</strong></th></tr></thead><tbody>
+<tr><td><strong>PROT_NONE</strong></td><td>The region may not be accessed</td></tr>
+<tr><td><strong>PROT_READ</strong></td><td>The contents of region can be read</td></tr>
+<tr><td><strong>PROT_WRITE</strong></td><td>The contents of region can be modified</td></tr>
+<tr><td><strong>PROT_EXEC</strong></td><td>The contents of region can be executed</td></tr>
+</tbody></table>
+</div>
+<p><strong>Privacy</strong></p>
+<p>In <code>flags</code> parameter, region can be designated as private (<code>MAP_PRIVATE</code>) or shared (<code>MAP_SHARED</code>). exactly one flag is required while calling <code>mmap()</code>. In addition to these flags, there are multiple falgs available <a href="https://man7.org/linux/man-pages/man2/mmap.2.html">https://man7.org/linux/man-pages/man2/mmap.2.html</a></p>
+<h3 id="mapping"><a class="header" href="#mapping">Mapping</a></h3>
+<p>A file is mapped in multiples of the page size.  For a file that is not a multiple of the page size, the remaining bytes in the partial page at the end of the mapping are zeroed when mapped, and modifications to that region are not written out to the file.</p>
+<hr />
+<h2 id="signals"><a class="header" href="#signals">Signals</a></h2>
+<ul>
+<li>
+<p>Signals are <strong>software interrupts.</strong> They provide way of handling <strong>asynchronous events.</strong></p>
+</li>
+<li>
+<p><code>kill()</code> function allows process to send any signal to another process/process group. (need to be owner of the process that we are sending signal to, or superuser).</p>
+</li>
+<li>
+<p>process can define what to do when XYZ signal occurs using <code>signal(int sigcode, void (*func) (int))</code>. func can be 1. constant <em>SIG_IGN</em> (ignore signal) 2. constant <em>SIG_DFL</em> (default action) or 3. address of function.</p>
+<p><strong>We can tell kernel to do one of below action</strong></p>
+<ol>
+<li><strong>Ignore the signal</strong>: This works with all signals except <em>SIGKILL</em> and <em>SIGSTOP</em>. These two signals provide kernel &amp; superuser a way to kill or stop process.</li>
+<li><strong>Catch the signal</strong>: We can register function with kernel. We can write function which perform clean up when <em>SIGTERM</em> signal occurs. Note: <em>SIGKILL</em> &amp; <em>SIGSTOP</em> can't be caught.</li>
+<li><strong>Let default action apply</strong>: Every signal has their own default action. Note: most signals has <strong>terminate process</strong> as default action.</li>
+</ol>
+</li>
+<li>
+<p>When new process created, it inherits parent's signal disposition (action for signal). This is because child starts off with copy of parent's memory image, address of signal catching function.</p>
+</li>
+</ul>
+<hr />
+<h2 id="semaphores"><a class="header" href="#semaphores">Semaphores</a></h2>
+<hr />
+<h2 id="file-locking"><a class="header" href="#file-locking">File Locking</a></h2>
+<p>files can be used for IPC by locking mechanism.</p>
+<ul>
+<li><strong>Mandatory locking</strong>: It will prevent <code>read()</code> and <code>write()</code> to file.</li>
+<li><strong>Advisory locking</strong>: processes can still read and write from file while it's locked. Process has to check if file is locked or not.</li>
+</ul>
+<h3 id="mandatory-locking"><a class="header" href="#mandatory-locking">Mandatory Locking</a></h3>
+<p><a href="https://stackoverflow.com/questions/77931997/linux-mandatory-locking-for-file-locking">https://stackoverflow.com/questions/77931997/linux-mandatory-locking-for-file-locking</a></p>
+<h3 id="advisory-locking"><a class="header" href="#advisory-locking">Advisory Locking</a></h3>
+<ul>
+<li>process can lock file for reading or writing. Multiple processes can lock for reading at same time.</li>
+<li>When process lock file for writing, no other process can lock for reading or writing.</li>
+<li>for locking, we can use either <code>flock()</code> or <code>fcntl()</code>.</li>
+</ul>
+<h4 id="lockunlock-file"><a class="header" href="#lockunlock-file">Lock/Unlock file</a></h4>
+<pre><code class="language-c">#include &lt;fcntl.h&gt;
+struct flock fl = {
+  .l_type = F_WRLCK,    /* F_RDLCK, F_WRLCK, F_UNLCK */
+  .l_whence = SEEK_SET, /* SEEK_SET, SEEK_CUR, SEEK_END */
+  .l_start = 0,         /* Offset from l_whence */
+  .l_len = 0,           /* length, 0 mean whole file */
+  // .l_pid             /* PID holding lock, F_RDLCK only. set bu kernel */
+};
+
+int fd = open("./file.txt", O_WRONLY);
+
+// lock file
+fcntl(fd, F_SETLKW, &amp;fl);   /* F_GETLK, F_SETLK, F_SETLKW */
+
+// unlock same region of file
+fl.l_type = F_UNLCK;
+fcntl(fd, F_SETLK, &amp;fl);
+</code></pre>
+<blockquote>
+<p>when you open the file, you need to open it in the same mode as you have specified in the lock. If you open the file in the wrong mode for a given lock type, <code>fcntl()</code> will return <code>-1</code> and <code>errno</code> will be set to <code>EBADF</code>.</p>
+</blockquote>
+<h4 id="check-if-file-locked"><a class="header" href="#check-if-file-locked">Check if file locked</a></h4>
+<pre><code class="language-c">struct flock fl = { 0 };
+
+int fd = open("../file.txt", O_WRONLY);
+fcntl(fd, F_GETLK, &amp;fl);   /* F_GETLK, F_SETLK, F_SETLKW */
+
+if (fl.l_type == F_WRLCK) {
+  printf("file is locked by process %d\n", fl.l_pid);
+} else {
+  printf("file not locked.\n");
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../computer-science/os/process.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../computer-science/dbms/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../computer-science/os/process.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../computer-science/dbms/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
