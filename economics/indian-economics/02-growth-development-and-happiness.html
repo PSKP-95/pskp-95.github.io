@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>02 Growth, Development &amp; Happiness - Parikshit&#x27;s Notebook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../mathematics/index.html">Mathematics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../mathematics/formulas/index.html">Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../mathematics/formulas/algebra.html">Algebra</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../computer-science/index.html">Computer Science</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../computer-science/os/index.html">Operating System</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../computer-science/os/process.html">Process</a></li><li class="chapter-item "><a href="../../computer-science/os/ipc.html">Interprocess Communication</a></li></ol></li><li class="chapter-item "><a href="../../computer-science/dbms/index.html">Database Management System</a></li><li class="chapter-item "><a href="../../computer-science/networking/index.html">Computer Network</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../computer-science/networking/reference-models/index.html">Reference Models</a></li><li class="chapter-item "><a href="../../computer-science/networking/physical-layer/index.html">Physical Layer</a></li><li class="chapter-item "><a href="../../computer-science/networking/data-link-layer/index.html">Data Link Layer</a></li><li class="chapter-item "><a href="../../computer-science/networking/network-layer/index.html">Network Layer</a></li><li class="chapter-item "><a href="../../computer-science/networking/transport-layer/index.html">Transport Layer</a></li><li class="chapter-item "><a href="../../computer-science/networking/application-layer/index.html">Application Layer</a></li></ol></li><li class="chapter-item "><a href="../../computer-science/dsa/index.html">Data Structure & Algorithms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../computer-science/dsa/searching.html">Searching</a></li><li class="chapter-item "><a href="../../computer-science/dsa/sorting.html">Sorting</a></li></ol></li><li class="chapter-item "><a href="../../computer-science/toc/index.html">Theory of Computation</a></li></ol></li><li class="chapter-item "><a href="../../aiml/index.html">AI/ML</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../aiml/ml-algos/index.html">ML Algorithms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../aiml/ml-algos/regression/index.html">Regression</a></li><li class="chapter-item "><a href="../../aiml/ml-algos/classification/index.html">Classification</a></li><li class="chapter-item "><a href="../../aiml/ml-algos/clustering/index.html">Clustering</a></li><li class="chapter-item "><a href="../../aiml/ml-algos/forecasting/index.html">Forecasting</a></li></ol></li><li class="chapter-item "><a href="../../aiml/deep-learning/index.html">Deep Learning</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../aiml/deep-learning/full-connected/00-basics.html">Fully Connected</a></li><li class="chapter-item "><a href="../../aiml/deep-learning/activation-functions/index.html">Activation Functions</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../linux/index.html">Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../linux/networking/index.html">Networking</a></li></ol></li><li class="chapter-item expanded "><a href="../../economics/index.html">Economics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../economics/indian-economics/index.html">Indian Economics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../economics/indian-economics/01-introduction.html">01 Introduction</a></li><li class="chapter-item expanded "><a href="../../economics/indian-economics/02-growth-development-and-happiness.html" class="active">02 Growth, Development & Happiness</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Parikshit&#x27;s Notebook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<blockquote>
+<p>Since 1971, Bhutan has rejected GDP as the only way to measure progress—in its place, it has championed a new approach to development, which measures prosperity through formal principles of <strong>gross national happiness (GNH)</strong> and the spiritual, physical, social and environmental health of its citizens and natural environment.</p>
+</blockquote>
+<p><img src="./images/bhutan.png" alt="Bhutan" /></p>
+<h2 id="introduction"><a class="header" href="#introduction">Introduction</a></h2>
+<p>With greater dependence on the idea of the ‘economic man’, the world created immense wealth in the post-War decades. It was in the 1980s that social scientists started finer studies in the area of mankind’s actions, finally challenging the very idea of the ‘economic man’ (‘rational man’). By now, courtesy the UNO, the world has the <strong>World Happiness Report.</strong></p>
+<h2 id="progress"><a class="header" href="#progress">Progress</a></h2>
+<p>Progress is used by experts to denote betterment or improvement in anything. It shows the positive movement in the lives of people and in an economy. It had both quantitative and qualitative aspects to it. The term ‘progress’
+became a general term with no specific meaning in economics or denoting both growth and development.</p>
+<h2 id="economic-growth"><a class="header" href="#economic-growth">Economic Growth</a></h2>
+<p>An increase in economic variables like income over a period of time is economic growth. The most important aspect of growth is its <strong>quantifiability</strong>, i.e., one can measure it in absolute terms. for example, The growth of road network in an economy might be measured for a decade or any period in miles or kilometres.</p>
+<blockquote>
+<p>economic growth is a <strong>quantitative progress.</strong></p>
+</blockquote>
+<p>To calculate the growth rate of an economic
+variable the difference between the concerned period is converted into percentage form.</p>
+<p>Growth rate is an annual concept which may be used otherwise with the clear reference to the period for which it is used. Though growth is a value neutral term, i.e., it might be positive or negative for an economy for a specific period.</p>
+<p>Economic growth is used for national level economic analyses, policymaking and also for study of comparative economics.</p>
+<h2 id="economic-development"><a class="header" href="#economic-development">Economic Development</a></h2>
+<p>It was believed that once an economy is able to increase its production, its income will also increase and there will be an automatic betterment (quality increase) in the lives of the people of the economy.</p>
+<p>For economists, development indicates the quality of life in the economy, which might be seen in accordance with the availability of many variables such as:</p>
+<ol>
+<li>The level of nutrition</li>
+<li>The expansion and reach of healthcare facilities—hospitals, medicines, safe drinking water, vaccination, sanitation, etc.</li>
+<li>The level of education</li>
+<li>Other variables on which the quality of life depends</li>
+</ol>
+<p>If people are to be guaranteed with a basic minimum level of quality-enhancing inputs (such as food, health, education, etc.) in their life, a minimum level of income has to be guaranteed for them. Income is generated from productive activities. It means that before assuring development we need to assure growth. Higher.</p>
+<p>Higher economic development requires higher economic growth. But it does not mean that a higher economic growth automatically brings in higher economic development. Without a conscious public policy, development has not been possible anywhere in the world. Similarly, we can say, that without growth there cannot be development either.</p>
+<blockquote>
+<p>economic development is <strong>quantitative as well as qualitative progress.</strong></p>
+</blockquote>
+<p>If economic growth is suitably used for development, it comes back to accelerate the growth and ultimately greater and greater population brought under the arena of development.  Similarly, high growth with low development and ill-cared development finally results in fall in growth.</p>
+<p><img src="./images/growth-vs-development.png" alt="economic growth vs development" /></p>
+<h3 id="measuring-development"><a class="header" href="#measuring-development">Measuring Development</a></h3>
+<p>The idea of developing a formula/method to measure the development was basically facing two kinds of difficulties:</p>
+<ol>
+<li>At one level it was difficult to define as to what constitutes development. Factors which could show development might be many, such as levels of income/ consumption, quality of consumption, healthcare, nutrition, etc. It has been a realty difficult task to achieve consensus among the experts on these determinants of development.</li>
+<li>At the second level it looked highly difficult to quantify a concept as development constitutes quantitative as well as qualitative aspects. It is easy to compare qualitative aspects such as beauty, taste, etc., but to measure them we don’t have any measuring scale.</li>
+</ol>
+<h2 id="human-development-index"><a class="header" href="#human-development-index">Human Development Index</a></h2>
+<p>In 1990, United Nations Development Programme (UNDP) published its first Human Development Report (HDR) which had a human development index (HDI) which was the first attempt to define and measure the level of development of economies.</p>
+<p>The HDR measures development by combining three indicators— <strong>Health, Education and Standard of Living</strong> —converted into a composite human development index, the HDI.</p>
+<p>The HDI sets a minimum and a maximum for each dimension, called goalposts, and then shows where each country stands in relation to these goalposts, expressed as a value between 0 and 1 (i.e., the index is prepared on the scale of one).</p>
+<h3 id="education-index"><a class="header" href="#education-index">Education Index</a></h3>
+<p>It is (since HDR-2010) measured by two other indicators</p>
+<ol>
+<li><strong>Mean of years of schooling (for adults aged 25 years):</strong> This is estimated based on educational attainment data from censuses and surveys available in the UNESCO Institute for Statistics database and Barro and Lee (2010) methodology.</li>
+<li><strong>Expected years of schooling (for children of school entering age):</strong> These estimates are based on enrolment by age at all levels of education and population of official school age for each level of education. Expected years of schooling is capped at 18 years.</li>
+</ol>
+<blockquote>
+<p>The education index is the <strong>geometric mean</strong> of two indices.</p>
+</blockquote>
+<h3 id="health-index"><a class="header" href="#health-index">Health Index</a></h3>
+<p>It is measured by the
+life expectancy at birth component of the HDI and is calculated using a minimum value of 20 years and maximum value of 83.57 years. for example, if country \(x\) has life expectancy 55 years then health index will be \((55-20)/(83.57-20) = 0.55057417\)</p>
+<h3 id="standard-of-living"><a class="header" href="#standard-of-living">Standard of Living</a></h3>
+<p>It is measured by <strong>GNI (Gross National Income/ Product) per capita at ‘Purchasing Power Parity in US Dollars’ (PPP $)</strong> instead of GDP per capita (PPP $) of past. The goalpost taken for minimum income is $100 (PPP) and the maximum is US $87,478 (PPP), estimated for Qatar in 2012. The HDI uses the logarithm of income, to reflect the diminishing importance of income with increasing GNI.</p>
+<blockquote>
+<p>The scores for the three HDI dimension
+indices are then aggregated into a composite index using geometric mean.</p>
+</blockquote>
+<h3 id="the-debate-on-human-development-continues"><a class="header" href="#the-debate-on-human-development-continues">The Debate on Human Development Continues</a></h3>
+<p>By 1995, economies around the world had officially accepted the concept of human development propounded by the UNDP. It is used by World Bank since the 1990s to quantify the developmental efforts of the member countries and cheap developmental funds were allocated in accordance.</p>
+<p>For many years, experts and scholars came up with their own versions of defining development. They gave unequal weightage to the determinants defining development, as well as selected some completely different parameters. Most of such attempts were not prescriptions for an alternative development index, but they were basically trying to show the incompleteness of the HDI, via intellectual satires. In 1999, Bangladesh was the most developed country in the world with the USA, Norway, Sweden getting the lowest ranks in the index.</p>
+<p>HDI which calculates the development of economies on certain parameters might be overlooking many other important factors such as</p>
+<ol>
+<li>cultural aspects of the economy,</li>
+<li>outlook towards aesthetics and purity of the environment</li>
+<li>aspects related to the rule and administration in the economy</li>
+<li>people’s idea of happiness and prestige</li>
+<li>ethical dimension of human life, etc.</li>
+</ol>
+<h3 id="introspecting-development"><a class="header" href="#introspecting-development">Introspecting Development</a></h3>
+<p>Most of studies concluded that life in the developed world is anything but happy. Crime, corruption, burglaries, extortion, drug trafficking, flesh trade, rape, homicide, moral degradation, sexual perversion, etc.—all kinds of the so-called vices—were thriving in the developed
+world. It means development had failed to deliver them happiness, peace of mind, a general well- being and a feeling of being in good state.</p>
+<p>Social scientists, somehow have been using terms such as progress, growth, development, well-being, welfare as synonyms of ‘happiness’. Happiness is a normative concept as well as a state of mind. Therefore, its idea might vary from one economy to the other.</p>
+<p><strong>Gross National Happiness</strong></p>
+<p>Bhutan has been following the GNH since 1972 which has the following parameters to attain happiness/ development:</p>
+<ol>
+<li>Higher real per capita income</li>
+<li>Good governance</li>
+<li>Environmental protection</li>
+<li>Cultural promotion (i.e., inculcation of ethical and spiritual values in life without which, it says, progress may become a curse rather than a blessing)</li>
+</ol>
+<p>An impartial analysis sufficiently suggests that material achievements are unable to deliver us happiness devoid of some ethics at its base. And ethics are rooted in the religious and spiritual texts.  But the new world is guided by its own scientific and secular interpretation of life and the world has always been suspicious about recognising the spiritual factor in human life.</p>
+<h2 id="happiness"><a class="header" href="#happiness">Happiness</a></h2>
+<p><strong>Sustainable Development Solution Network</strong> (a UN body) publishes World Happiness report which measures happiness and well-being of the nations to help guide public policy on the basis of the following six parameters:</p>
+<ol>
+<li>GDP per capita (at PPP)</li>
+<li>Social support (someone to count on)</li>
+<li>Healthy life expectancy at birth</li>
+<li>Freedom to make life choices</li>
+<li>Generosity</li>
+<li>Perception of corruption</li>
+</ol>
+<p><strong>Major highlights of the WHR 2018 are as given below:</strong></p>
+<ul>
+<li>Finland is happiest while Burundi is the unhappiest country on the planet.</li>
+<li>India is ranked 133rd in 156 nations while Pakistan at 75th.</li>
+<li>Finland has got several accolades from the report as—the most stable, the safest and best governed country in the world together with being the least corrupt and the most socially progressive and the happiest immigrants. Its police are the world’s most trusted and its banks the soundest.</li>
+<li>As per the report, USA(18) its happiness is being systematically undermined by three
+inter-related epidemic diseases—obesity, substance abuse (especially opioid addiction) and depression.</li>
+<li>The greatest human migration in history—the hundreds of millions of people who have moved from the Chinese countryside into cities—has not advanced happiness at all.</li>
+</ul>
+<h3 id="the-meaning-of-happiness"><a class="header" href="#the-meaning-of-happiness">The Meaning of Happiness</a></h3>
+<p>Happiness is an aspiration of every human being, and can also be a measure of social progress. Yet,</p>
+<p>happiness is used in at least two ways :</p>
+<ol>
+<li>As an emotion [‘Were you happy yesterday?’], and</li>
+<li>As an evaluation [‘Are you happy with your life as a whole?’].</li>
+</ol>
+<p>WHRs did show that the respondents of the surveys clearly recognise the <em>difference between happiness as an emotion and happiness in the sense of life satisfaction.</em></p>
+<h4 id="trends-in-happiness"><a class="header" href="#trends-in-happiness">Trends in Happiness</a></h4>
+<p>The report presents data for the world showing the levels, explanations, changes and equality of happiness. The world has become a slightly happier and more generous place over the past five years, despite the obvious detrimental happiness impacts of the financial crisis (2007– 08), as per the report.</p>
+<h4 id="the-hdr-linkage"><a class="header" href="#the-hdr-linkage">The HDR Linkage</a></h4>
+<p>The WHR 2013 investigated the conceptual and empirical relationships between ‘human development’ (the UNDP idea used in the Human Development Report) and ‘life evaluation’ approaches to understanding human progress. It argues that both approaches were, at least in part, motivated by a desire to consider progress and development in ways that went beyond the mere comparison of GDPs, and to put people at the centre.</p>
+<h3 id="the-background"><a class="header" href="#the-background">The Background</a></h3>
+<p>In July 2011 the UN General Assembly passed a historic resolution. It invited member countries
+to measure the happiness of their people and to use this to help guide their public policies. On
+April 2012 by the first UN high-level meeting on happiness and well-being, chaired by the Prime Minister of Bhutan. At the same time the first World Happiness Report was published.</p>
+<h3 id="re-imagining-idea-of-happiness"><a class="header" href="#re-imagining-idea-of-happiness">Re-imagining idea of Happiness</a></h3>
+<p>To understand the ‘shift’ which is expected to take place among policymakers around the world in coming years, it will be better to lift some ideas from the <strong>first WHR</strong>:</p>
+<ol>
+<li>
+<p>This is an age of stark contradictions. While at the one hand the world enjoys technologies of unimaginable sophistication, at the other hand, at least one billion people are living without enough to eat. yet it is relentlessly destroying the natural environment in the process.</p>
+</li>
+<li>
+<p>self-reported happiness of the citizenry with the following serious ‘concerns’ of today (WHR 2012):</p>
+<ul>
+<li>uncertainties and anxieties are high</li>
+<li>social and economic inequalities have widened considerably</li>
+<li>social trust is in decline</li>
+<li>confidence in government is at an all- time low</li>
+</ul>
+</li>
+<li>
+<p>If we continue mindlessly along the current economic trajectory, we risk undermining the Earth’s life support systems—food supplies, clean water and stable climate—necessary for human health and even survival in some places.</p>
+</li>
+<li>
+<p>In an impoverished society, the urge for material gain typically makes a lot of sense. Higher household income (or higher per capita GNP) generally signifies an improvement in the life conditions of the poor.</p>
+</li>
+<li>
+<p>Higher average incomes do not necessarily improve average well-being, GNP per capita of USA has risen by a factor of three since 1960, while measures of average happiness have remained essentially unchanged over the half-century.</p>
+<p>Society did not become happier as it became richer. This is due to four reasons:</p>
+<ul>
+<li>Individuals compare themselves to others. They are happier when they are higher on the social (or income) ladder. Yet when everybody rises together, relative status remains unchanged.</li>
+<li>The gains have not been evenly shared</li>
+<li>insecurity, loss of social trust, declining confidence in government</li>
+<li>Individuals may experience an initial jump in happiness when their income rises, but then at least partly return to earlier levels as they adapt to their new higher income</li>
+</ul>
+</li>
+<li>
+<p>higher income may raise happiness to some extent, the quest for higher income may actually reduce one’s happiness. <strong>Psychologists</strong> have found repeatedly that <em>individuals who put a high premium on higher incomes generally are less happy and more vulnerable to other psychological ills than individuals who do not crave higher incomes.</em></p>
+</li>
+<li>
+<p>The thinking of becoming happier by becoming richer is challenged by the <strong>law of diminishing marginal utility of income</strong> — after a certain point, the gains are very small. This means that poor people benefit far more than rich people from an added dollar of income.</p>
+<blockquote>
+<p>Suppose that a poor household at Rs. 1,000 income requires an extra Rs. 100 to raise its life satisfaction level (or happiness) by one notch. A rich household at Rs. 1,000,000 income (one thousand times as much as the poor household) would need one thousand times more money, or Rs. 100,000, to raise its well-being by the same one notch. Gains</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="at-the-end"><a class="header" href="#at-the-end">At the End</a></h3>
+<p>Yet most people probably believe that happiness is in the eye of the beholder, an individual’s choice, something to be pursued individually rather than as a matter of national policy. Happiness seems far too subjective, too vague, to serve as a touchstone for a nation’s goals, much less its policy content. That indeed has been the traditional view.</p>
+<p>The WHR 2012 summarises the fascinating and emerging story of these studies on two broad measurements of happiness:</p>
+<ol>
+<li>the ups and downs of daily emotions and</li>
+<li>an individual’s overall evaluation of life</li>
+</ol>
+<p>The former is sometimes called ‘<strong>affective happiness</strong>,’ and the latter ‘<strong>evaluative happiness</strong>’.</p>
+<blockquote>
+<p><strong>Affective happiness</strong> captures the day-to-day joy of friendship, time with family and sex, or the downsides of long work commutes and sessions with one’s boss. <strong>Evaluative happiness</strong> measures very different dimensions of life, those that lead to overall satisfaction or frustration with one’s place in society.</p>
+</blockquote>
+<p>A household’s income counts for life satisfaction,but only in a limited way—other things matter more:</p>
+<ol>
+<li>community trust,</li>
+<li>mental and physical health, and</li>
+<li>the quality of governance and rule of law.</li>
+</ol>
+<p>‘<b>happiness traps</b>’ such as in the USA in recent decades, where GNP may rise relentlessly while life satisfaction stagnates or even declines.</p>
+<h2 id="insights-into-human-behaviour"><a class="header" href="#insights-into-human-behaviour">Insights into Human Behaviour</a></h2>
+<p>The World Bank in its latest report (World Development Report 2015: Mind, Society, and Behaviour) said that development policies become more effective when combined with insights into human behaviour. It further adds that policy decisions informed by behavioural economics can deliver impressive improvements in promoting development and well-being in society.</p>
+<h3 id="social-norms-culture-and-development"><a class="header" href="#social-norms-culture-and-development">Social norms, culture and development</a></h3>
+<p>Economic development is not only dependent on fiscal policy, monetary policy and taxation, but is also rooted in human psychology, sociology, culture and norms. The
+recent World Development Report (WDR) of 2015 focuses on the behavioural and social foundations
+of development, and has been very well received.</p>
+<h2 id="values-of-economics"><a class="header" href="#values-of-economics">Values of Economics</a></h2>
+<p>There is research in psychology and evolutionary
+biology which shows that morality, altruism, and other-regarding values are an innate part of the human mind, even though the social setting in which a person lives can nurture or stunt these traits. Recent research shows that having a few ‘good’ human beings in society can give rise to dynamics through which we end up with an overall better society.</p>
+<p>In talking about a nation’s economic progress,
+all attention, including both praise and criticism, is usually focused on the government. It is, however, important to recognise that much also depends on civil society, the firms, the farmers and ordinary citizens. The social norms and collective beliefs that shape the behaviour of these agents play an important role in how a nation performs.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../economics/indian-economics/01-introduction.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../economics/indian-economics/01-introduction.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>01 Introduction - Parikshit&#x27;s Notebook</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item "><a href="../../mathematics/index.html">Mathematics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../mathematics/formulas/index.html">Formulas</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../mathematics/formulas/algebra.html">Algebra</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../computer-science/index.html">Computer Science</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../computer-science/os/index.html">Operating System</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../computer-science/os/process.html">Process</a></li><li class="chapter-item "><a href="../../computer-science/os/ipc.html">Interprocess Communication</a></li></ol></li><li class="chapter-item "><a href="../../computer-science/dbms/index.html">Database Management System</a></li><li class="chapter-item "><a href="../../computer-science/networking/index.html">Computer Network</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../computer-science/networking/reference-models/index.html">Reference Models</a></li><li class="chapter-item "><a href="../../computer-science/networking/physical-layer/index.html">Physical Layer</a></li><li class="chapter-item "><a href="../../computer-science/networking/data-link-layer/index.html">Data Link Layer</a></li><li class="chapter-item "><a href="../../computer-science/networking/network-layer/index.html">Network Layer</a></li><li class="chapter-item "><a href="../../computer-science/networking/transport-layer/index.html">Transport Layer</a></li><li class="chapter-item "><a href="../../computer-science/networking/application-layer/index.html">Application Layer</a></li></ol></li><li class="chapter-item "><a href="../../computer-science/dsa/index.html">Data Structure & Algorithms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../computer-science/dsa/searching.html">Searching</a></li><li class="chapter-item "><a href="../../computer-science/dsa/sorting.html">Sorting</a></li></ol></li><li class="chapter-item "><a href="../../computer-science/toc/index.html">Theory of Computation</a></li></ol></li><li class="chapter-item "><a href="../../aiml/index.html">AI/ML</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../aiml/ml-algos/index.html">ML Algorithms</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../aiml/ml-algos/regression/index.html">Regression</a></li><li class="chapter-item "><a href="../../aiml/ml-algos/classification/index.html">Classification</a></li><li class="chapter-item "><a href="../../aiml/ml-algos/clustering/index.html">Clustering</a></li><li class="chapter-item "><a href="../../aiml/ml-algos/forecasting/index.html">Forecasting</a></li></ol></li><li class="chapter-item "><a href="../../aiml/deep-learning/index.html">Deep Learning</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../aiml/deep-learning/full-connected/00-basics.html">Fully Connected</a></li><li class="chapter-item "><a href="../../aiml/deep-learning/activation-functions/index.html">Activation Functions</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../linux/index.html">Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../linux/networking/index.html">Networking</a></li></ol></li><li class="chapter-item expanded "><a href="../../economics/index.html">Economics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../economics/indian-economics/index.html">Indian Economics</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../economics/indian-economics/01-introduction.html" class="active">01 Introduction</a></li><li class="chapter-item "><a href="../../economics/indian-economics/02-growth-development-and-happiness.html">02 Growth, Development & Happiness</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Parikshit&#x27;s Notebook</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css">
+<h2 id="economics-the-discipline"><a class="header" href="#economics-the-discipline">Economics: The Discipline</a></h2>
+<p>economics is the study of how societies use <strong>scarce resources</strong> to produce valuable commodities and distribute them among different people.</p>
+<p>Economics studies how individuals, firms, governments, and other organisations within our society make choices and how these choices determine a society’s use of its resources.</p>
+<blockquote>
+<p>we need to make some choices before we utilise the scarce resources by prioritising some of our needs.</p>
+</blockquote>
+<h3 id="a-working-definition"><a class="header" href="#a-working-definition">A Working Definition</a></h3>
+<p>Economics studies the economic activities of mankind. Similarly, political, social and administrative activities of mankind are studied under Political Science, Sociology and Public Administration, respectively. That is why these disciplines are broadly categorised as <strong>humanities</strong> as all of them study human activities.</p>
+<p>The activities which involve profit, loss, livelihood, occupation, wage, employment, etc., are economic activities. Economics studies all these activities.</p>
+<h3 id="economics-and-economy"><a class="header" href="#economics-and-economy">Economics and Economy</a></h3>
+<p>Economics will come out with theories of market, employment, etc., and an economy is the real picture of the things which emerges after the application of those theories.</p>
+<p>many countries selecting the same remedy and tools to fight the same problems might have similar or dissimilar results during a given period. At the same time, two economies selecting different tools to solve the same economic problems might experience the same results or completely different results.</p>
+<p>The level and quality of natural resources, the quantity and quality of human resources, the socio-political milieu, the historical background, the psychic make of the human resource, etc., are some of the factors which individually as well as collectively impact an economy while carrying out economic activities</p>
+<h3 id="distribution-network-models"><a class="header" href="#distribution-network-models">Distribution Network Models</a></h3>
+<p><img src="./images/distribution-network-models.png" alt="Distribution Network Models" /></p>
+<p>We have 3 types of models</p>
+<ul>
+<li><strong>State</strong>: In the first type of distribution system, the state (i.e., the government) takes the sole responsibility of supplying goods and services required by the population with no payments being done by the consumer—the former Soviet Union and Communist China being the best examples.</li>
+<li><strong>Market</strong>: In this system, goods and services are made available in the market and on the basis of their demand and supply, their prices are determined in the open market and finally they get distributed to the population.</li>
+<li><strong>State-market mix</strong>: This distribution system has certain goods and services which might be made available to the population freely or at the subsidised prices by the state and some might be supplied by the market for which consumers need to pay.</li>
+</ul>
+<h2 id="organising-an-economy"><a class="header" href="#organising-an-economy">Organising an Economy</a></h2>
+<h3 id="types-of-economy"><a class="header" href="#types-of-economy">Types of Economy</a></h3>
+<p><img src="./images/type-of-economies.png" alt="Types of Economy" /></p>
+<ul>
+<li>
+<p><strong>Capitalistic Economy:</strong> The decisions of what to produce, how much to produce and at what price to sell are taken by the market, by the private enterprises in this system, with the state having no economic role.</p>
+</li>
+<li>
+<p><strong>State Economy:</strong> socialistic economy emphasised collective ownership of the means of production (property and assets), it also ascribed a large role to the state in running the economy, while communist economy, on the other hand, advocated state ownership of all properties including labour with absolute power to state in running the economy. Here we see two versions of the state economy—in erstwhile USSR known as the socialist economy and in pre-1985 China as the communist economy.</p>
+</li>
+<li>
+<p><strong>Mixed Economy:</strong> The impact of the great depression (1929) spread from the USA to other economies of Western Europe escalating large scale unemployment, downfall in demand and economic activities and lockouts in industrial enterprises. English economist at Cambridge University, John Maynard Keynes (1883–1946) questioned the very principles of <strong>‘laissez-faire’</strong> and the nature of the <strong>‘invisible hand’</strong>(Wealth of Nation). He even opined that the invisible hand brings equilibirium to the economy but by ‘strangulating the poor’. He suggested that prices and wages are not flexible enough to provide employment to all. It means there will be some people unemployed when the economy will be at its full potential.</p>
+<blockquote>
+<p><strong>Laissez-faire</strong> is an economic system in which transactions between private parties are absent of any form of economic interventionism such as regulation and subsidies. As a system of thought, laissez-faire rests on the axioms that the individual is the basic unit in society and has a natural right to freedom; that the physical order of nature is a harmonious and self-regulating system; and that corporations are creatures of the state and therefore the citizens must watch them closely due to their propensity to disrupt the Smithian spontaneous order.</p>
+</blockquote>
+<p>To get the economy out of the depression, Keynes suggested an increase in government expenditures, discretionary fiscal policy (fiscal deficit, lower interest rates, cheap money supply, etc.) to boost the demand of goods and services as this was the reason behind the depression.</p>
+<p>In the capitalist economies of the time, all the basic goods and services were part of the market mechanism, i.e., being produced and supplied by the private sector. It meant that almost everything the people required was supplied by the private enterprises via the market which was ultimately an undimensional movement of money and wealth (from the mass of people to the few who controlled the production and supply chain) and the masses were going through the process of pauperisation every day, thereby weakening their purchasing power. In the end, it affected overall demand and culminated in the Great Depression.</p>
+<p>As a follow up to the Keynesian advices, governments of the time started producing and supplying some basic goods and services which are known as <strong>‘public goods’</strong>. These goods basically intended to guarantee minimum level of nutrition to all, healthcare, sanitation, education, social security, etc. The expenditure on public goods were incurred on the public exchequer even if it required deficit financing.</p>
+</li>
+</ul>
+<p>The concluding consensus emerged with the publication of the World Development Report (1999) titled Entering the <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord">2</span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span></span></span> Century in which the WB said, <strong>“Governments play a vital role in development, but there is no simple set of rules that tells them what to do.”</strong> The World Bank went on to suggest that every country should determine the areas and the extent of the market and the state intervention, depending upon its own stage of economic development, socio-political and other historical factors.</p>
+<p>In the process of organising the economy, some basic and important infrastructural economic responsibilities were taken up by the state/governments (centre and state) and rest of the economic activities were left to private enterprises, i.e., the market.</p>
+<h2 id="role-of-the-state-in-a-economy"><a class="header" href="#role-of-the-state-in-a-economy">Role of the State in a Economy</a></h2>
+<p>Possible roles for the state/government in an economy:</p>
+<ol>
+<li><strong>As a regulator of the economic system</strong> (where the state takes important economic decisions, announces the required kind of economic policies, takes the sole responsibility to get them implemented, and controlling and punishing those who don’t oblige to those economic decisions).</li>
+<li><strong>As a producer and/or supplier of ‘private goods and services’</strong> (these include all those goods and services which constitute the part of market and which will be distributed among the needy according to the principles of market mechanism. Here the state earns profit as a private enterprise).</li>
+<li><strong>As a producer and/or supplier of ‘public goods’ or ‘social goods’</strong> (these include goods and services which look essential from the perspective of social justice and well-being for the people. like ducation, healthcare, sanitation, drinking water, nutrition, caring for the differently abled and old, etc.)</li>
+</ol>
+<p>The economy which selected both the roles (2 and 3) for the state under monopoly we called them the state. socialist economy at least the labour was not owned and exploited by the state unlike the other—the communist economy where labour used to be under complete state control.</p>
+<p>The economic system which left both the roles (2 and 3) as the sole responsibilities of the private sector was called the capitalistic economic system.</p>
+<p>Mixed economies had at least kept one economic role fixed for the state (i.e., 3), of supplying public goods to the needy people.</p>
+<p><strong>Compulsory roles for the state in economy</strong></p>
+<ol>
+<li>As  a regulator of  the  economic  system because If   the   regulation   and   control   of   an economy  is  left  to  private  individuals or  groups  (i.e., firms)  they  will  be  using the  regulatory  powers  to  maximise  their profits  and  returns  at  the  cost  of  others.</li>
+<li>The   responsibility   of   producing   and supplying   the   social/public   goods   to the  needy  cannot  be  left  to  the  private sector as this is a loss-making exercise. It means, the state will have to take the sole responsibility or may need to expand its role  in  such  areas—as  we  see  it  in  post-reform India.</li>
+</ol>
+<p><strong>What should be left for market?</strong></p>
+<p>The   responsibility   of   producing   and distributing  private  goods  to  the  people could  be  well  handled  by  the  private sector as this is a profit-fetching area. As the private sector became capable, in some countries this responsibility was given  up  by  the  state  in  favour  of  the private sector and better development has been possible in those economies. In this sense, India delayed this process while in Indonesia, Malaysia, Thailand and South Korea allowed entry of the private sector much earlier.</p>
+<blockquote>
+<p>Basically,   the   WB   study,   the East   Asian Miracle  (1993),  recognises  the  above-given  shift of one kind of mixed economy to another kind of mixed  economy—in  the  cases  of  the  Malaysian, Thai and South Korean economies—taking place since the mid-1960s. Experts believe that this shift could not take place in time in India. And once it started (1991–92) it was too late and this choice was not voluntary but obligatory.</p>
+</blockquote>
+<h2 id="washington-consensus"><a class="header" href="#washington-consensus">Washington Consensus</a></h2>
+<p>The term <strong>‘Washington Consensus’</strong> was coined by the  US  economist  <em>John  Williamson</em> (in  1989) under  which  he  had  suggested a  set  of  policy reforms which most of the official in Washington (i.e.,  International  Monetary  Fund  and  World Bank) thought would be good for the crisis-driven Latin American countries of the time.</p>
+<h3 id="ten-propositions-in-washington-consensus"><a class="header" href="#ten-propositions-in-washington-consensus">Ten propositions in Washington Consensus</a></h3>
+<ol>
+<li><strong>Fiscal policy discipline</strong>, with avoidance of large fiscal deficits relative to GDP.</li>
+<li>A redirection of public expenditure priorities toward fields offering both high economic returns and the potential to improve income distribution, such as primary health care, primary education, and infrastructure.</li>
+<li><strong>Tax reform</strong> (to lower marginal rates and broaden the tax base)</li>
+<li>Interest Rates that are market determined and positive (but moderate) in real terms.</li>
+<li>Competitive exchange rate i.e. rate that is very near to mid market rate.</li>
+<li><strong>Trade liberalisation</strong>: liberlization of imports, with particular emphasis on elimination of quantitative restrictions (licensing etc), any trade protection to be provided by low and relatively uniform tariffs.</li>
+<li><strong>Liberalisation of FDI inflows</strong></li>
+<li><strong>Privatisation of state enterprises</strong></li>
+<li>Deregulation  (in  the  sense  of  abolishing barriers to entry and exit except those justified on safety, environmental and consumer protection)</li>
+<li>Legal security for property rights.</li>
+</ol>
+<p>In the aftermath of the Great Recession (after the ‘US sub-prime’ crisis) in the Western economies, it is believed that dependence on market to correct the growth and development may not sustain any longer. and solution to this problems is the Keynesian idea of ‘interventionist state’ seems the ultimate alternative in the present times.</p>
+<h2 id="sectors-of-an-economy"><a class="header" href="#sectors-of-an-economy">Sectors of an Economy</a></h2>
+<ol>
+<li><strong>Primary Sector:</strong> This  sector  includes  all  those  economic  activities where  there  is  the  direct  use  of  natural  resources as   agriculture,   forestry, fishing,   fuels,   metals, minerals, etc. Broadly,  such  economies  term their agricultural sector as the primary sector.</li>
+<li><strong>Secondary Sector:</strong> This  sector  is  rightly  called  the  manufacturing sector,  which  uses  the  produce  of  the  primary sector  as  its  raw  materials.</li>
+<li><strong>Tertiary Sector:</strong> This sector includes all economic activities where different ‘services’ are produced such as education, banking,  insurance,  transportation,  tourism,  etc. This sector is also known as the services sector.</li>
+</ol>
+<h2 id="types-of-economies"><a class="header" href="#types-of-economies">Types of Economies</a></h2>
+<ol>
+<li><strong>Agrarian Economy:</strong> An economy is called agrarian if its share of the primary sector is 50 per cent or more in the total output (the GDP) of the economy. In monetary terms, India is no more an agrarian economy,  however the dependency ratio makes it so—India being the first such example in the economic history of the world.</li>
+<li><strong>Industrial Economy:</strong> If the secondary sector contributes 50 per cent or more to the total produce value of an economy, it is an industrial economy.</li>
+<li><strong>Service Economy:</strong> An economy where <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">50</span></span></span></span>  or  more  of  the produced  value  comes  from  the  tertiary  sector is known as the service economy.</li>
+</ol>
+<h2 id="idea-of-national-income"><a class="header" href="#idea-of-national-income">Idea of National Income</a></h2>
+<blockquote>
+<p>Income level is the most commonly used tool to determine the well-being and happiness of nations and their citizens.</p>
+</blockquote>
+<p>Education and life expectancy can only be enhanced once the required amount of ‘investment’ (expenditure on them)  could be mobilised.</p>
+<h3 id="gdp"><a class="header" href="#gdp">GDP</a></h3>
+<p>Gross  Domestic  Product  (GDP)  is  the  value  of the  all final  goods  and  services  produced  within the boundary of a nation during one year period.</p>
+<blockquote>
+<p>For India, this calendar year is from <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span></span></span> April to <span class="katex"><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7936em;"></span><span class="mord">3</span><span class="mord"><span class="mord">1</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7936em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">s</span><span class="mord mathnormal mtight">t</span></span></span></span></span></span></span></span></span></span></span></span> March.</p>
+</blockquote>
+<p>It is also calculated by adding national private consumption, gross investment, government spending and trade balance (exports-minus-imports). The use of the exports-minus-imports factor removes expenditures on imports not produced in the nation, and adds expenditures of goods and service produced which are exported, but not sold within the country.</p>
+<h4 id="uses-of-gdp"><a class="header" href="#uses-of-gdp">Uses of GDP</a></h4>
+<ol>
+<li>Per annum percentage change in it is the ‘growth rate’ of an economy.</li>
+<li>It is a ‘quantitative’ concept and its volume/size indicates the ‘internal’ strength of the economy. But it does not say anything about the ‘qualitative’ aspects of the goods and services produced.</li>
+<li>It is used by the IMF/WB in the comparative analyses of its member nations.</li>
+</ol>
+<h3 id="ndp"><a class="header" href="#ndp">NDP</a></h3>
+<p>Net Domestic Product (NDP) is the GDP calculated after adjusting the weight of the value of ‘depreciation’. GDP minus the total value of the ‘wear and tear’ (depreciation) that happened in the assets while the goods and services were being produced.</p>
+<p>The governments of the economies decide and announce the rates by which assets depreciate (done in India by the Ministry of Commerce and Industry) and a list is published, which is used by different sections of the economy to determine the real levels of depreciations in different assets.</p>
+<p>If the value of the domestic currency falls following market mechanism in comparison to a foreign currency, it is a situation of ‘depreciation’ in the domestic currency, calculated in terms of loss in value of the domestic currency.</p>
+<pre><code>NDP = GDP - Depreciation
+</code></pre>
+<h4 id="uses-of-ndp"><a class="header" href="#uses-of-ndp">Uses of NDP</a></h4>
+<ol>
+<li>For domestic use only: to understand the historical situation of the loss due to depreciation to the economy.  Also used to understand and analyse the sectoral situation of depreciation in industry and trade in comparative periods.</li>
+<li>To show the achievements of the economy in the area of research and development, which have tried cutting  the levels of depreciation in a historical time period.</li>
+<li>depreciation and its rates are also used by modern governments as a tool of economic policymaking.</li>
+</ol>
+<p><strong>NDP is not used in comparative economics</strong>, i.e., to compare the economies of the world. This  is  due  to  different rates of depreciation which is set by the different economies of the world.</p>
+<h3 id="gnp"><a class="header" href="#gnp">GNP</a></h3>
+<p>Gross National Product (GNP) is the GDP of a country added with its ‘income from abroad’.</p>
+<h4 id="the-items-which-are-counted-in-the-segment-income-from-abroad-are"><a class="header" href="#the-items-which-are-counted-in-the-segment-income-from-abroad-are">The items which are counted in the segment ‘Income from Abroad’ are:</a></h4>
+<ol>
+<li><strong>Private  Remittances:</strong> the net outcome of the money which inflows and outflows on account of the ‘private transfers’ by Indian nationals working outside of India (to India) and the foreign nationals working in India (to their home countries)</li>
+</ol>
+<blockquote>
+<p>Today,  India  is  the  highest  recipient  of private remittances in the world—as per the World Bank projected at $ 72 billion in 2015 (in 2013 it was $ 70 billion, the year’s  highest).  China  falls  second  ($ 64 billion) in 2015.</p>
+</blockquote>
+<ol start="2">
+<li>
+<p><strong>Interest on External Loans:</strong> balance of inflow (on the money lend out by  the  economy)  and  outflow  (on  the money  borrowed  by  the  economy)  of external  interests. In  India’s  case  it  has always been negative as the economy has been  a  ‘net  borrower’  from  the  world economies.</p>
+</li>
+<li>
+<p><strong>External  Grants:</strong>  the net outcome of the external grants i.e., the balance of such grants which flow to and from India. <strong>Today, India offers more such grants than it  receives.</strong></p>
+<p>In the wake of globalisation, grant outflows from India has increased as its economic diplomacy aims at the playing bigger role at international level.</p>
+</li>
+</ol>
+<pre><code>GNP = GDP + income from abroad
+</code></pre>
+<h4 id="uses-of-gnp"><a class="header" href="#uses-of-gnp">Uses of GNP</a></h4>
+<ol>
+<li>This is the ‘national income’ according to which the IMF ranks the nations of the world in terms of the  volumes—at purchasing power parity (PPP). India is ranked as the 3rd largest economy of the world (after China and the USA), while as per the nominal/ prevailing exchange rate of rupee, India is the 7th largest economy (IMF,  April 2016).</li>
+<li>It is the more exhaustive concept of national income than the GDP as it indicates towards the ‘quantitative’ as well as the ‘qualitative’ aspects of the economy, i.e.,  the ‘internal’  as  well  as  the ‘external’strength of the economy.</li>
+<li>It enables us to learn several facts about the production behaviour and pattern of an economy, such as, how much the outside world is dependent on its product and how much it depends on the world.</li>
+</ol>
+<h3 id="nnp"><a class="header" href="#nnp">NNP</a></h3>
+<p>Net National Product (NNP) of an economy is the GNP after deducting the loss due to ‘depreciation’.</p>
+<p>The formula to derive it may be written like:</p>
+<pre><code>NNP = GNP - Depreciation
+NNP = GDP + Income from abroad - Depreciation
+</code></pre>
+<h4 id="uses-of-gnp-1"><a class="header" href="#uses-of-gnp-1">Uses of GNP</a></h4>
+<ol>
+<li>This is the ‘National Income’ (NI) of an economy. Though,  the  GDP,  NDP  and GNP,  all  are  ‘national  income’  they  are not written with capitalised ‘N’ and ‘I’.</li>
+<li>When   we   divide   NNP   by   the   total population  of  a  nation  we  get  the ‘per capita  income’ (PCI)  of  that  nation,</li>
+</ol>
+<h3 id="cost-and-price-of-national-income"><a class="header" href="#cost-and-price-of-national-income">Cost and Price of National Income</a></h3>
+<h4 id="cost"><a class="header" href="#cost">Cost</a></h4>
+<p>Income of an economy, i.e., value of its total produced goods and services may be calculated at either the ‘factor cost’ or the ‘market cost’.</p>
+<p><strong>Factor cost</strong> is the ‘input cost’ the producer has to incur in  the  process  of  producing  something (such  as  cost  of  capital,  i.e.,  interest  on loans, raw materials, labour, rent, power, etc.). This is also termed as ‘factory price’or ‘production cost/price’.</p>
+<p><strong>market cost</strong> is  derived  after  adding  the  indirect  taxes to the factor cost of the product, it means the  cost  at  which  the  goods  reach  the market,  i.e.,  showrooms  (these  are  the cenvat/central excise and the CST which are  paid  by  the  producers  to  the  central government in India).</p>
+<blockquote>
+<p>India  officially  used  to  calculate  its national  income  at factor  cost  (though the  data  at market  cost was  also  released Since January 2015, the CSO has  switched  over  to  calculating  it  at market price (i.e., market cost).</p>
+</blockquote>
+<p>Once the GST  has  been  implemented  it  will  be easier  for  India  to  calculate  its  national income at market price.</p>
+<h4 id="price"><a class="header" href="#price">Price</a></h4>
+<p>Income can be derived at two prices, constant  and  current. The  difference  in the  constant  and  current  prices  is  only that  of  the impact  of  inflation.</p>
+<p>Inflation is  considered  stand  still  at  a  year  of  the past  (this  year  of  the  past  is  also  known as  the <strong>‘base  year’</strong>)  in  the  case  of  the <strong>constant price</strong>, while in the <strong>current price</strong>, present  day  inflation  is  added.  Current price  is,  basically,  the  maximum  retail price (MRP) which we see printed on the goods selling in the market.</p>
+<blockquote>
+<p>As  per  the  new  guidelines  the base  year  in India has been revised from 2004–05 to 2011–12 (January 2015)</p>
+</blockquote>
+<p>India calculates its national income at constant prices —so is the situation among other developing   economies,   while   the   developed nations calculate it at the current prices.</p>
+<p>Basically,  inflation  has  been  a  challenging  aspect of policymaking in India because of its level (i.e., range  in  which  it  dwindles)  and  stability  (how stable  it  has  been)</p>
+<ul>
+<li><strong>nominal  income</strong>: The  wage  someone  gets  in  hand  per  day  or  per month.</li>
+<li><strong>real  income</strong>: this  is nominal  income  minus  the  present  day  rate  of inflation—adjusted in percentage form.</li>
+<li><strong>disposable  income</strong>: the  net  part of  wage  one  is  free  to  use  which  is  derived  after deducting the direct taxes from the real/nominal income, depending upon the need of data.</li>
+</ul>
+<h3 id="taxes-and-national-income"><a class="header" href="#taxes-and-national-income">Taxes and National Income</a></h3>
+<p>While   accounting/calculating   national   income the  taxes,  direct  and  indirect,  collected  by  the government,  needs  to  be  considered.</p>
+<ul>
+<li>
+<p><strong>Direct Taxes:</strong> individual income   tax,   corporate   income   tax,   i.e.,   the corporate  tax,  divident  tax,  interest  tax,  etc.)</p>
+<p>There is no need of adjustment whether the national income is accounted at factor cost or market cost. This is so because at both the ‘costs’ they  have  to  be  the  same.</p>
+</li>
+<li>
+<p><strong>Indirect Taxes:</strong> cenvat, customs, central sales tax, sales tax/vat, state excise, etc.</p>
+<p>If  the  national  income  is calculated  at  factor  cost  then  the  corpus  of  the total indirect taxes needs to be deducted from it. This  is  because,  indirect  taxes  have  been  added twice: once at the point of the people/group who pay these taxes from their disposable income while purchasing things from the market, and again at the  point  of  the  governments  (as  their  income receipts)</p>
+<p>Collection/source  of  indirect  taxes  are the ‘disposable  income’  (which  individuals  and companies have with them after paying their direct taxes—from  which  they  do  any  purchasing  and finally, the indirect taxes reach the government)</p>
+</li>
+</ul>
+<blockquote>
+<p>National Income at Factor Cost = NNP at Market price - Indirect taxes</p>
+</blockquote>
+<h3 id="subsidies-and-national-income"><a class="header" href="#subsidies-and-national-income">Subsidies and National Income</a></h3>
+<p>Subsidies which are forwarded by the governments need to be  adjusted  while  calculating  national  income. They are added to the national income at market cost,  in  the  case  of  India.</p>
+<blockquote>
+<p>National Income at Factor Cost = NNP at Market price - Subsidies</p>
+</blockquote>
+<p>If the national income is derived at the market cost and governments forward no subsidies there is  no  need  of  adjustments  for  the  subsidies but after all there is not a single economy in the world today which does not forward subsidies in one or the other form.</p>
+<blockquote>
+<p>National Income at Factor Cost = NNP at Market price - Indirect taxes + Subsidies</p>
+</blockquote>
+<h2 id="revision-in-the-base-year-and-method-of-national-income-accounting"><a class="header" href="#revision-in-the-base-year-and-method-of-national-income-accounting">Revision in the base year and method of National Income Accounting</a></h2>
+<p>The  Central  Statistics  Office  (CSO),  in  January 2015,  released  the new  and revised  data  of National Accounts, effecting two changes:</p>
+<ol>
+<li>The Base Year was revised from 2004–05 to 2011–12. This was done in accordance with the recommendation of the National Statistical   Commission   (NSC),   which had advised to revise the base year of all economic indices every five years.</li>
+<li>This time, the methodology of calculating the  National  Accounts  has  also  been revised  in  line  with  the  requirements of   the   System   of   National   Accounts (SNA)-2008, an internationally accepted standard.</li>
+</ol>
+<h3 id="changes-in-methodology-of-calculating-the-national-accounts"><a class="header" href="#changes-in-methodology-of-calculating-the-national-accounts">Changes in Methodology of calculating the National Accounts</a></h3>
+<ol>
+<li>
+<p>Headline growth rate will now be measured by GDP at constant market prices, which  will  henceforth  be  referred  to  as ‘GDP’. Earlier, growth was measured in terms of growth  rate  in GDP  at  factor  cost  and  at constant prices.</p>
+</li>
+<li>
+<p>Sector-wise   estimates   of   <strong>Gross   Value Added  (GVA)</strong>  will  now  be  given  at  basic  prices16 instead  of  factor  cost.</p>
+<p>The relationship between GVA at factor cost, GVA at basic prices, and GDP (at market prices) is given below:</p>
+<p><strong>GVA  at  basic  prices</strong>  =  CE  +  OS/MI  + CFC + production taxes less production subsidies.</p>
+<p><strong>GVA  at  factor  cost</strong>  =  GVA  at  basic prices – production taxes less production subsidies.</p>
+<p><strong>GDP</strong>  =  GVA  at  basic  prices  +  product taxes – product subsidies.</p>
+<p>Where,</p>
+<ul>
+<li><strong>CE</strong> : compensation of employees;</li>
+<li><strong>OS</strong>:    operating    surplus;</li>
+<li><strong>MI</strong>:    mixed income;</li>
+<li><strong>CFC</strong>: consumption of fixed capital  (i.e.,  depriciation)</li>
+<li><strong>Production taxes</strong>:  land revenues, stamps and registration fees and tax on profession.</li>
+<li><strong>production subsidies</strong> are subsidies to  Railways,  input  subsidies  to  farmers, subsidies  to  village  and  small  industries, administrative  subsidies  to  corporations or  cooperatives,  etc.
+<blockquote>
+<p><strong>Production taxes  or production  subsidies</strong>  are  paid or  received  with  relation  to  production and  are  independent  of  the  volume  of actual   production.</p>
+</blockquote>
+</li>
+<li><strong>Product  taxes</strong>: excise  tax,  sales  tax,  service  tax and  import  and  export  duties.</li>
+<li><strong>Product subsidies</strong>: include  food,  petroleum  and fertilizer subsidies, interest subsidiesgiven to   farmers,   households,   etc.,through banks,    and    subsidies    for    providing insurance to households at lower rates.
+<blockquote>
+<p><strong>Product  taxes  or subsidies</strong> are paid or received on per unit of the product.</p>
+</blockquote>
+</li>
+</ul>
+</li>
+<li>
+<p>Comprehensive coverage of the corporate sector both in manufacturing and services by  incorporation  of  annual  accounts  of companies  as filed  with  the  Ministry  of Corporate  Affairs  (MCA)  under  their e-governance   initiative, MCA21. Use of  MCA21  database  for  manufacturing companies   has   helped   in   accounting for  activities  other  than  manufacturing undertaken by these companies.</p>
+</li>
+<li>
+<p>Comprehensive coverage of the financial sector by inclusion of information  from the   accounts   of   stock   brokers, stock exchanges, asset management companies, mutual  funds  and  pension  funds,  and the   regulatory   bodies including the Securities  and  Exchange  Board  of  India (SEBI),  Pension  Fund  Regulatory  and Development  Authority (PFRDA)  and Insurance  Regulatory  and  Development Authority (IRDA).</p>
+</li>
+<li>
+<p>Improved  coverage  of  activities  of local bodies and autonomous institutions, covering around 60 per cent of the grants/transfers provided to these institutions.</p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../economics/indian-economics/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../economics/indian-economics/02-growth-development-and-happiness.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../economics/indian-economics/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../economics/indian-economics/02-growth-development-and-happiness.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
